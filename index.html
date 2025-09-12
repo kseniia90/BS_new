@@ -18,6 +18,13 @@
             <a href="" class="header-min-banner">Всі знижки тут</a>            
             <div class="header-container container">
                 <div class="header__main">
+                    <div class="header__main__list__item burger-menu">
+                        <div class="burger-menu-btn">
+                            <div class="burger-menu__icon">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="header__search-block">
                         <div class="header__main__logo">
                             <a class="header__main-logo" href="index.html"><img src="./images/logo.png" alt="logo" width="178"
@@ -55,7 +62,7 @@
                 
                                 </div>
                                 <div class="search-results__button">
-                                    <a href="#" class="product__card__info__button">Перейти до пошуку</a>
+                                    <a href="#" class="product__info__button">Перейти до пошуку</a>
                                 </div>
                             </div>
                         </form>
@@ -95,16 +102,14 @@
 
                             <li class="header__main__list__item">
                                 <a href="">
-                                    <span class="icon icon-Property-153 authorized"></span>
+                                    <!-- add class authorized -->
+                                    <span class="icon icon-Property-153"></span>
                                 </a>                            
                             </li>
 
                             <li class="header__main__list__item">
                                 <a href="">
                                     <span class="icon icon-Property-148"></span>
-                                    <div class="header__counter">
-                                        <span class="header__counter__value">3</span>
-                                    </div>
                                 </a>                            
                             </li>
 
@@ -117,10 +122,14 @@
                            
                           
                         </ul>
-
-                        <div class="header__main__lang">
-                            <a href="#" class="header__main__lang-item active">UA</a>
-                            <a class="header__main__lang-item" href="">RU</a>
+                        <div class="lang-switcher">
+                            <div class="current">
+                                <span>UA</span>
+                                <span class="icon icon-Property-1-8"></span>
+                            </div>
+                            <ul class="lang-dropdown">
+                                <li><a href="#">RU</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -135,174 +144,125 @@
                         </div>
                         <ul class="header__nav__list">
                             <li class="header__nav-link">
-                                <a href="#">Головна</a>
+                                <a href="#"><span>Головна</span></a>
                             </li>
                             <li class="header__nav-link">
-                                <a href="#">Бренди</a>
+                                <a href="#">
+                                    <span>New</span>
+                                    <svg class="icon" width="14" height="14" viewBox="0 0 15 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1241_26655)">
+                                            <path
+                                                d="M5.3332 11.0142C5.22237 11.0142 5.1057 10.9792 5.01237 10.9092C4.83153 10.775 4.7557 10.5358 4.8257 10.32L5.32737 8.71001L4.0557 7.67751C3.88653 7.53167 3.82237 7.29834 3.8982 7.08834C3.97403 6.87834 4.1782 6.73834 4.39987 6.73834H6.00403L6.56987 5.21584C6.6457 5.00584 6.84987 4.86584 7.07153 4.86584C7.2932 4.86584 7.49737 5.00584 7.5732 5.21584L8.13903 6.73834H9.7432C9.96487 6.73834 10.169 6.87834 10.2449 7.08834C10.3207 7.29834 10.2565 7.53751 10.0874 7.68334L8.82153 8.71584L9.34653 10.3083C9.41653 10.5242 9.34653 10.7633 9.1657 10.8975C8.98487 11.0375 8.73987 11.0433 8.54737 10.9208L7.07737 9.96417L5.6307 10.9325C5.5432 10.9908 5.4382 11.02 5.3332 11.02V11.0142ZM7.07153 14.8933C3.20987 14.8933 0.0715332 11.755 0.0715332 7.89334C0.0715332 4.03167 3.20987 0.893341 7.07153 0.893341C10.9332 0.893341 14.0715 4.03167 14.0715 7.89334C14.0715 11.755 10.9332 14.8933 7.07153 14.8933ZM7.07153 2.06001C3.85737 2.06001 1.2382 4.67917 1.2382 7.89334C1.2382 11.1075 3.85737 13.7267 7.07153 13.7267C10.2857 13.7267 12.9049 11.1075 12.9049 7.89334C12.9049 4.67917 10.2857 2.06001 7.07153 2.06001Z"
+                                                fill="#4B6D74" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1241_26655">
+                                                <rect width="14" height="14" fill="white" transform="translate(0.0715332 0.893341)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
                             </li>
                             <li class="header__nav-link">
-                                <a href="#">Новинки</a>
+                                <a href="#"><span>Обличчя</span></a>
                             </li>
                             <li class="header__nav-link">
-                                <a href="#">Догляд для дітей</a>
+                                <a href="#"><span>SPF</span></a>
                             </li>
                             <li class="header__nav-link">
-                                <a href="#">Волосся</a>
+                                <a href="#"><span>Волосся</span></a>
                             </li>
+                            <li class="header__nav-link">
+                                <a href="#"><span>Тіло</span></a>
+                            </li>                    
                             <li class="header__nav-link">
                                 <a class="dropdown-link hover-dropdown" href="#">
-                                    <span>Тіло</span>
-                                    <span class="icon-arrow_down arrow_down"></span>
+                                    <span>Ротова порожнина</span>
                                 </a>
                                 <div class="header__submenu__list">
                                     <ul>
-                                        <li><a href="#"><span>Усі засоби</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li class="has-submenu">
-                                            <a href="#">
-                                                <span>Догляд за обличчям</span>
-                                                <span class="icon-arrow_down arrow_down submenu__arrow"></span>
-                                            </a>
-                                            <ul class="header__second-submenu__list">
-                                                
-                                                <li><a href="#">111111111111</a></li>
-                                                <li><a href="#">111111111111</a></li>
-                                                <li><a href="#">111111111111</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-submenu">
-                                            <a href="#">
-                                                <span>Догляд за обличчям</span>
-                                                <span class="icon-arrow_down arrow_down submenu__arrow"></span>
-                                            </a>
-                                            <ul class="header__second-submenu__list">
-                                                <li><a href="#">111111111111</a></li>
-                                                <li><a href="#">111111111111</a></li>
-                                                <li><a href="#">111111111111</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#"><span>Область навколо очей</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Шия та декольте</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Брови та вії</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Губи</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>SPF та автозасмага</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Спеціальний догляд</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                    </ul>
-                                    <img src="./images/sublist_img.png" alt="img">
-                                </div>
-                            </li>
-                            <li class="header__nav-link">
-                                <a class="dropdown-link hover-dropdown" href="#">
-                                    <span>Шкіра обличчя</span>
-                                    <span class="icon-arrow_down arrow_down"></span>
-                                </a>
-                                <div class="header__submenu__list">
-                                    <ul>
-                                        <li><a href="#"><span>Усі засоби</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Догляд за обличчям</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Область навколо очей</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Шия та декольте</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Брови та вії</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Губи</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>SPF та автозасмага</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Спеціальний догляд</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                        <li><a href="#"><span>Усі засоби</span></a></li>
+                                        <li><a href="#"><span>Догляд за обличчям</span></a></li>
+                                        <li><a href="#"><span>Область навколо очей</span></a></li>
+                                        <li><a href="#"><span>Шия та декольте</span></a></li>
+                                        <li><a href="#"><span>Брови та вії</span></a></li>
+                                        <li><a href="#"><span>Губи</span></a></li>
+                                        <li><a href="#"><span>SPF та автозасмага</span></a></li>
+                                        <li><a href="#"><span>Спеціальний догляд</span></a></li>
                                     </ul>
                                     <img src="./images/categories_carousel_img2.png" alt="img">
                                 </div>
                             </li>
                             <li class="header__nav-link">
                                 <a class="dropdown-link hover-dropdown" href="#">
-                                    <span>Макіяж</span>
-                                    <span class="icon-arrow_down arrow_down"></span>
+                                    <span>Для дітей</span>
                                 </a>
                                 <div class="header__submenu__list">
                                     <ul>
-                                        <li><a href="#"><span>Усі засоби</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Догляд за обличчям</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Область навколо очей</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Шия та декольте</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Брови та вії</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Губи</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>SPF та автозасмага</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Спеціальний догляд</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                        <li><a href="#"><span>Усі засоби</span></a></li>
+                                        <li><a href="#"><span>Догляд за обличчям</span></a></li>
+                                        <li><a href="#"><span>Область навколо очей</span></a></li>                                       
                                     </ul>
                                     <img src="./images/sublist_img.png" alt="img">
                                 </div>
                             </li>
                             <li class="header__nav-link">
-                                <a href="#">Подарунки</a>
+                                <a href="#"><span>Для чоловіків</span></a>
                             </li>
                             <li class="header__nav-link">
-                                <a href="#">Пробник</a>
+                                <a href="#"><span>Макіяж</span></a>
                             </li>
                             <li class="header__nav-link">
                                 <a class="dropdown-link hover-dropdown" href="#">
-                                    <span>Ротова порожнина</span>
-                                    <span class="icon-arrow_down arrow_down"></span>
+                                    <span>Аромадифузори</span>
                                 </a>
                                 <div class="header__submenu__list">
                                     <ul>
-                                        <li><a href="#"><span>Усі засоби</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Догляд за обличчям</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Область навколо очей</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Шия та декольте</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Брови та вії</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Губи</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>SPF та автозасмага</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
-                                        <li><a href="#"><span>Спеціальний догляд</span><span
-                                                    class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                        <li><a href="#"><span>Усі засоби</span></a></li>
+                                        <li><a href="#"><span>Догляд за обличчям</span></a></li>
+                                        <li><a href="#"><span>Область навколо очей</span></a></li>
+                                        <li><a href="#"><span>Шия та декольте</span></a></li>
+                                        <li><a href="#"><span>Брови та вії</span></a></li>                                        
                                     </ul>
                                     <img src="./images/sublist_img.png" alt="img">
                                 </div>
                             </li>
+                            <li  class="header__nav-link">
+                                <a class="dropdown-link hover-dropdown" href="#">
+                                    <span>Парфумерія</span>
+                                </a>
+                            </li>
+                             <li  class="header__nav-link">
+                                <a class="dropdown-link hover-dropdown" href="#">
+                                    <span>Акції</span>
+                                    <span class="icon icon-Property-137"></span>
+                                </a>
+                            </li>
+                             <li  class="header__nav-link">
+                                <a class="dropdown-link hover-dropdown" href="#">
+                                    <span>Подарунки</span>
+                                </a>
+                            </li>
+                             <li  class="header__nav-link">
+                                <a class="dropdown-link hover-dropdown" href="#">
+                                    <span>Бренди</span>
+                                </a>
+                            </li>
                         </ul>
-                        <ul class="header__main__nav__list">
-                            <li>
-                                <a href="#">Акції</a>
-                            </li>
-                            <li>
-                                <a href="#">Доставка та оплата</a>
-                            </li>
+
+                        <ul class="header__main__nav__list">                           
                             <li>
                                 <a href="#">Програма лояльнсті</a>
                             </li>
                             <li>
+                                <a href="#">Оплата частинами</a>
+                            </li>
+                            <li>
+                                <a href="#">Доставка і оплата</a>
+                            </li>
+                            <li>
                                 <a href="#">Блог</a>
-                            </li>
-                            <li>
-                                <a href="#">Про компанію</a>
-                            </li>
-                            <li>
-                                <a href="#">Контакти</a>
                             </li>
                         </ul>
                         <div class="header-contacts">
@@ -315,10 +275,10 @@
                                 <a href="#"><img src="./images/Letter_icon.svg" alt=""></a>
                             </div>
                         </div>
-                        <div class="header__main__lang">
+                        <!-- <div class="header__main__lang">
                             <a href="#" class="header__main__lang-item active">UA</a>
                             <a class="header__main__lang-item" href="">RU</a>
-                        </div>
+                        </div> -->
                     </nav>
                 </div>
             </div>
@@ -328,11 +288,205 @@
             <div class="slider-banner margin-bottom">
                 <div class="banner-carousel swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img class="banner__img" src="./images/index_banner_1.jpg" alt="banner" width="1440" height="637"></div>
-                        <div class="swiper-slide"><img class="banner__img" src="./images/index_banner_1.jpg" alt="banner" width="1440" height="637"></div>
+                        <div class="swiper-slide">
+                            <img class="banner__img desktop-only" src="./images/index_banner_1.jpg" alt="banner" width="1440" height="637">
+                            <img class="banner__img mobile-only" src="./images/index_banner_1_mob.jpg" alt="banner" width="390" height="390">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="banner__img desktop-only" src="./images/index_banner_1.jpg" alt="banner" width="1440" height="637">
+                            <img class="banner__img mobile-only" src="./images/index_banner_1_mob.jpg" alt="banner" width="390" height="390">
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>                
+            </div>
+
+            <!-- brends block -->
+            <div class="brands-block margin-bottom">
+                <ul class="brands-list">
+                    <li>
+                        <a href="">
+                            <img src="images/brand_1.png" alt="brand" width="150" height="150">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/brand_2.png" alt="brand" width="150" height="150">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/brand_3.png" alt="brand" width="150" height="150">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/brand_4.png" alt="brand" width="150" height="150">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/brand_5.png" alt="brand" width="150" height="150">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/brand_6.png" alt="brand" width="150" height="150">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/brand_1.png" alt="brand" width="150" height="150">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/brand_2.png" alt="brand" width="150" height="150">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/brand_3.png" alt="brand" width="150" height="150">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/brand_4.png" alt="brand" width="150" height="150">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/brand_5.png" alt="brand" width="150" height="150">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/brand_6.png" alt="brand" width="150" height="150">
+                        </a>
+                    </li>
+                
+                </ul>
+                <a class="bs-btn bs-btn-gray" href="#">
+                    <span>
+                        <span>Всі бренди</span>
+                        <span class="icon icon-Property-1Arrow"></span>                
+                    </span>
+                </a>
+            </div>
+
+            <!-- instagram block -->
+            <div class="insta-block margin-bottom container">
+                <div class="insta-block__content">
+                    <div class="col">
+                        <h1 class="title_30">Дивись нас у Instagram</h1>
+                        <p>Щодня в сторіс: живі огляди, тести, помилки й поради — без фільтрів і прикрас.</p>
+                        <a class="bs-btn" href="#">
+                            <span>
+                                <span>Перейти у Instagram</span>
+                                <span class="icon icon-Property-1Instagram"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="insta-block__slider">
+                        <div class="insta-slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><video class="video insta_video" src="https://www.beauty-systema.com/wp-content/uploads/2025/08/img_5776.mp4" muted="" autoplay="" controls=""></video></div>
+                                <div class="swiper-slide"><video class="video insta_video" src="https://www.beauty-systema.com/wp-content/uploads/2025/08/img_5776.mp4" muted="" autoplay="" controls=""></video></div>
+                                <div class="swiper-slide"><video class="video insta_video" src="https://www.beauty-systema.com/wp-content/uploads/2025/08/img_5776.mp4" muted="" autoplay="" controls=""></video></div>
+                                <div class="swiper-slide"><video class="video insta_video" src="https://www.beauty-systema.com/wp-content/uploads/2025/08/img_5776.mp4" muted="" autoplay="" controls=""></video></div>
+                                <div class="swiper-slide"><video class="video insta_video" src="https://www.beauty-systema.com/wp-content/uploads/2025/08/img_5776.mp4" muted="" autoplay="" controls=""></video></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+
+            <!-- products slider akcii -->
+            <div class="products-slider-block margin-bottom">
+                <div class="container">
+                    <a href="" class="title"><span class="icon icon-Property-137"></span><span>Акції</span></a>
+                </div>
+            
+                <div class="slider-container container">
+                    <div class="products-slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                            
+                                <div class="product__card">
+                                    <div class="top">
+                                        <a class="product__card__img" href="">
+                                            <img src="./images/product.png" alt="product-img" width="140" height="140">                            
+                                        </a>
+                                        <div class="lables-block">
+                                            <div class="product-lable sale">
+                                                <span>-16%</span>
+                                            </div>
+                                        </div>
+                                        <div class="bs-buy-btn">
+                                            <span class="icon icon-Property-154"></span>
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                    <div class="product__info">
+                            
+                                        <div class="product__info__header product__card__row">
+                                            <a class="product__card__brand"  href="">The seam</a>
+                                            <div class="product__card__icons">
+                                                <span class="icon icon-Property-151"></span>
+                                                <span class="icon icon-Property-148"></span>
+                                            </div>
+                            
+                                        </div>
+                                        <div>
+                                            <a href="" class="product__name">
+                                                <span>Відновлюючий бальзам для губ</span>
+                                            </a>
+                                            <p class="product__description">Overnight Restoring Lip-Treatment</p>
+                                        </div>
+
+                                         <div class="product__parameters">
+                                                <div class="product-parameter">Niacinamide</div>
+                                                <div class="product-parameter">SPF30</div>
+                                            </div>
+                                        
+                                        <div class="bottom">
+                                            <div class="product__card__row">
+                                                <div class="product__price">
+                                                    <p class="price">1260₴</p>
+                                                    <p class="old-price">1699₴</p>                        
+                                                </div>
+                                                <p class="cashback">+23₴ кешбек</p>
+                                                
+                                            </div>
+                                            <div class="product__reviews-block">
+                                                    <div class="product__reviews">
+                                                        <div class="product__star yellow"></div>
+                                                        <div class="product__star yellow"></div>
+                                                        <div class="product__star yellow"></div>
+                                                        <div class="product__star yellow"></div>
+                                                        <div class="product__star gray"></div>
+                                                    </div>
+                                                    <p class="product__reviews-count">4.8 <span>(54)</span>
+                                                    </p>
+                                                </div>
+                                        </div>
+                                      
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                
+                        <div class="swiper-pagination"></div>
+                
+                
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                
+                    </div>
+                </div>
             </div>
         
         </main>
@@ -443,7 +597,9 @@
             </div> -->
         </footer>
     </div>
+    <script src="./lib/jquery.min.js"></script>
     <script src="./lib/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
     <script src="./js/index.js"></script>
 </body>
 

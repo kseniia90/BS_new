@@ -210,24 +210,41 @@ $(function () {
 
 const swiperProducts = new Swiper('.products-slider', {
   loop: true,
-  spaceBetween: 8,
-   slidesPerView: 1,
-      spaceBetween: 10,
-      pagination: {
-        clickable: true,
-      },
-      breakpoints: {
-        0: {
-           slidesPerView: 'auto',
+  spaceBetween: 32,
+  slidesPerView: 'auto',
+   navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  }
+});
 
-        },
-        768: {
-          slidesPerView: 3,
-        },
-        1024: {
-          slidesPerView: 4,
-        },
-      },
+const swiperReviews = new Swiper('.reviews-slider', {
+  loop: true,
+  spaceBetween: 32,
+  slidesPerView: 'auto',
+   navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  }
+});
+
+const swiperPosts = new Swiper('.posts-slider', {
+  loop: true,
+  spaceBetween: 32,
+  slidesPerView: 'auto',
+   navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  }
 });
 
 // sliders end

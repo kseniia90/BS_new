@@ -6,19 +6,9 @@
 
 .slider-banner .swiper-pagination {
     display: none;
-    position: static;
+    position: static !important;
     margin-top: 16px;
-}
-
-.swiper-pagination-bullet {
-    opacity: 1;
-    background: var(--bg-light);
-    transition: all .3s ease;
-}
-.swiper-pagination-bullet-active {
-    width: 40px;
-    border-radius: 119988px;
-   
+    max-width: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -37,6 +27,7 @@
     max-width: 100vw;
     overflow-x: auto;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 16px;
     padding: 0 16px;
@@ -103,15 +94,62 @@
     max-width: 62%;
 }
 
-.insta-block__slider .swiper-slide {
-    width: 203px;
-    height: 315px;
-    border-radius: 10px !important;
+.loyalty-banner {
+    margin-bottom: 40px;
 }
 
-.insta-block__slider .video {
+.loyalty-banner>p:last-of-type {
+    margin-bottom: 24px;
+}
+
+.card-slider .swiper-slide {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 8px;
+}
+
+.card-slider .card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 16px 23px;
+}
+
+.card-slider .card-img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.card-slider .card-img>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px !important;
+    border-radius: 8px;
+}
+
+.card-container {
+    height: 100%;
+}
+
+.card .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: #FFE7F9;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+.card h3 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+}
+
+.card p {
+    line-height: 26px;
 }

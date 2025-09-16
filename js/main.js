@@ -248,3 +248,21 @@ const swiperPosts = new Swiper('.posts-slider', {
 });
 
 // sliders end
+
+// accordion start
+
+    $(".faq-accordion .accordion__title").on("click", function (e) {
+    e.preventDefault();
+    var $this = $(this);
+
+    if (!$this.hasClass("accordion-active")) {
+      $(".faq-accordion .accordion__content").slideUp(400);
+      $(".faq-accordion .accordion__title").removeClass("accordion-active");
+      $(".faq-accordion .accordion__arrow").removeClass("active");
+    }
+
+    $this.toggleClass("accordion-active");
+    $this.next().slideToggle();
+  });
+
+// accordion end

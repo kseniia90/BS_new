@@ -26,8 +26,9 @@
     width: 100%;
     max-width: 100vw;
     overflow-x: auto;
+    scroll-snap-type: x mandatory;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     gap: 16px;
     padding: 0 16px;
@@ -51,6 +52,7 @@
 } */
 
 .brands-list li {
+    scroll-snap-align: start;
     flex: 0 0 auto;
 }
 

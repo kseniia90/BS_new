@@ -265,4 +265,13 @@ const swiperPosts = new Swiper('.posts-slider', {
     $this.next().slideToggle();
   });
 
+  $(".footer-main__side.center .accordion__title").on("click", function (e) {
+    e.preventDefault();
+    var $this = $(this);
+
+    $this.toggleClass("accordion-active");
+    $this.next().slideToggle();
+    $(".accordion__arrow", this).toggleClass("accordion__rotate");
+  });
+
 // accordion end

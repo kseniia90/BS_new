@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'BS_new';
-  src:  url('fonts/BS_new.eot?bafxqr');
-  src:  url('fonts/BS_new.eot?bafxqr#iefix') format('embedded-opentype'),
-    url('fonts/BS_new.ttf?bafxqr') format('truetype'),
-    url('fonts/BS_new.woff?bafxqr') format('woff'),
-    url('fonts/BS_new.svg?bafxqr#BS_new') format('svg');
+  src:  url('fonts/BS_new.eot?hfcyrl');
+  src:  url('fonts/BS_new.eot?hfcyrl#iefix') format('embedded-opentype'),
+    url('fonts/BS_new.ttf?hfcyrl') format('truetype'),
+    url('fonts/BS_new.woff?hfcyrl') format('woff'),
+    url('fonts/BS_new.svg?hfcyrl#BS_new') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-tg:before {
+  content: "\e903";
+}
+.icon-fb:before {
+  content: "\e954";
+}
+.icon-phone:before {
+  content: "\e955";
+}
 .icon-Property-1Instagram:before {
   content: "\e900";
   color: #4b6d74;
@@ -37,18 +46,9 @@
   content: "\e902";
   color: #4b6d74;
 }
-.icon-Property-12:before {
-  content: "\e903";
-}
-.icon-Property-13:before {
-  content: "\e904";
-}
 .icon-Property-1-:before {
   content: "\e905";
   color: #4b6d74;
-}
-.icon-Property-14:before {
-  content: "\e906";
 }
 .icon-Property-15:before {
   content: "\e907";
@@ -65,9 +65,6 @@
 .icon-Property-1-2:before {
   content: "\e90a";
   color: #4b6d74;
-}
-.icon-Property-18:before {
-  content: "\e90b";
 }
 .icon-Property-19:before {
   content: "\e90c";
@@ -133,15 +130,9 @@
   content: "\e91b";
   color: #4b6d74;
 }
-.icon-Property-1-22:before {
-  content: "\e91c";
-}
 .icon-Property-1-5:before {
   content: "\e91d";
   color: #4b6d74;
-}
-.icon-Property-1--:before {
-  content: "\e91e";
 }
 .icon-Property-1--1:before {
   content: "\e91f";

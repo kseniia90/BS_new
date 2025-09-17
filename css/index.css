@@ -31,16 +31,16 @@
     /* justify-content: center; */
     align-items: center;
     gap: 16px;
-    padding: 0 16px;
-    margin-bottom: 5px;
+    padding: 0 16px 10px;
+    margin-bottom: 15px;
 }
 
 .brands-list::-webkit-scrollbar {
-    display: none;
+    /* display: none; */
 	height: 4px;
 }
 
-/* .brands-list::-webkit-scrollbar-thumb {
+.brands-list::-webkit-scrollbar-thumb {
 	background: #C8C8C8;
 	border-radius: 4px;
 }
@@ -49,7 +49,7 @@
     .brands-list::-webkit-scrollbar {
         display: none;
     }
-} */
+}
 
 .brands-list li {
     scroll-snap-align: start;
@@ -90,6 +90,10 @@
 .insta-block__content .col .bs-btn {
     align-self: start;
     width: max-content;
+}
+
+.insta-block__content .bs-btn .icon {
+    color: var(--accent);
 }
 
 .insta-block__slider {

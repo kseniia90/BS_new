@@ -6,68 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/style_common.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/index.css">
     <title>BS_new</title>
 </head>
 
 <body>
-    
+
     <div class="wrapper">
         <header class="header">
-            <a href="" class="header-min-banner">Всі знижки тут</a>            
+            <a href="" class="header-min-banner">Всі знижки тут</a>
             <div class="header-container container">
                 <div class="header__main">
-                    <div class="header__main__list__item burger-menu">
-                        <div class="burger-menu-btn">
-                            <div class="burger-menu__icon">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="header__search-block">
-                        <div class="header__main__logo">
-                            <a class="header__main-logo" href="index.html"><img src="./images/logo.png" alt="logo" width="178"
-                                    height="20"></a>
-                        </div>
-                        <form action="#" class="header__main-form search-form">
-                            <input class="header__main-input" type="text" placeholder="Пошук..." />
-                            <button class="header__main-search" aria-label="search"><span class="icon-Property-141"></span></button>
-                            <div class="search-results">
-                                <div class="search-results__items">
-                                    <div class="search-result-item">
-                                        <a href="#">
-                                            <div class="search-result-item__img">
-                                                <img src="./images/popular_1.png" alt="">
-                                            </div>
-                                            <div class="search-result-item__info">
-                                                <p class="search-result-item__header">Гідрофільна олія Beauty of Joseon
-                                                    Ginseng Cleansing Oil, 210 мл</p>
-                                                <p class="search-result-item__price">₴745</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="search-result-item">
-                                        <a href="#">
-                                            <div class="search-result-item__img">
-                                                <img src="./images/insta_1.png" alt="">
-                                            </div>
-                                            <div class="search-result-item__info">
-                                                <p class="search-result-item__header">Гідрофільна олія Beauty of Joseon
-                                                    Ginseng Cleansing Oil, 210 мл</p>
-                                                <p class="search-result-item__price">₴745</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                
-                                </div>
-                                <div class="search-results__button">
-                                    <a href="#" class="product__info__button">Перейти до пошуку</a>
+                        <div class="burger-menu">
+                            <div class="burger-menu-btn">
+                                <div class="burger-menu__icon">
+                                    <span></span>
                                 </div>
                             </div>
+                        </div>
+                        <a class="header__logo" href="index.html">
+                            <img class="logo" src="./images/logo.png" alt="logo" width="178" height="20">
+                            <img class="logo-min" src="./images/logo-min.svg" alt="logo" width="20" height="20">
+                        </a>
+                        <form action="#" class="search-form">
+                            <input class="search-input" type="text" placeholder="Пошук..." />
+                            <button class="search-button icon-Property-141" aria-label="search"></button>
                         </form>
                     </div>
-                   
+
                     <div class="header__main-center">
                         <nav class="header__main__nav">
                             <ul class="header__main__nav__list">
@@ -84,11 +53,11 @@
                                     <a href="blog.html">Блог</a>
                                 </li>
                             </ul>
-                        </nav>                       
-                        
+                        </nav>
+
                     </div>
 
-                     <div class="header__main-right">
+                    <div class="header__main-right">
                         <ul class="header__main__list">
 
                             <li class="header__main__list__item">
@@ -97,28 +66,28 @@
                                     <div class="header__counter">
                                         <span class="header__counter__value">3</span>
                                     </div>
-                                </a>                            
+                                </a>
                             </li>
 
                             <li class="header__main__list__item">
                                 <a href="account.html">
                                     <!-- add class authorized -->
                                     <span class="icon icon-Property-153"></span>
-                                </a>                            
+                                </a>
                             </li>
 
                             <li class="header__main__list__item">
                                 <a href="favorites.html">
                                     <span class="icon icon-Property-148"></span>
-                                </a>                            
+                                </a>
                             </li>
 
                             <li class="header__main__list__item">
                                 <a href="account.html#bonus" class="header-cashback">
-                                    <span class="header-cashback__text">25 бʼютіків</span>
+                                    <span class="cashback-text">725 бʼютіків</span>
                                     <span class="icon icon-Property-154"></span>
-                                </a>                            
-                            </li>                          
+                                </a>
+                            </li>
                         </ul>
                         <div class="lang-switcher">
                             <div class="current">
@@ -131,14 +100,15 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="header__nav-container">
                     <nav class="header__nav">
                         <div class="header__nav__title">
-                            <div class="header__nav__back">
-                                <span class="icon-arrow_down"></span>
+                            <div class="header__logo" href="index.html"><img class="logo" src="./images/logo.png" alt="logo"
+                                    width="178" height="20"></div>
+                            <div class="nav__close">
+                                <span class="icon icon-Property-142"></span>
                             </div>
-                            <span>Beauty Systema</span>                            
                         </div>
                         <ul class="header__nav__list">
                             <li class="header__nav-link">
@@ -156,7 +126,8 @@
                                         </g>
                                         <defs>
                                             <clipPath id="clip0_1241_26655">
-                                                <rect width="14" height="14" fill="white" transform="translate(0.0715332 0.893341)" />
+                                                <rect width="14" height="14" fill="white"
+                                                    transform="translate(0.0715332 0.893341)" />
                                             </clipPath>
                                         </defs>
                                     </svg>
@@ -173,13 +144,19 @@
                             </li>
                             <li class="header__nav-link">
                                 <a href="#"><span>Тіло</span></a>
-                            </li>                    
+                            </li>
                             <li class="header__nav-link">
                                 <a class="dropdown-link hover-dropdown" href="#">
                                     <span>Ротова порожнина</span>
                                     <span class="submenu__arrow icon-Property-1-8"></span>
                                 </a>
                                 <div class="header__submenu__list">
+                                    <div class="header__nav__title">
+                                        <div class="nav__close">
+                                            <span class="icon icon-Property-1--1"></span>
+                                        </div>
+                                        <h3>Ротова порожнина</h3>                                        
+                                    </div>
                                     <ul>
                                         <li>
                                             <a href="">
@@ -192,7 +169,7 @@
                                                 <span>СПФ зі знижкою</span>
                                                 <span class="submenu__arrow icon-Property-1--1"></span>
                                             </a>
-                                        </li>                                       
+                                        </li>
                                     </ul>
                                     <img src="./images/menu_img.jpg" alt="img" width="200" height="280">
                                 </div>
@@ -203,6 +180,13 @@
                                     <span class="submenu__arrow icon-Property-1-8"></span>
                                 </a>
                                 <div class="header__submenu__list">
+                                    <div class="header__nav__title"> 
+                                        <div class="nav__close">
+                                            <span class="icon icon-Property-1--1"></span>
+                                        </div> 
+                                        <h3>Для дітей</h3>                                        
+                                    </div>
+
                                     <ul>
                                         <li>
                                             <a href="">
@@ -222,9 +206,16 @@
                                                 <span class="submenu__arrow icon-Property-1--1"></span>
                                             </a>
                                             <ul class="header__second-submenu__list">
+                                                <div class="header__nav__title">
+                                                    <div class="nav__close">
+                                                        <span class="icon icon-Property-1--1"></span>
+                                                    </div>
+                                                    <h3>Для обличчя</h3>
+                                                </div>
                                                 <li><a href=""><span><b>Усі засоби</b></span></a></li>
                                                 <li><a href="">спф 30</a></li>
-                                                <li><a href="">спф 40</a></li><li><a href="">спф 50</a></li>
+                                                <li><a href="">спф 40</a></li>
+                                                <li><a href="">спф 50</a></li>
                                                 <li><a href="">спф без тону&nbsp;</a></li>
                                             </ul>
                                         </li>
@@ -239,7 +230,7 @@
                                                 <span>Для тіла</span>
                                                 <span class="submenu__arrow icon-Property-1--1"></span>
                                             </a>
-                                        </li>                                        
+                                        </li>
                                     </ul>
                                     <img src="./images/menu_img.jpg" alt="img" width="200" height="280">
                                 </div>
@@ -256,6 +247,12 @@
                                     <span class="submenu__arrow icon-Property-1-8"></span>
                                 </a>
                                 <div class="header__submenu__list">
+                                    <div class="header__nav__title">                                        
+                                        <div class="nav__close">
+                                            <span class="icon icon-Property-1--1"></span>
+                                        </div>
+                                        <h3>Аромадифузори</h3>
+                                    </div>
                                     <ul>
                                         <li>
                                             <a href="">
@@ -275,9 +272,16 @@
                                                 <span class="submenu__arrow icon-Property-1--1"></span>
                                             </a>
                                             <ul class="header__second-submenu__list">
+                                                <div class="header__nav__title">
+                                                    <div class="nav__close">
+                                                        <span class="icon icon-Property-1--1"></span>
+                                                    </div>
+                                                    <h3>СПФ захист для дітей</h3>
+                                                </div>
                                                 <li><a href=""><span><b>Усі засоби</b></span></a></li>
                                                 <li><a href="">спф 30</a></li>
-                                                <li><a href="">спф 40</a></li><li><a href="">спф 50</a></li>
+                                                <li><a href="">спф 40</a></li>
+                                                <li><a href="">спф 50</a></li>
                                                 <li><a href="">спф без тону&nbsp;</a></li>
                                             </ul>
                                         </li>
@@ -292,35 +296,35 @@
                                                 <span>Для тіла</span>
                                                 <span class="submenu__arrow icon-Property-1--1"></span>
                                             </a>
-                                        </li>                                        
+                                        </li>
                                     </ul>
                                     <img src="./images/menu_img.jpg" alt="img" width="200" height="280">
                                 </div>
                             </li>
-                            <li  class="header__nav-link">
+                            <li class="header__nav-link">
                                 <a class="dropdown-link hover-dropdown" href="#">
                                     <span>Парфумерія</span>
                                 </a>
                             </li>
-                             <li  class="header__nav-link">
+                            <li class="header__nav-link">
                                 <a class="dropdown-link hover-dropdown" href="#">
                                     <span>Акції</span>
                                     <span class="icon icon-Property-137"></span>
                                 </a>
                             </li>
-                             <li  class="header__nav-link">
+                            <li class="header__nav-link">
                                 <a class="dropdown-link hover-dropdown" href="#">
                                     <span>Подарунки</span>
                                 </a>
                             </li>
-                             <li  class="header__nav-link">
+                            <li class="header__nav-link">
                                 <a class="dropdown-link hover-dropdown" href="#">
                                     <span>Бренди</span>
                                 </a>
                             </li>
                         </ul>
 
-                        <ul class="header__main__nav__list">                           
+                        <ul class="header__main__nav__list">
                             <li>
                                 <a href="#">Програма лояльнсті</a>
                             </li>
@@ -335,19 +339,37 @@
                             </li>
                         </ul>
                         <div class="header-contacts">
-                            <span>Зв’язатись з нами</span>
-                            <a href="tel:+38073938393">+38 (073) 193 83 93</a>
-                            <a href="mailto:beautysystema@gmail.com">beautysystema@gmail.com</a>
-                            <div class="header-social">
-                                <a href="#"><img src="./images/Instagram_icon.svg" alt=""></a>
-                                <a href="#"><img src="./images/Phone_icon.svg" alt=""></a>
-                                <a href="#"><img src="./images/Letter_icon.svg" alt=""></a>
-                            </div>
+                            <ul class="social-list">
+                                <li>
+                                    <a href="https://t.me/beauty_systema2024">
+                                        <span class="icon icon-tg"></span>
+                                        <span>@beauty_systema2024</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/beauty_systema/">
+                                        <span class="icon icon-Property-1Instagram"></span>
+                                        <span>@beauty_systema</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/Korea.skin.ua">
+                                        <span class="icon icon-fb"></span>
+                                        <span>@Korea.skin.ua</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:+38073938393">
+                                        <span class="icon icon-phone"></span>
+                                        <span>+380731938393</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        <!-- <div class="header__main__lang">
-                            <a href="#" class="header__main__lang-item active">UA</a>
-                            <a class="header__main__lang-item" href="">RU</a>
-                        </div> -->
+                        <div class="header__main__lang">
+                            <a href="#" class="lang-item active">UA</a>
+                            <a class="lang-item" href="">RU</a>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -358,16 +380,20 @@
                 <div class="banner-carousel swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img class="banner__img desktop-only" src="./images/index_banner_1.jpg" alt="banner" width="1440" height="637">
-                            <img class="banner__img mobile-only" src="./images/index_banner_1_mob.jpg" alt="banner" width="390" height="390">
+                            <img class="banner__img desktop-only" src="./images/index_banner_1.jpg" alt="banner"
+                                width="1440" height="637">
+                            <img class="banner__img mobile-only" src="./images/index_banner_1_mob.jpg" alt="banner"
+                                width="390" height="390">
                         </div>
                         <div class="swiper-slide">
-                            <img class="banner__img desktop-only" src="./images/index_banner_1.jpg" alt="banner" width="1440" height="637">
-                            <img class="banner__img mobile-only" src="./images/index_banner_1_mob.jpg" alt="banner" width="390" height="390">
+                            <img class="banner__img desktop-only" src="./images/index_banner_1.jpg" alt="banner"
+                                width="1440" height="637">
+                            <img class="banner__img mobile-only" src="./images/index_banner_1_mob.jpg" alt="banner"
+                                width="390" height="390">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
-                </div>                
+                </div>
             </div>
 
             <!-- brends block -->
@@ -433,12 +459,12 @@
                             <img src="images/brand_6.png" alt="brand" width="150" height="150">
                         </a>
                     </li>
-                
+
                 </ul>
                 <a class="bs-btn bs-btn-gray" href="#">
                     <span>
                         <span>Всі бренди</span>
-                        <span class="icon icon-Property-1Arrow"></span>                
+                        <span class="icon icon-Property-1Arrow"></span>
                     </span>
                 </a>
             </div>
@@ -460,38 +486,39 @@
                         <div class="insta-slider swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"><video class="video insta_video"
-                                        src="https://www.beauty-systema.com/wp-content/uploads/2025/08/img_5776.mp4" muted=""
-                                        autoplay="" controls=""></video></div>
+                                        src="https://www.beauty-systema.com/wp-content/uploads/2025/08/img_5776.mp4"
+                                        muted="" autoplay="" controls=""></video></div>
                                 <div class="swiper-slide"><video class="video insta_video"
-                                        src="https://www.beauty-systema.com/wp-content/uploads/2025/08/img_5776.mp4" muted=""
-                                        autoplay="" controls=""></video></div>
+                                        src="https://www.beauty-systema.com/wp-content/uploads/2025/08/img_5776.mp4"
+                                        muted="" autoplay="" controls=""></video></div>
                                 <div class="swiper-slide"><video class="video insta_video"
-                                        src="https://www.beauty-systema.com/wp-content/uploads/2025/08/img_5776.mp4" muted=""
-                                        autoplay="" controls=""></video></div>
+                                        src="https://www.beauty-systema.com/wp-content/uploads/2025/08/img_5776.mp4"
+                                        muted="" autoplay="" controls=""></video></div>
                                 <div class="swiper-slide"><video class="video insta_video"
-                                        src="https://www.beauty-systema.com/wp-content/uploads/2025/08/img_5776.mp4" muted=""
-                                        autoplay="" controls=""></video></div>
+                                        src="https://www.beauty-systema.com/wp-content/uploads/2025/08/img_5776.mp4"
+                                        muted="" autoplay="" controls=""></video></div>
                                 <div class="swiper-slide"><video class="video insta_video"
-                                        src="https://www.beauty-systema.com/wp-content/uploads/2025/08/img_5776.mp4" muted=""
-                                        autoplay="" controls=""></video></div>
+                                        src="https://www.beauty-systema.com/wp-content/uploads/2025/08/img_5776.mp4"
+                                        muted="" autoplay="" controls=""></video></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            
+
             </div>
-            
+
             <!-- products slider aktsii -->
             <div class="products-slider-block margin-bottom">
                 <div class="container">
-                    <a href="aktsii.html" class="title"><span class="icon icon-Property-137"></span><span>Акції</span></a>
+                    <a href="aktsii.html" class="title"><span
+                            class="icon icon-Property-137"></span><span>Акції</span></a>
                 </div>
-            
+
                 <div class="slider-container container">
                     <div class="products-slider swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -505,18 +532,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -524,12 +551,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -537,7 +564,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -551,14 +578,14 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
-            
+
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -572,18 +599,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -591,12 +618,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -604,7 +631,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -618,14 +645,14 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
-            
+
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -639,18 +666,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -658,12 +685,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -671,7 +698,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -685,14 +712,14 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
-            
+
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -706,18 +733,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -725,12 +752,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -738,7 +765,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -752,14 +779,14 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
-            
+
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -773,18 +800,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -792,12 +819,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -805,7 +832,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -819,14 +846,14 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
-            
+
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -840,18 +867,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -859,12 +886,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -872,7 +899,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -886,10 +913,10 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
                         </div>
                         <div class="swiper-buttons">
@@ -897,15 +924,16 @@
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next"></div>
                         </div>
-            
+
                     </div>
                 </div>
             </div>
-            
+
             <!-- loyalty banner -->
             <div class="loyalty-banner container">
                 <h2 class="title_30">Програма лояльності #beautysystema</h2>
-                <p>Зареєструйтесь та приєднуйтесь до Приватного Клубу #beautysystema — отримуйте кешбек, подарунки та особливі
+                <p>Зареєструйтесь та приєднуйтесь до Приватного Клубу #beautysystema — отримуйте кешбек, подарунки та
+                    особливі
                     привілеї.</p>
                 <a class="bs-btn" href="loyalty.html">
                     <span>
@@ -914,17 +942,17 @@
                     </span>
                 </a>
             </div>
-            
+
             <div class="slider-container container">
                 <div class="card-slider swiper">
                     <div class="swiper-wrapper">
-            
+
                         <div class="swiper-slide">
                             <div class="card card-img">
                                 <img src="./images/card_img.jpg" alt="card_img">
                             </div>
                         </div>
-            
+
                         <div class="swiper-slide">
                             <div class="card-container border-gradient">
                                 <div class="card">
@@ -934,7 +962,7 @@
                                 </div>
                             </div>
                         </div>
-            
+
                         <div class="swiper-slide">
                             <div class="card-container border-gradient">
                                 <div class="card">
@@ -944,7 +972,7 @@
                                 </div>
                             </div>
                         </div>
-            
+
                         <div class="swiper-slide">
                             <div class="card-container border-gradient">
                                 <div class="card">
@@ -954,7 +982,7 @@
                                 </div>
                             </div>
                         </div>
-            
+
                         <div class="swiper-slide">
                             <div class="card-container border-gradient">
                                 <div class="card">
@@ -964,28 +992,28 @@
                                 </div>
                             </div>
                         </div>
-            
+
                     </div>
                     <div class="swiper-buttons">
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-pagination"></div>
                         <div class="swiper-button-next"></div>
                     </div>
-            
+
                 </div>
             </div>
-            
+
             <!-- products slider new -->
             <div class="products-slider-block margin-bottom">
                 <div class="container">
                     <a href="new.html" class="title"><span>Новинки</span></a>
                 </div>
-            
+
                 <div class="slider-container container">
                     <div class="products-slider swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -999,18 +1027,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -1018,12 +1046,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -1031,7 +1059,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -1045,14 +1073,14 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
-            
+
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -1066,18 +1094,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -1085,12 +1113,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -1098,7 +1126,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -1112,14 +1140,14 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
-            
+
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -1133,18 +1161,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -1152,12 +1180,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -1165,7 +1193,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -1179,14 +1207,14 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
-            
+
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -1200,18 +1228,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -1219,12 +1247,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -1232,7 +1260,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -1246,14 +1274,14 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
-            
+
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -1267,18 +1295,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -1286,12 +1314,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -1299,7 +1327,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -1313,14 +1341,14 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
-            
+
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -1334,18 +1362,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -1353,12 +1381,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -1366,7 +1394,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -1380,10 +1408,10 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
                         </div>
                         <div class="swiper-buttons">
@@ -1391,7 +1419,7 @@
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next"></div>
                         </div>
-            
+
                     </div>
                 </div>
             </div>
@@ -1401,87 +1429,99 @@
                 <div class="container">
                     <h2 class="title"><span>Дівчата, які довірились Beauty Systema</span></h2>
                 </div>
-            
+
                 <div class="slider-container container">
                     <div class="photo-slider swiper">
                         <div class="swiper-wrapper">
 
-                            <div class="swiper-slide">                            
-                               <div class="photo-block">
+                            <div class="swiper-slide">
+                                <div class="photo-block">
                                     <div class="photo-card">
                                         <div class="label label-before">До</div>
-                                        <img class="photo photo-before" src="./images/before_1.jpg" alt="card_img" width="200" height="400">
-                                    </div> 
+                                        <img class="photo photo-before" src="./images/before_1.jpg" alt="card_img"
+                                            width="200" height="400">
+                                    </div>
                                     <div class="photo-card">
                                         <div class="label label-after">Після</div>
-                                        <img class="photo photo-after" src="./images/after_1.jpg" alt="card_img" width="200" height="400">
-                                    </div>  
-                               </div>                          
+                                        <img class="photo photo-after" src="./images/after_1.jpg" alt="card_img"
+                                            width="200" height="400">
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="swiper-slide">                            
-                               <div class="photo-block">
+                            <div class="swiper-slide">
+                                <div class="photo-block">
                                     <div class="photo-card">
                                         <div class="label label-before">До</div>
-                                        <img class="photo photo-before" src="./images/before_2.jpg" alt="card_img" width="200" height="400">
-                                    </div> 
+                                        <img class="photo photo-before" src="./images/before_2.jpg" alt="card_img"
+                                            width="200" height="400">
+                                    </div>
                                     <div class="photo-card">
                                         <div class="label label-after">Після</div>
-                                        <img class="photo photo-after" src="./images/after_2.jpg" alt="card_img" width="200" height="400">
-                                    </div>  
-                               </div>                          
+                                        <img class="photo photo-after" src="./images/after_2.jpg" alt="card_img"
+                                            width="200" height="400">
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="swiper-slide">                            
-                               <div class="photo-block">
+                            <div class="swiper-slide">
+                                <div class="photo-block">
                                     <div class="photo-card">
                                         <div class="label label-before">До</div>
-                                        <img class="photo photo-before" src="./images/before_1.jpg" alt="card_img" width="200" height="400">
-                                    </div> 
+                                        <img class="photo photo-before" src="./images/before_1.jpg" alt="card_img"
+                                            width="200" height="400">
+                                    </div>
                                     <div class="photo-card">
                                         <div class="label label-after">Після</div>
-                                        <img class="photo photo-after" src="./images/after_1.jpg" alt="card_img" width="200" height="400">
-                                    </div>  
-                               </div>                          
+                                        <img class="photo photo-after" src="./images/after_1.jpg" alt="card_img"
+                                            width="200" height="400">
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="swiper-slide">                            
-                               <div class="photo-block">
+                            <div class="swiper-slide">
+                                <div class="photo-block">
                                     <div class="photo-card">
                                         <div class="label label-before">До</div>
-                                        <img class="photo photo-before" src="./images/before_2.jpg" alt="card_img" width="200" height="400">
-                                    </div> 
+                                        <img class="photo photo-before" src="./images/before_2.jpg" alt="card_img"
+                                            width="200" height="400">
+                                    </div>
                                     <div class="photo-card">
                                         <div class="label label-after">Після</div>
-                                        <img class="photo photo-after" src="./images/after_2.jpg" alt="card_img" width="200" height="400">
-                                    </div>  
-                               </div>                          
+                                        <img class="photo photo-after" src="./images/after_2.jpg" alt="card_img"
+                                            width="200" height="400">
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="swiper-slide">                            
-                               <div class="photo-block">
+                            <div class="swiper-slide">
+                                <div class="photo-block">
                                     <div class="photo-card">
                                         <div class="label label-before">До</div>
-                                        <img class="photo photo-before" src="./images/before_1.jpg" alt="card_img" width="200" height="400">
-                                    </div> 
+                                        <img class="photo photo-before" src="./images/before_1.jpg" alt="card_img"
+                                            width="200" height="400">
+                                    </div>
                                     <div class="photo-card">
                                         <div class="label label-after">Після</div>
-                                        <img class="photo photo-after" src="./images/after_1.jpg" alt="card_img" width="200" height="400">
-                                    </div>  
-                               </div>                          
+                                        <img class="photo photo-after" src="./images/after_1.jpg" alt="card_img"
+                                            width="200" height="400">
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="swiper-slide">                            
-                               <div class="photo-block">
+                            <div class="swiper-slide">
+                                <div class="photo-block">
                                     <div class="photo-card">
                                         <div class="label label-before">До</div>
-                                        <img class="photo photo-before" src="./images/before_2.jpg" alt="card_img" width="200" height="400">
-                                    </div> 
+                                        <img class="photo photo-before" src="./images/before_2.jpg" alt="card_img"
+                                            width="200" height="400">
+                                    </div>
                                     <div class="photo-card">
                                         <div class="label label-after">Після</div>
-                                        <img class="photo photo-after" src="./images/after_2.jpg" alt="card_img" width="200" height="400">
-                                    </div>  
-                               </div>                          
+                                        <img class="photo photo-after" src="./images/after_2.jpg" alt="card_img"
+                                            width="200" height="400">
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -1490,7 +1530,7 @@
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next"></div>
                         </div>
-            
+
                     </div>
                 </div>
             </div>
@@ -1517,12 +1557,12 @@
                 <div class="container">
                     <a href="" class="title"><span>Бестселери</span></a>
                 </div>
-            
+
                 <div class="slider-container container">
                     <div class="products-slider swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -1536,18 +1576,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -1555,12 +1595,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -1568,7 +1608,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -1582,14 +1622,14 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
-            
+
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -1603,18 +1643,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -1622,12 +1662,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -1635,7 +1675,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -1649,14 +1689,14 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
-            
+
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -1670,18 +1710,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -1689,12 +1729,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -1702,7 +1742,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -1716,14 +1756,14 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
-            
+
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -1737,18 +1777,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -1756,12 +1796,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -1769,7 +1809,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -1783,14 +1823,14 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
-            
+
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -1804,18 +1844,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -1823,12 +1863,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -1836,7 +1876,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -1850,14 +1890,14 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
-            
+
                             <div class="swiper-slide">
-            
+
                                 <div class="product__card">
                                     <div class="top">
                                         <a class="product__card__img" href="product-page.html">
@@ -1871,18 +1911,18 @@
                                         <div class="bs-buy-btn">
                                             <span class="icon icon-Property-154"></span>
                                         </div>
-            
+
                                     </div>
-            
+
                                     <div class="product__info">
-            
+
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
                                                 <span class="icon icon-Property-151"></span>
                                                 <span class="icon icon-Property-148"></span>
                                             </div>
-            
+
                                         </div>
                                         <div>
                                             <a href="product-page.html" class="product__name">
@@ -1890,12 +1930,12 @@
                                             </a>
                                             <p class="product__description">Overnight Restoring Lip-Treatment</p>
                                         </div>
-            
+
                                         <div class="product__parameters">
                                             <div class="product-parameter">Niacinamide</div>
                                             <div class="product-parameter">SPF30</div>
                                         </div>
-            
+
                                         <div class="bottom">
                                             <div class="product__card__row">
                                                 <div class="product__price">
@@ -1903,7 +1943,7 @@
                                                     <p class="old-price">1699₴</p>
                                                 </div>
                                                 <p class="cashback">+23₴ кешбек</p>
-            
+
                                             </div>
                                             <div class="product__reviews-block">
                                                 <div class="product__reviews">
@@ -1917,10 +1957,10 @@
                                                 </p>
                                             </div>
                                         </div>
-            
+
                                     </div>
                                 </div>
-            
+
                             </div>
                         </div>
                         <div class="swiper-buttons">
@@ -1928,15 +1968,15 @@
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next"></div>
                         </div>
-            
+
                     </div>
                 </div>
             </div>
 
             <!-- reviews -->
-             <div class="reviews-slider-block container margin-bottom">
+            <div class="reviews-slider-block container margin-bottom">
                 <h2 class="title"><span>Відгуки</span></h2>
-            
+
                 <div class="slider-container">
                     <div class="reviews-slider swiper overflow">
                         <div class="swiper-wrapper">
@@ -1951,7 +1991,7 @@
                                             <p class="product__description">Захист від сонця для обличчя</p>
                                             <p class="product__name">Сонцезахисний крем Purito
                                                 Daily Soft Touch Sunscreen
-                                                SPF 50 PA++++ 60 мл</p>                                        
+                                                SPF 50 PA++++ 60 мл</p>
                                         </div>
                                     </a>
                                     <div class="review-bottom">
@@ -1962,11 +2002,13 @@
                                             <div class="product__star yellow"></div>
                                             <div class="product__star gray"></div>
                                         </div>
-                                        <p class="description">Сонцезахисний крем Purito Daily Soft Touch Sunscreen приємний у використанні — легка текстура
-                                            швидко вбирається, не залишає жирної плівки та добре підходить під макіяж.</p>
+                                        <p class="description">Сонцезахисний крем Purito Daily Soft Touch Sunscreen
+                                            приємний у використанні — легка текстура
+                                            швидко вбирається, не залишає жирної плівки та добре підходить під макіяж.
+                                        </p>
                                     </div>
                                     <p class="author">Анонім</p>
-                                </div>            
+                                </div>
                             </div>
 
                             <div class="swiper-slide">
@@ -1977,7 +2019,7 @@
                                         </div>
                                         <div class="product__info">
                                             <p class="product__description">Захист від сонця для обличчя</p>
-                                            <p class="product__name">Сонцезахисний SPF 50 PA++++ 60 мл</p>                                        
+                                            <p class="product__name">Сонцезахисний SPF 50 PA++++ 60 мл</p>
                                         </div>
                                     </a>
                                     <div class="review-bottom">
@@ -1991,7 +2033,7 @@
                                         <p class="description">Сонцезахисний</p>
                                     </div>
                                     <p class="author">Анонім</p>
-                                </div>            
+                                </div>
                             </div>
 
                             <div class="swiper-slide">
@@ -2004,7 +2046,7 @@
                                             <p class="product__description">Захист від сонця для обличчя</p>
                                             <p class="product__name">Сонцезахисний крем Purito
                                                 Daily Soft Touch Sunscreen
-                                                SPF 50 PA++++ 60 мл Soft Touch Sunscreen</p>                                        
+                                                SPF 50 PA++++ 60 мл Soft Touch Sunscreen</p>
                                         </div>
                                     </a>
                                     <div class="review-bottom">
@@ -2015,12 +2057,16 @@
                                             <div class="product__star yellow"></div>
                                             <div class="product__star gray"></div>
                                         </div>
-                                        <p class="description">Сонцезахисний крем Purito Daily Soft Touch Sunscreen приємний у використанні — легка текстура
-                                            швидко вбирається, не залишає жирної плівки та добре підходить під макіяж.Сонцезахисний крем Purito Daily Soft Touch Sunscreen приємний у використанні — легка текстура
-                                            швидко вбирається, не залишає жирної плівки та добре підходить під макіяж.</p>
+                                        <p class="description">Сонцезахисний крем Purito Daily Soft Touch Sunscreen
+                                            приємний у використанні — легка текстура
+                                            швидко вбирається, не залишає жирної плівки та добре підходить під
+                                            макіяж.Сонцезахисний крем Purito Daily Soft Touch Sunscreen приємний у
+                                            використанні — легка текстура
+                                            швидко вбирається, не залишає жирної плівки та добре підходить під макіяж.
+                                        </p>
                                     </div>
                                     <p class="author">Анонім</p>
-                                </div>            
+                                </div>
                             </div>
 
                             <div class="swiper-slide">
@@ -2033,7 +2079,7 @@
                                             <p class="product__description">Захист від сонця для обличчя</p>
                                             <p class="product__name">Сонцезахисний крем Purito
                                                 Daily Soft Touch Sunscreen
-                                                SPF 50 PA++++ 60 мл Soft Touch Sunscreen</p>                                        
+                                                SPF 50 PA++++ 60 мл Soft Touch Sunscreen</p>
                                         </div>
                                     </a>
                                     <div class="review-bottom">
@@ -2044,12 +2090,16 @@
                                             <div class="product__star yellow"></div>
                                             <div class="product__star gray"></div>
                                         </div>
-                                        <p class="description">Сонцезахисний крем Purito Daily Soft Touch Sunscreen приємний у використанні — легка текстура
-                                            швидко вбирається, не залишає жирної плівки та добре підходить під макіяж.Сонцезахисний крем Purito Daily Soft Touch Sunscreen приємний у використанні — легка текстура
-                                            швидко вбирається, не залишає жирної плівки та добре підходить під макіяж.</p>
+                                        <p class="description">Сонцезахисний крем Purito Daily Soft Touch Sunscreen
+                                            приємний у використанні — легка текстура
+                                            швидко вбирається, не залишає жирної плівки та добре підходить під
+                                            макіяж.Сонцезахисний крем Purito Daily Soft Touch Sunscreen приємний у
+                                            використанні — легка текстура
+                                            швидко вбирається, не залишає жирної плівки та добре підходить під макіяж.
+                                        </p>
                                     </div>
                                     <p class="author">Анонім</p>
-                                </div>            
+                                </div>
                             </div>
 
                         </div>
@@ -2058,15 +2108,15 @@
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next"></div>
                         </div>
-            
+
                     </div>
                 </div>
             </div>
 
-             <!-- posts -->
+            <!-- posts -->
             <div class="posts-slider-block margin-bottom container">
                 <a href="" class="title"><span>Блог</span></a>
-            
+
                 <div class="slider-container margin-bottom_40">
                     <div class="posts-slider swiper overflow">
                         <div class="swiper-wrapper">
@@ -2081,14 +2131,15 @@
                                             <h4>Як правильно </h4>
                                             <svg class="icon" width="24" height="29" viewBox="0 0 24 29" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7 21.6709L17 11.6709M17 11.6709H7M17 11.6709V21.6709" stroke="#1B1B1D"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M7 21.6709L17 11.6709M17 11.6709H7M17 11.6709V21.6709"
+                                                    stroke="#1B1B1D" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
                                             </svg>
-            
+
                                         </a>
                                         <p class="post-item-description">
                                             Від нашої улюбленої косметики </p>
-            
+
                                         <div class="labels-row">
                                             <p class="label">Догляд</p>
                                             <p class="label">Волосся</p>
@@ -2096,7 +2147,7 @@
                                     </div>
                                 </div>
                             </div>
-            
+
                             <div class="swiper-slide">
                                 <div class="post-item">
                                     <a href="" class="post-item-img">
@@ -2105,25 +2156,30 @@
                                     <div class="post-item-content">
                                         <p class="post-item-data">Автор • 24.04.2025</p>
                                         <a href="" class="post-item-title">
-                                            <h4>Весняне оновлення: як вибрати шампунь для фарбованого волосся після зимового догляду
+                                            <h4>Весняне оновлення: як вибрати шампунь для фарбованого волосся після
+                                                зимового догляду
                                             </h4>
                                             <svg class="icon" width="24" height="29" viewBox="0 0 24 29" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7 21.6709L17 11.6709M17 11.6709H7M17 11.6709V21.6709" stroke="#1B1B1D"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M7 21.6709L17 11.6709M17 11.6709H7M17 11.6709V21.6709"
+                                                    stroke="#1B1B1D" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
                                             </svg>
-            
+
                                         </a>
                                         <p class="post-item-description">
-                                            Від нашої улюбленої косметики залежить якість волосся і шкіри, насиченість і стійкість
+                                            Від нашої улюбленої косметики залежить якість волосся і шкіри, насиченість і
+                                            стійкість
                                             макіяжу і,
-                                            звичайно ж, наш настрій. Щоб улюблені продукти служили довго і зберігали свої найкращі
+                                            звичайно ж, наш настрій. Щоб улюблені продукти служили довго і зберігали
+                                            свої найкращі
                                             властивості,
-                                            важливо знати правила їх зберігання. Експерти Beauty Systema готові поділитися з тобою
+                                            важливо знати правила їх зберігання. Експерти Beauty Systema готові
+                                            поділитися з тобою
                                             секретами
                                             довговічності косметики та доглядових засобів. Запам’ятовуй та зберігай!
                                         </p>
-            
+
                                         <div class="labels-row">
                                             <p class="label">Догляд</p>
                                             <p class="label">Волосся</p>
@@ -2131,7 +2187,7 @@
                                     </div>
                                 </div>
                             </div>
-            
+
                             <div class="swiper-slide">
                                 <div class="post-item">
                                     <a href="" class="post-item-img">
@@ -2143,21 +2199,25 @@
                                             <h4>Як підготувати шкіру до використання кислот у догляді</h4>
                                             <svg class="icon" width="24" height="29" viewBox="0 0 24 29" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7 21.6709L17 11.6709M17 11.6709H7M17 11.6709V21.6709" stroke="#1B1B1D"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M7 21.6709L17 11.6709M17 11.6709H7M17 11.6709V21.6709"
+                                                    stroke="#1B1B1D" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
                                             </svg>
-            
+
                                         </a>
                                         <p class="post-item-description">
-                                            Від нашої улюбленої косметики залежить якість волосся і шкіри, насиченість і стійкість
+                                            Від нашої улюбленої косметики залежить якість волосся і шкіри, насиченість і
+                                            стійкість
                                             макіяжу і,
-                                            звичайно ж, наш настрій. Щоб улюблені продукти служили довго і зберігали свої найкращі
+                                            звичайно ж, наш настрій. Щоб улюблені продукти служили довго і зберігали
+                                            свої найкращі
                                             властивості,
-                                            важливо знати правила їх зберігання. Експерти Beauty Systema готові поділитися з тобою
+                                            важливо знати правила їх зберігання. Експерти Beauty Systema готові
+                                            поділитися з тобою
                                             секретами
                                             довговічності косметики та доглядових засобів. Запам’ятовуй та зберігай!
                                         </p>
-            
+
                                         <div class="labels-row">
                                             <p class="label">Догляд</p>
                                             <p class="label">Волосся</p>
@@ -2177,14 +2237,15 @@
                                             <h4>Як правильно </h4>
                                             <svg class="icon" width="24" height="29" viewBox="0 0 24 29" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7 21.6709L17 11.6709M17 11.6709H7M17 11.6709V21.6709" stroke="#1B1B1D"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M7 21.6709L17 11.6709M17 11.6709H7M17 11.6709V21.6709"
+                                                    stroke="#1B1B1D" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
                                             </svg>
-            
+
                                         </a>
                                         <p class="post-item-description">
                                             Від нашої улюбленої косметики </p>
-            
+
                                         <div class="labels-row">
                                             <p class="label">Догляд</p>
                                             <p class="label">Волосся</p>
@@ -2194,20 +2255,20 @@
                             </div>
 
                         </div>
-                        
+
                         <div class="swiper-buttons">
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next"></div>
                         </div>
-            
+
                     </div>
                 </div>
 
                 <a class="bs-btn bs-btn-gray" href="#">
-                    <span>                        
-                        <span class="icon icon-Property-1Arrow"></span>     
-                        <span>Всі статі</span>           
+                    <span>
+                        <span class="icon icon-Property-1Arrow"></span>
+                        <span>Всі статі</span>
                     </span>
                 </a>
             </div>
@@ -2225,11 +2286,13 @@
                             </div>
                         </div>
                         <div class="accordion__content" style="display: none;">
-                            <p>При оформленні замовлення повідомлення про реквізити оплати, електронний чек та статус відправки ви отримаєте в бізнес-чат вайберу, тож будь ласка, перевірте цей месенджер.</p>
+                            <p>При оформленні замовлення повідомлення про реквізити оплати, електронний чек та статус
+                                відправки ви отримаєте в бізнес-чат вайберу, тож будь ласка, перевірте цей месенджер.
+                            </p>
                         </div>
                     </div>
 
-                     <div class="accordion__item">
+                    <div class="accordion__item">
                         <div class="accordion__title">
                             <div class="accordion__title__content">
                                 <p class="accordion__title-text">Як отримати допомогу з підбору засобів? 💬</p>
@@ -2237,23 +2300,28 @@
                             </div>
                         </div>
                         <div class="accordion__content" style="display: none;">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum et aliquid reiciendis, quae nulla tempora. Quaerat nobis nesciunt rerum voluptatem molestias distinctio labore alias eos quos, cumque doloribus, porro est!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum et aliquid reiciendis,
+                                quae nulla tempora. Quaerat nobis nesciunt rerum voluptatem molestias distinctio labore
+                                alias eos quos, cumque doloribus, porro est!</p>
                         </div>
                     </div>
 
                     <div class="accordion__item">
                         <div class="accordion__title">
                             <div class="accordion__title__content">
-                                <p class="accordion__title-text">Які є варіанти доставки? Чи доставляєте закордон? 🚛</p>
+                                <p class="accordion__title-text">Які є варіанти доставки? Чи доставляєте закордон? 🚛
+                                </p>
                                 <p class="accordion__title-icon"></p>
                             </div>
                         </div>
                         <div class="accordion__content" style="display: none;">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum et aliquid reiciendis, quae nulla tempora. Quaerat nobis nesciunt rerum voluptatem molestias distinctio labore alias eos quos, cumque doloribus, porro est!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum et aliquid reiciendis,
+                                quae nulla tempora. Quaerat nobis nesciunt rerum voluptatem molestias distinctio labore
+                                alias eos quos, cumque doloribus, porro est!</p>
                         </div>
                     </div>
 
-                     <div class="accordion__item">
+                    <div class="accordion__item">
                         <div class="accordion__title">
                             <div class="accordion__title__content">
                                 <p class="accordion__title-text">Не знайшла відповіді. Як з вами зв'язатися? 📞</p>
@@ -2261,90 +2329,49 @@
                             </div>
                         </div>
                         <div class="accordion__content" style="display: none;">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum et aliquid reiciendis, quae nulla tempora. Quaerat nobis nesciunt rerum voluptatem molestias distinctio labore alias eos quos, cumque doloribus, porro est!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum et aliquid reiciendis,
+                                quae nulla tempora. Quaerat nobis nesciunt rerum voluptatem molestias distinctio labore
+                                alias eos quos, cumque doloribus, porro est!</p>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-        
+
         </main>
         <footer class="footer">
             <div class="footer-main container">
                 <div class="footer-main__side left">
                     <a class="footer-logo" href="index.html">
-                        <img src="./images/logo.png" alt="logo" width="240" height="27">
+                        <img src="./images/logo.png" class="logo" alt="logo" width="240" height="27">
                     </a>
                     <ul class="social-list">
-                            <li>
-                                <a href="https://t.me/beauty_systema2024">
-                                    <svg class="contacts-icon" width="22" height="20" viewBox="0 0 22 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M10.9847 13.3746L14.2267 17.0606C15.4267 18.4256 16.0277 19.1086 16.6567 18.9416C17.2847 18.7756 17.5007 17.8776 17.9317 16.0806L20.3217 6.11259C20.9867 3.34459 21.3187 1.96159 20.5807 1.27859C19.8427 0.595592 18.5637 1.10359 16.0057 2.11859L4.13974 6.83159C2.09374 7.64459 1.07074 8.05059 1.00574 8.74859C0.998086 8.81972 0.998086 8.89146 1.00574 8.96259C1.06874 9.66159 2.08974 10.0706 4.13374 10.8896C5.05874 11.2606 5.52174 11.4466 5.85374 11.8016C5.89107 11.8416 5.92707 11.8829 5.96174 11.9256C6.26774 12.3056 6.39774 12.8056 6.65874 13.8016L7.14774 15.6686C7.40074 16.6386 7.52774 17.1246 7.86074 17.1906C8.19374 17.2566 8.48274 16.8546 9.06174 16.0496L10.9847 13.3746ZM10.9847 13.3746L10.6677 13.0446C10.3057 12.6666 10.1247 12.4786 10.1247 12.2446C10.1247 12.0106 10.3047 11.8216 10.6677 11.4446L14.2407 7.72059"
-                                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>                                
-                                    <span>@beauty_systema2024</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/beauty_systema/">
-                                    <svg class="contacts-icon" width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_3040_57767)">
-                                            <path
-                                                d="M10 2.76709C12.6719 2.76709 12.9883 2.77881 14.0391 2.82568C15.0156 2.86865 15.543 3.03272 15.8945 3.16943C16.3594 3.34912 16.6953 3.56787 17.043 3.91553C17.3945 4.26709 17.6094 4.59912 17.7891 5.06397C17.9258 5.41553 18.0898 5.94678 18.1328 6.91943C18.1797 7.97412 18.1914 8.29053 18.1914 10.9585C18.1914 13.6304 18.1797 13.9468 18.1328 14.9976C18.0898 15.9741 17.9258 16.5015 17.7891 16.853C17.6094 17.3179 17.3906 17.6538 17.043 18.0015C16.6914 18.353 16.3594 18.5679 15.8945 18.7476C15.543 18.8843 15.0117 19.0483 14.0391 19.0913C12.9844 19.1382 12.668 19.1499 10 19.1499C7.32813 19.1499 7.01172 19.1382 5.96094 19.0913C4.98438 19.0483 4.45703 18.8843 4.10547 18.7476C3.64063 18.5679 3.30469 18.3491 2.95703 18.0015C2.60547 17.6499 2.39063 17.3179 2.21094 16.853C2.07422 16.5015 1.91016 15.9702 1.86719 14.9976C1.82031 13.9429 1.80859 13.6265 1.80859 10.9585C1.80859 8.28662 1.82031 7.97021 1.86719 6.91943C1.91016 5.94287 2.07422 5.41553 2.21094 5.06397C2.39063 4.59912 2.60938 4.26318 2.95703 3.91553C3.30859 3.56397 3.64063 3.34912 4.10547 3.16943C4.45703 3.03272 4.98828 2.86865 5.96094 2.82568C7.01172 2.77881 7.32813 2.76709 10 2.76709ZM10 0.966309C7.28516 0.966309 6.94531 0.978027 5.87891 1.0249C4.81641 1.07178 4.08594 1.24365 3.45313 1.48975C2.79297 1.74756 2.23438 2.0874 1.67969 2.646C1.12109 3.20068 0.78125 3.75928 0.523438 4.41553C0.277344 5.05225 0.105469 5.77881 0.0585938 6.84131C0.0117188 7.91162 0 8.25147 0 10.9663C0 13.6812 0.0117188 14.021 0.0585938 15.0874C0.105469 16.1499 0.277344 16.8804 0.523438 17.5132C0.78125 18.1733 1.12109 18.7319 1.67969 19.2866C2.23438 19.8413 2.79297 20.1851 3.44922 20.439C4.08594 20.6851 4.8125 20.8569 5.875 20.9038C6.94141 20.9507 7.28125 20.9624 9.99609 20.9624C12.7109 20.9624 13.0508 20.9507 14.1172 20.9038C15.1797 20.8569 15.9102 20.6851 16.543 20.439C17.1992 20.1851 17.7578 19.8413 18.3125 19.2866C18.8672 18.7319 19.2109 18.1733 19.4648 17.5171C19.7109 16.8804 19.8828 16.1538 19.9297 15.0913C19.9766 14.0249 19.9883 13.6851 19.9883 10.9702C19.9883 8.25537 19.9766 7.91553 19.9297 6.84912C19.8828 5.78662 19.7109 5.05615 19.4648 4.42334C19.2188 3.75928 18.8789 3.20068 18.3203 2.646C17.7656 2.09131 17.207 1.74756 16.5508 1.49365C15.9141 1.24756 15.1875 1.07568 14.125 1.02881C13.0547 0.978027 12.7148 0.966309 10 0.966309Z"
-                                                fill="#1B1B1D" />
-                                            <path
-                                                d="M10 5.82959C7.16406 5.82959 4.86328 8.13037 4.86328 10.9663C4.86328 13.8022 7.16406 16.103 10 16.103C12.8359 16.103 15.1367 13.8022 15.1367 10.9663C15.1367 8.13037 12.8359 5.82959 10 5.82959ZM10 14.2983C8.16016 14.2983 6.66797 12.8062 6.66797 10.9663C6.66797 9.12647 8.16016 7.63428 10 7.63428C11.8398 7.63428 13.332 9.12647 13.332 10.9663C13.332 12.8062 11.8398 14.2983 10 14.2983Z"
-                                                fill="#1B1B1D" />
-                                            <path
-                                                d="M16.5391 5.62647C16.5391 6.29053 16 6.82569 15.3398 6.82569C14.6758 6.82569 14.1406 6.28662 14.1406 5.62647C14.1406 4.9624 14.6797 4.42725 15.3398 4.42725C16 4.42725 16.5391 4.96631 16.5391 5.62647Z"
-                                                fill="#1B1B1D" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_3040_57767">
-                                                <rect width="20" height="20" fill="white" transform="translate(0 0.966309)" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                
-                                    <span>@beauty_systema</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.facebook.com/Korea.skin.ua">
-                                    <svg class="contacts-icon" width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M17.0636 3.89265C15.6653 2.49495 13.8839 1.54327 11.9447 1.15798C10.0055 0.772679 7.99558 0.971063 6.16914 1.72804C4.34269 2.48502 2.78173 3.76659 1.68363 5.41071C0.585537 7.05482 -0.000370128 8.98763 1.7542e-07 10.9647C-1.60396e-07 13.6164 1.05304 16.1596 2.92762 18.0351C4.80219 19.9107 7.34483 20.965 9.99655 20.9663C11.3087 20.9664 12.6082 20.7099 13.822 20.2113C15.0316 19.7004 16.132 18.9622 17.0636 18.0368C17.9924 17.1081 18.7292 16.0056 19.2319 14.7922C19.7346 13.5787 19.9933 12.2782 19.9933 10.9647C19.9933 9.65129 19.7346 8.35072 19.2319 7.13728C18.7292 5.92384 17.9924 4.82131 17.0636 3.89265ZM16.3589 17.3221C14.9194 18.7678 13.0305 19.6803 11.0032 19.9093V13.3053H12.8958C13.1628 13.3053 13.4189 13.1992 13.6077 13.0105C13.7965 12.8217 13.9025 12.5656 13.9025 12.2986C13.9025 12.0316 13.7965 11.7756 13.6077 11.5868C13.4189 11.398 13.1628 11.2919 12.8958 11.2919H11.0032V8.53355C11.0032 8.26655 11.1093 8.01049 11.2981 7.8217C11.4869 7.63291 11.743 7.52685 12.0099 7.52685H13.218C13.485 7.52685 13.741 7.42078 13.9298 7.23199C14.1186 7.0432 14.2247 6.78714 14.2247 6.52014C14.2247 6.25315 14.1186 5.99709 13.9298 5.8083C13.741 5.61951 13.485 5.51344 13.218 5.51344H11.5066C10.8391 5.51344 10.199 5.7786 9.72698 6.25058C9.255 6.72257 8.98984 7.36271 8.98984 8.0302V11.2919H7.10731C6.84032 11.2919 6.58426 11.398 6.39547 11.5868C6.20667 11.7756 6.10061 12.0316 6.10061 12.2986C6.10061 12.5656 6.20667 12.8217 6.39547 13.0105C6.58426 13.1992 6.84032 13.3053 7.10731 13.3053H8.98984V19.9093C7.12029 19.696 5.36499 18.9007 3.97189 17.6358C2.57879 16.3709 1.61829 14.7003 1.22606 12.8599C0.833838 11.0196 1.02971 9.10252 1.78602 7.37952C2.54233 5.65652 3.82084 4.21468 5.44097 3.25765C7.0611 2.30062 8.94096 1.87677 10.815 2.04598C12.6891 2.21519 14.4626 2.9689 15.8851 4.20065C17.3076 5.4324 18.3072 7.07993 18.7426 8.91053C19.1781 10.7411 19.0274 12.6623 18.3119 14.4026C17.8553 15.4926 17.1921 16.484 16.3589 17.3221Z"
-                                            fill="black" />
-                                    </svg>
-                            
-                                    <span>@Korea.skin.ua</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="tel:+38073938393">
-                                    <svg class="contacts-icon" width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_3040_57773)">
-                                            <path
-                                                d="M10.833 1.8C10.833 1.57898 10.9208 1.36702 11.0771 1.21074C11.2334 1.05446 11.4453 0.966663 11.6663 0.966663C13.8757 0.969089 15.9939 1.84784 17.5562 3.41012C19.1185 4.9724 19.9972 7.0906 19.9997 9.3C19.9997 9.52101 19.9119 9.73297 19.7556 9.88925C19.5993 10.0455 19.3873 10.1333 19.1663 10.1333C18.9453 10.1333 18.7334 10.0455 18.5771 9.88925C18.4208 9.73297 18.333 9.52101 18.333 9.3C18.331 7.5325 17.628 5.83796 16.3782 4.58814C15.1284 3.33833 13.4338 2.63531 11.6663 2.63333C11.4453 2.63333 11.2334 2.54553 11.0771 2.38925C10.9208 2.23297 10.833 2.02101 10.833 1.8ZM11.6663 5.96666C12.5504 5.96666 13.3982 6.31785 14.0234 6.94297C14.6485 7.56809 14.9997 8.41594 14.9997 9.3C14.9997 9.52101 15.0875 9.73297 15.2437 9.88925C15.4 10.0455 15.612 10.1333 15.833 10.1333C16.054 10.1333 16.266 10.0455 16.4223 9.88925C16.5785 9.73297 16.6663 9.52101 16.6663 9.3C16.665 7.97432 16.1378 6.70332 15.2004 5.76592C14.263 4.82853 12.992 4.30132 11.6663 4.3C11.4453 4.3 11.2334 4.38779 11.0771 4.54407C10.9208 4.70035 10.833 4.91232 10.833 5.13333C10.833 5.35434 10.9208 5.5663 11.0771 5.72259C11.2334 5.87887 11.4453 5.96666 11.6663 5.96666ZM19.2438 14.9158C19.7268 15.4001 19.9979 16.0561 19.9979 16.74C19.9979 17.4239 19.7268 18.0799 19.2438 18.5642L18.4855 19.4383C11.6605 25.9725 -4.94784 9.36833 1.4855 2.52166L2.44383 1.68833C2.92864 1.21889 3.57877 0.959204 4.25358 0.965442C4.92839 0.97168 5.57362 1.24334 6.04966 1.72166C6.0755 1.7475 7.61966 3.75333 7.61966 3.75333C8.07785 4.23469 8.33292 4.8741 8.33183 5.53867C8.33074 6.20323 8.07359 6.84181 7.61383 7.32166L6.64883 8.535C7.18287 9.83259 7.96805 11.0119 8.95925 12.0051C9.95046 12.9983 11.1281 13.7858 12.4247 14.3225L13.6455 13.3517C14.1254 12.8923 14.7639 12.6354 15.4282 12.6345C16.0926 12.6335 16.7318 12.8886 17.213 13.3467C17.213 13.3467 19.218 14.89 19.2438 14.9158ZM18.0972 16.1275C18.0972 16.1275 16.103 14.5933 16.0772 14.5675C15.9055 14.3973 15.6735 14.3018 15.4317 14.3018C15.19 14.3018 14.958 14.3973 14.7863 14.5675C14.7638 14.5908 13.083 15.93 13.083 15.93C12.9697 16.0202 12.8349 16.0793 12.6919 16.1015C12.5488 16.1237 12.4024 16.1082 12.2672 16.0567C10.5875 15.4313 9.06194 14.4523 7.79369 13.1859C6.52544 11.9195 5.54416 10.3954 4.91633 8.71666C4.86066 8.57954 4.84251 8.43007 4.86375 8.28361C4.88499 8.13715 4.94484 7.99899 5.03716 7.88333C5.03716 7.88333 6.37633 6.20166 6.39883 6.18C6.56905 6.00832 6.66456 5.77634 6.66456 5.53458C6.66456 5.29282 6.56905 5.06084 6.39883 4.88916C6.373 4.86416 4.83883 2.86833 4.83883 2.86833C4.66458 2.71209 4.43717 2.62841 4.2032 2.63445C3.96924 2.64049 3.74645 2.7358 3.5805 2.90083L2.62216 3.73416C-2.0795 9.3875 12.313 22.9817 17.2672 18.3L18.0263 17.425C18.2042 17.2602 18.3111 17.0327 18.3243 16.7906C18.3375 16.5484 18.2561 16.3107 18.0972 16.1275Z"
-                                                fill="#1B1B1D" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_3040_57773">
-                                                <rect width="20" height="20" fill="white" transform="translate(0 0.966309)" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>                                
-                                
-                                    <span>+380731938393</span>
-                                </a>
-                            </li>
-                        </ul>
+                        <li>
+                            <a href="https://t.me/beauty_systema2024">
+                                <span class="icon icon-tg"></span>
+                                <span>@beauty_systema2024</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/beauty_systema/">
+                                <span class="icon icon-Property-1Instagram"></span>
+                                <span>@beauty_systema</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/Korea.skin.ua">
+                                <span class="icon icon-fb"></span>
+                                <span>@Korea.skin.ua</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+38073938393">
+                                <span class="icon icon-phone"></span>
+                                <span>+380731938393</span>
+                            </a>
+                        </li>
+                    </ul>
                     <div class="footer-download-app">
                         <a href="#">
                             <img src="./images/appstore.jpg" alt="appstore" width="180" height="52">
@@ -2386,7 +2413,7 @@
                                 </div>
                             </div>
                             <div class="accordion__content">
-                                
+
                                 <ul>
                                     <li><a href="#">Доглядова косметика для обличчя</a></li>
                                     <li><a href="#">Засоби для догляду за волоссям</a></li>
@@ -2404,7 +2431,7 @@
                             </div>
                         </div>
                         <div class="accordion__item">
-                    
+
                             <div class="accordion__title">
                                 <div class="accordion__title__content">
                                     <p class="accordion__title-text">Мій акаунт</p>
@@ -2419,8 +2446,8 @@
                             </div>
                         </div>
                     </div>
-                </div>                
-               
+                </div>
+
             </div>
             <div class="footer-line">
                 <div class="footer-line-container container">

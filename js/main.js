@@ -205,7 +205,6 @@ $(function () {
 
 const swiperProducts = new Swiper('.products-slider', {
   loop: true,
-  spaceBetween: 32,
   slidesPerView: 'auto',
    navigation: {
     nextEl: '.swiper-button-next',
@@ -213,7 +212,17 @@ const swiperProducts = new Swiper('.products-slider', {
   },
   pagination: {
     el: '.swiper-pagination',
-  }
+  },
+
+  breakpoints: {
+    0: {
+      spaceBetween: 8,
+    },
+    768: {
+      spaceBetween: 32,
+    },
+  },
+
 });
 
 const swiperReviews = new Swiper('.reviews-slider', {
@@ -231,7 +240,6 @@ const swiperReviews = new Swiper('.reviews-slider', {
 
 const swiperPosts = new Swiper('.posts-slider', {
   loop: true,
-  spaceBetween: 32,
   slidesPerView: 'auto',
    navigation: {
     nextEl: '.swiper-button-next',
@@ -239,7 +247,15 @@ const swiperPosts = new Swiper('.posts-slider', {
   },
   pagination: {
     el: '.swiper-pagination',
-  }
+  },
+  breakpoints: {
+    0: {
+      spaceBetween: 16,
+    },
+    768: {
+      spaceBetween: 32,
+    },
+  },
 });
 
 // sliders end

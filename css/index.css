@@ -19,6 +19,7 @@
 
 .brands-block .bs-btn {
     width: max-content;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -37,12 +38,12 @@
 
 .brands-list::-webkit-scrollbar {
     /* display: none; */
-	height: 4px;
+    height: 4px;
 }
 
 .brands-list::-webkit-scrollbar-thumb {
-	background: #C8C8C8;
-	border-radius: 4px;
+    background: #C8C8C8;
+    border-radius: 4px;
 }
 
 @media screen and (max-width: 768px) {
@@ -66,6 +67,7 @@
 .brands-list li img {
     width: 100%;
     height: 100%;
+    aspect-ratio: 150/150;
     object-fit: cover;
 }
 
@@ -100,12 +102,16 @@
     max-width: 62%;
 }
 
-.loyalty-banner {
-    margin-bottom: 40px;
+.loyalty-banner .title_30 {
+    margin-bottom: 8px;
 }
 
 .loyalty-banner>p:last-of-type {
     margin-bottom: 24px;
+}
+
+.loyalty-banner .bs-btn {
+    margin-bottom: 40px;
 }
 
 .card-slider .swiper-slide {
@@ -124,6 +130,7 @@
 .card-slider .card-img {
     width: 100%;
     height: 100%;
+    aspect-ratio: 320/238;
     padding: 0;
 }
 
@@ -158,4 +165,141 @@
 
 .card p {
     line-height: 26px;
+}
+
+@media (max-width: 768px) {
+    .slider-banner {
+        margin-bottom: 16px;
+    }
+
+    .brands-list {
+        margin-bottom: 10px;
+    }
+
+    .brands-list li {
+        scroll-snap-align: start;
+        flex: 0 0 auto;
+    }
+
+    .brands-list li a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brands-list li {
+        width: 80px;
+        height: 80px;        
+    }
+
+    .insta-block__content {
+       flex-direction: column;
+       align-items: flex-start;
+        gap: 40px;
+    }
+
+    .insta-block__content .title_30 {
+        width: max-content;
+        max-width: 100%;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: normal;
+        padding-bottom: 8px;
+        text-transform: none;
+        border-bottom: 1px solid #1B1B1D;   
+    }
+
+    .insta-block__content .col {
+        gap: 16px;
+    }
+
+    .insta-block__content .col p {
+        margin-bottom: 0;
+    }
+
+    .insta-block__content .col .bs-btn {
+        width: 100%;
+    }
+
+    .insta-block__content .bs-btn .icon {
+        color: var(--accent);
+    }
+
+    .insta-block__slider {
+        max-width: 100%;
+    }
+
+    .card-img.mobile-only {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .card-img img {
+        width: 100%;
+        aspect-ratio: 358/238;
+        object-fit: cover;
+        border-radius: 11px;
+    }
+
+    .loyalty-banner>p:last-of-type {
+        margin-bottom: 24px;
+    }
+
+    .loyalty-banner .bs-btn {
+        margin-bottom: 40px;
+    }
+
+    .card-slider .swiper-slide {
+        width: 100%;
+        max-width: 320px;
+        border-radius: 8px;
+    }
+
+    .card-slider .card {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 16px 23px;
+    }
+
+    .card-slider .card-img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 320/238;
+        padding: 0;
+    }
+
+    .card-slider .card-img>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .card-container {
+        height: 100%;
+    }
+
+    .card .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        background: #FFE7F9;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+    }
+
+    .card h3 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        text-transform: uppercase;
+    }
+
+    .card p {
+        line-height: 26px;
+    }
 }

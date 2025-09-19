@@ -258,6 +258,26 @@ const swiperPosts = new Swiper('.posts-slider', {
   },
 });
 
+const swiperGifts = new Swiper('.gifts-slider', {
+  loop: true,
+  slidesPerView: 'auto',
+  //  navigation: {
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+  // },
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  breakpoints: {
+    0: {
+      spaceBetween: 16,
+    },
+    768: {
+      spaceBetween: 32,
+    },
+  },
+});
+
 // sliders end
 
 // accordion start

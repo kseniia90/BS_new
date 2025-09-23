@@ -225,6 +225,16 @@ const swiperProducts = new Swiper('.products-slider', {
 
 });
 
+const swiperInsta = new Swiper('.insta-slider', {
+  loop: true,
+  spaceBetween: 8,
+  slidesPerView: 'auto',
+  spaceBetween: 10,
+  pagination: {
+    clickable: true,
+  },
+});
+
 const swiperReviews = new Swiper('.reviews-slider', {
   loop: true,
   spaceBetween: 32,
@@ -306,3 +316,12 @@ const swiperGifts = new Swiper('.gifts-slider', {
   });
 
 // accordion end
+
+$('textarea').keyup(function() {
+    
+  var characterCount = $(this).val().length,
+      current = $('#current');
+    
+  current.text(characterCount);
+
+});

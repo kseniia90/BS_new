@@ -1,5 +1,4 @@
 if (document.querySelector(".product-page") !== null) {
- 
   const productCarousel = new Carousel(
     document.getElementById("productCarousel"),
     {
@@ -63,22 +62,40 @@ if (document.querySelector(".product-page") !== null) {
       },
     },
   });
-};
+}
+
+$(".product-page__accordion .accordion__title").on("click", function (e) {
+  e.preventDefault();
+  var $this = $(this);
+
+  if (!$this.hasClass("accordion-active")) {
+    $(".product-page__accordion .accordion__content").slideUp(400);
+    $(".product-page__accordion .accordion__title").removeClass("accordion-active"    );
+    $(".product-page__accordion .accordion__arrow").removeClass("active");
+  }
+
+  $this.toggleClass("accordion-active");
+  $this.next().slideToggle();
+});
 
 
- $(".product-page__accordion .accordion__title").on("click", function (e) {
-    e.preventDefault();
-    var $this = $(this);
 
-    if (!$this.hasClass("accordion-active")) {
-      $(".product-page__accordion .accordion__content").slideUp(400);
-      $(".product-page__accordion .accordion__title").removeClass("accordion-active");
-      $(".product-page__accordion .accordion__item").removeClass("border");
-      $(".product-page__accordion .accordion__arrow").removeClass("minus");
-    }
+// File input
 
-    $this.toggleClass("accordion-active");
-    $this.parent().toggleClass("border");
-    $this.next().slideToggle();
-    $(".accordion__arrow", this).toggleClass("minus");
-  });
+function validateFiles(event) {
+  const input = event.target;
+  const fileList = document.getElementById('fileList');
+
+  [...input.files].forEach(file => {
+        const li = document.createElement('li');
+        li.textContent = file.name;
+        fileList.appendChild(li);
+      });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const fileInput = document.getElementById('fileInput');
+  if (fileInput) {
+    fileInput.addEventListener('change', validateFiles);
+  }
+});

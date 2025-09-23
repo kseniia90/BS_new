@@ -467,26 +467,18 @@
 /* fonts end */
 
 :root {
-	/* --light: #edf1f2; */
 	--accent: #4B6D74;
-	/* --accent-hover: #668b90; */
 	--accent-yellow: #E1F56F;
 	--accent-dark: #213235;
 	--text-color: #1B1B1D;
 	--text-gray: #808080;
-	--text-light: #D0D5DD;
+	--text-light: #555D6D;
 	--bg-light: #ECECEC;
 	--star-yellow: url('data:image/svg+xml,<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.99998 0.170898L7.41638 4.7545H12L8.29179 7.58732L9.70819 12.1709L5.99998 9.33808L2.29179 12.1709L3.70819 7.58732L0 4.7545H4.58358L5.99998 0.170898Z" fill="%23FFD562"/></svg>');
 	--star-gray: url('data:image/svg+xml,<svg width="43" height="41" viewBox="0 0 43 41" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.4999 0.189941L26.4573 15.4686H42.5L29.5213 24.9114L34.4787 40.1899L21.4999 30.7472L8.52127 40.1899L13.4787 24.9114L0.5 15.4686H16.5425L21.4999 0.189941Z" fill="%23F4F5F7"/></svg>');
+	--star-black: url('data:image/svg+xml,<svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.3334 0.115234L16.3498 8.90047H26.1112L18.2141 14.33L21.2305 23.1152L13.3334 17.6857L5.43633 23.1152L8.45274 14.33L0.555664 8.90047H10.317L13.3334 0.115234Z" fill="%231B1B1D"/></svg>');
 	--prev-btn: url('data:image/svg+xml,<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 12.6709H4M4 12.6709L10 6.6709M4 12.6709L10 18.6709" stroke="%231B1B1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
 	--next-btn: url('data:image/svg+xml,<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.6709H20M20 12.6709L14 6.6709M20 12.6709L14 18.6709" stroke="%231B1B1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-	/* --btn: linear-gradient(90deg, rgba(62, 109, 116, 1) 34%, rgba(229, 244, 114, 1) 100%); */
-	/* --progress: linear-gradient(90deg, rgba(229, 244, 114, 1) 34%, rgba(62, 109, 116, 1) 100%); */
-	/* --primary: #4B6D74; */
-	/* --text: #333; */
-	/* --background: #fefefe; */
-	/* --light-gray: #eaeaea; */
-	/* --hover: #dce4e6; */
 }
 
 /* normalize start */
@@ -745,6 +737,10 @@ body.lock {
 	flex-direction: column;
 }
 
+.wrapper:has(.product-page) {
+	overflow: initial;
+}
+
 .wl_body .wrapper,
 .tax-promotion .wrapper,
 .tax-pa_brand .wrapper,
@@ -779,6 +775,10 @@ main {
 	margin-bottom: 40px;
 }
 
+.margin-bottom_24 {
+	margin-bottom: 24px;
+}
+
 @media (max-width: 768px) {
 	.margin-bottom {
 		margin-bottom: 64px;
@@ -786,6 +786,10 @@ main {
 
 	.margin-bottom_40 {
 		margin-bottom: 32px;
+	}
+
+	.margin-bottom_24 {
+		margin-bottom: 16px;
 	}
 }
 
@@ -810,6 +814,21 @@ main {
 	text-transform: uppercase;
 }
 
+.title_20 {
+	width: max-content;
+	max-width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-family: inherit;
+	font-size: 20px;
+	line-height: normal;
+	font-weight: 400;
+	margin-bottom: 16px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #1B1B1D
+}
+
 @media (max-width: 768px) {
 	.title {
 		gap: 6px;
@@ -820,10 +839,18 @@ main {
 	.title_30 {
 		font-size: 20px;
 	}
+
+	.title_20 {
+		font-size: 18px;
+	}
 }
 
 .blue-text {
 	color: var(--accent);
+}
+
+.ligth-text {
+	color: #555D6D;
 }
 
 .breadcrumb {
@@ -833,16 +860,17 @@ main {
 	flex-direction: row;
 	margin-top: 32px;
 	margin-bottom: 32px;
-	/* overflow-x: auto; */
+	overflow-x: auto;
 }
 
 .breadcrumb::-webkit-scrollbar {
-	height: 4px;
+	height: 5px;
+	display: none;
 }
 
 .breadcrumb::-webkit-scrollbar-thumb {
 	background: #C8C8C8;
-	border-radius: 4px;
+	border-radius: 6px;
 }
 
 @media (max-width: 768px) {
@@ -860,7 +888,7 @@ ol.breadcrumb li {
 	font-family: "Montserrat";
 	font-size: 14px;
 	white-space: nowrap;
-	color: #555D6D;
+	color: var(--text-light);
 }
 
 ol.breadcrumb li.active {
@@ -1596,12 +1624,12 @@ ol.breadcrumb li:last-child {
 	}
 
 	.header__nav-container.active::-webkit-scrollbar {
-		width: 4px;
+		width: 5px;
 	}
 
 	.header__nav-container::-webkit-scrollbar-thumb {
 		background: #C8C8C8;
-		border-radius: 4px;
+		border-radius: 6px;
 	}
 
 	.header__nav {
@@ -1993,7 +2021,7 @@ ol.breadcrumb li:last-child {
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
-	color: #555D6D;
+	color: var(--text-light);
 }
 
 .social-list {
@@ -2177,7 +2205,7 @@ ol.breadcrumb li:last-child {
 
 .insta-block__slider .swiper-slide {
 	width: 203px;
-	height: 315px !important;
+	max-height: 315px !important;
 	border-radius: 10px !important;
 }
 
@@ -2440,6 +2468,13 @@ ol.breadcrumb li:last-child {
 
 .product__star.gray {
 	background: var(--star-gray);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.product__star.black {
+	background: var(--star-black);
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -2937,7 +2972,7 @@ ol.breadcrumb li:last-child {
 	padding-top: 8px;
 	font-weight: 400;
 	font-size: 16px;
-	color: #555D6D;
+	color: var(--text-light);
 }
 
 @media (max-width: 768px) {
@@ -2949,4 +2984,66 @@ ol.breadcrumb li:last-child {
 	.faq-block {
 		margin-bottom: 10px;
 	}
+}
+
+.bs-form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.bs-form .input-block {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	position: relative;
+}
+
+.bs-form input,
+.bs-form textarea {
+	line-height: 24px;
+	color: #ABAFB6;
+	padding: 12px 14px;
+	background: transparent;
+	border: 1px solid #D0D5DD;
+	border-radius: 8px;
+	outline: none;
+}
+
+.bs-form textarea {
+	resize: none;
+	padding-bottom: 35px;
+}
+
+.characters-count {
+	width: calc(100% - 2px);
+	height: 35px;
+	position: absolute;
+	inset: auto 1px 1px;
+	padding: 10px;
+	text-align: right;
+	font-weight: 400;
+	font-size: 14px;
+	color: #ABAFB6;
+	background: #ffffff;
+	border-radius: 8px;
+}
+
+.bs-form input::placeholder,
+.bs-form textarea::placeholder {
+	color: #ABAFB6;
+}
+
+.bs-form label {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.bs-form label span {
+	color: var(--accent);
+}
+
+.bs-form .bs-btn {
+	width: 100%;
 }

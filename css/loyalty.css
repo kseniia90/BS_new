@@ -345,6 +345,12 @@
     color: rgba(208, 177, 92, 1);
 }
 
+.loyalty_new-carousel.card-slider .swiper-slide {
+    width: 100%;
+    max-width: 400px;
+    margin-right: 40px !important;
+}
+
 .loyalty_new__how-to-get__item {
     height: 100%;
     display: flex;
@@ -352,6 +358,10 @@
     justify-content: center;
     gap: 16px;
     text-align: center;
+}
+
+.loyalty_new__how-to-get__item img {
+    margin: 0 auto;
 }
 
 .loyalty_new__how-to-get__item .item_title {

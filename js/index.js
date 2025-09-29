@@ -8,19 +8,6 @@ const swiperBanner = new Swiper('.banner-carousel', {
   }
 });
 
-const swiperCards = new Swiper('.card-slider', {
-  loop: true,
-  spaceBetween: 16,
-  slidesPerView: 'auto',
-   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-  }
-});
-
 const swiperPhotos = new Swiper('.photo-slider', {
   loop: true,
   spaceBetween: 8,

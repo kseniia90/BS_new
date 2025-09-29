@@ -70,8 +70,7 @@ $(".product-page__accordion .accordion__title").on("click", function (e) {
 
   if (!$this.hasClass("accordion-active")) {
     $(".product-page__accordion .accordion__content").slideUp(400);
-    $(".product-page__accordion .accordion__title").removeClass("accordion-active"    );
-    $(".product-page__accordion .accordion__arrow").removeClass("active");
+    $(".product-page__accordion .accordion__title").removeClass("accordion-active");
   }
 
   $this.toggleClass("accordion-active");

@@ -240,6 +240,19 @@ const swiperReviews = new Swiper('.reviews-slider', {
   }
 });
 
+const swiperCards = new Swiper('.card-slider', {
+  loop: true,
+  spaceBetween: 16,
+  slidesPerView: 'auto',
+   navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  }
+});
+
 const swiperPosts = new Swiper('.posts-slider', {
   loop: true,
   slidesPerView: 'auto',
@@ -330,6 +343,11 @@ $('textarea').keyup(function() {
   var characterCount = $(this).val().length,
       current = $('#current');    
   current.text(characterCount);
+});
+
+$('.favorit_icon').on('click', function (e) {
+  e.preventDefault();
+  $(this).toggleClass('favorite');
 });
 
 

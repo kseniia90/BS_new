@@ -207,7 +207,7 @@
         line-height: normal;
         padding-bottom: 8px;
         text-transform: none;
-        border-bottom: 1px solid #1B1B1D;   
+        border-bottom: 1px solid var(--text-color);   
     }
 
     .insta-block__content .col {

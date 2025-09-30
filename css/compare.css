@@ -1,0 +1,158 @@
+
+.compare-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 32px;
+}
+
+.compare-title .title {
+	text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 0;
+    border: none;
+    margin: 0;
+}
+
+.compare-title .toggle {
+    position: relative;
+    display: inline-block;
+}
+
+.compare-title .toggle__input {
+    display: none;
+}
+
+.compare-title .toggle__label {
+    display: block;
+    width: 160px;
+    height: 32px;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 32px;
+    padding: 0 8px;
+	text-align: right;
+    background-color:  #F2F4F7;
+	border-radius: 99px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.compare-title .toggle__input:checked + .toggle__label {
+    background-color: #668b90;
+	color: #ffffff;
+    text-align: left;
+}
+
+.compare-title .toggle__input:checked + .toggle__label::after {
+    left: 133px;
+}
+
+.compare-title .toggle__label::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border-radius: 50%;
+	box-shadow: 0px 3px 2px 0px #101C410F, 0px 3px 8px 0px #101C4126;
+    transition: left 0.3s ease;
+}
+
+@media (max-width: 768px) {
+	
+	.compare-title {
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+	
+	.compare-title .title {
+		margin-bottom: 0;
+	}
+}
+
+.compare-catregory-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;    
+    font-weight: 500;
+}
+
+.compare-catregory-list span:not(.count) {
+    color: #939DAF;
+    transition: all 0.2s ease;
+}
+
+.compare-catregory-list .active span {
+    color: var(--text-color);
+}
+
+.compare-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+    gap: 40px;
+}
+
+.compare-item .product__card {
+    max-width: 100%;
+}
+
+.compare-item .bs-btn {
+    width: 100%;
+    font-size: 14px;
+}
+
+.compare-delete-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    color: var(--accent);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.compare-delete-btn:hover {
+    color: var(--text-color);
+}
+
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+.compare-table tbody tr:nth-child(odd) {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: uppercase;
+    padding: 14px;
+    background-color: #F4F5F7;
+}
+
+.compare-table tbody tr td {
+    padding: 24px;
+    text-align: center;
+    border-right: 1px solid #D0D5DD;
+    border-bottom: 1px solid #D0D5DD;
+}
+
+.compare-table tbody tr td:last-child {
+    border-right: none;
+}
+
+.compare-table tbody tr:nth-child(odd) td {
+    padding: 14px;
+}
+
+.compare-table .compare-parameter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+    

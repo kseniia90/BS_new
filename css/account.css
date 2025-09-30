@@ -77,8 +77,8 @@
     transition: all .2s ease;
 }
 
-.account-nav li:hover>a span.account-favorites-count,
-.account-nav>li.active>a span.account-favorites-count,
+.account-nav li:hover>a span.count,
+.account-nav>li.active>a span.count,
 .account-nav li:hover>a span.icon,
 .account-nav li.active>a span.icon {
     border-bottom: 2px solid transparent !important;
@@ -94,17 +94,6 @@
     .account-nav>li .icon-Property-1--1 {
         display: none;
     }
-}
-
-.account-favorites-count {
-    display: inline-block;
-    padding: 0 6px;
-    border-radius: 4px;
-    background: #F4F5F7;
-}
-
-.active .account-favorites-count {
-    background: var(--accent-yellow);
 }
 
 .account-sidebar,
@@ -148,7 +137,7 @@
         border-bottom: 1px solid #F4F5F7;
     }
 
-    .account-nav li:not(.banners) a span:not(.account-favorites-count) {
+    .account-nav li:not(.banners) a span:not(.count) {
         padding-bottom: 0;
         border: none;
     }
@@ -2326,6 +2315,10 @@
 
 .favorites-item {
     width: 100%;
+}
+
+.favorites-item .product__card {
+    max-width: 100%;
 }
 
 .favorites-item .bs-btn {

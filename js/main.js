@@ -231,13 +231,14 @@ const swiperReviews = new Swiper('.reviews-slider', {
   loop: true,
   spaceBetween: 32,
   slidesPerView: 'auto',
+  cssMode: true,
    navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
   pagination: {
     el: '.swiper-pagination',
-  }
+  },
 });
 
 const swiperCards = new Swiper('.card-slider', {
@@ -377,3 +378,23 @@ if (document.querySelector(".mini-cart-popup") !== null) {
   });
 }
 // mini-cart end
+
+// show more-less
+
+document.querySelectorAll(".text-block").forEach((block) => {
+  const hiddenText = block.querySelector(".hidden-text");
+  const button = block.querySelector(".show-more-btn");
+
+  button.addEventListener("click", () => {
+    if (hiddenText.style.maxHeight) {
+      hiddenText.style.maxHeight = null;
+      button.innerHTML = "Розгорнути";
+      button.setAttribute("aria-expanded", "false");
+    } else {
+      hiddenText.style.maxHeight = hiddenText.scrollHeight + "px";
+      button.innerHTML = "Згорнути";
+      button.setAttribute("aria-expanded", "true");
+    }
+  });
+});
+ 

@@ -1721,7 +1721,7 @@
 
     .account-reviews__item__product-info {
         max-width: 100%;
-        min-width: none;
+        min-width: auto;
     }
 
     .product__card__info__reviews-photo img {

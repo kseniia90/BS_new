@@ -23,37 +23,51 @@
     margin: 0 auto;
 }
 
-.brands-list {
-    width: 100%;
-    max-width: 100vw;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+.brands-wrapper {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 150px;
+  overflow-x: hidden;
+}
+
+.brands-wrapper::before,
+ .brands-wrapper::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 150px;
+  position: absolute;
+  width: 100px;
+  z-index: 2;
+}
+
+.brands-wrapper::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.brands-wrapper::before {
+  left: 0;
+  top: 0;
+}
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
+
+.brands-list {  
+    animation: scroll 40s linear infinite;
+	width: calc(250px * 14);
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     gap: 16px;
     padding: 0 16px 10px;
     margin-bottom: 15px;
 }
 
-.brands-list::-webkit-scrollbar {
-    /* display: none; */
-    height: 5px;
-}
-
-.brands-list::-webkit-scrollbar-thumb {
-    background: #C8C8C8;
-    border-radius: 6px;
-}
-
-@media screen and (max-width: 768px) {
-    .brands-list::-webkit-scrollbar {
-        display: none;
-    }
-}
-
 .brands-list li {
-    scroll-snap-align: start;
     flex: 0 0 auto;
 }
 

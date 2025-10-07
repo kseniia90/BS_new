@@ -26,8 +26,9 @@
 
 .compare-title .toggle__label {
     display: block;
-    width: 160px;
+    width: 152px;
     height: 32px;
+    font-family: 'Montserrat';
 	font-weight: 500;
 	font-size: 12px;
 	line-height: 32px;
@@ -40,13 +41,12 @@
 }
 
 .compare-title .toggle__input:checked + .toggle__label {
-    background-color: #668b90;
-	color: #ffffff;
+    background-color: var(--accent-yellow);
     text-align: left;
 }
 
 .compare-title .toggle__input:checked + .toggle__label::after {
-    left: 133px;
+    left: 126px;
 }
 
 .compare-title .toggle__label::after {
@@ -119,10 +119,53 @@
     color: var(--text-color);
 }
 
+.compare-table-wrapper {
+    /* overflow: auto; */
+    overflow: clip;
+    position: relative;
+}
+
 .compare-table {
+    position: relative;
     width: 100%;
     border-collapse: collapse;
     font-size: 20px;
+}
+
+.compare-table thead th {
+    min-width: 250px;
+    padding: 20px 20px 0;
+}
+
+.compare-table tr.sticky {
+  position: sticky;
+  overflow-x: auto;
+  top: 180px;
+  z-index: 1;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px 0px #A9A9A933;
+}
+
+@media (max-width: 1400px) {
+
+	.compare-table tr.sticky {
+		top: 125px;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.compare-table tr.sticky {
+		top: 95px;
+	}
+}
+
+.compare-table tr.sticky .product__info__header,
+.compare-table tr.sticky .product__description,
+.compare-table tr.sticky .product__parameters,
+.compare-table tr.sticky .product__reviews-block,
+.compare-table tr.sticky .bs-btn {
+    display: none;
 }
 
 .compare-table tbody tr:nth-child(odd) {
@@ -153,6 +196,61 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
 }
+
+.compare-table  .label {
+    padding: 4px 8px;
+    background: #FFF395;
+}
+
+.compare .products-slider-block {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    
+    .compare-table tbody tr td {
+        text-align: start;
+        vertical-align: top;
+        padding: 16px 10px;
+    }
+}
+
+.arrow {
+  position: absolute;
+  top: 100px;
+  bottom: auto;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  color: var(--accent);
+  font-size: 24px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.left-arrow .icon {
+  transform: rotate(180deg);
+}
+
+.right-arrow {
+  right: 0;
+}
+
+.arrow.hidden {
+  display: none;
+}
+
     

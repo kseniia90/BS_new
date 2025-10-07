@@ -41,6 +41,14 @@
 
 @font-face {
 	font-family: "Montserrat";
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+	src: url("../fonts/Montserrat/Montserrat-Medium.woff2");
+}
+
+@font-face {
+	font-family: "Montserrat";
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
@@ -578,6 +586,8 @@ textarea {
 	font-size: 100%;
 	line-height: 1.15;
 	margin: 0;
+	outline: none;
+	border: none;
 }
 
 button,
@@ -753,15 +763,8 @@ body.lock {
 	flex-direction: column;
 }
 
-.wrapper:has(.product-page) {
-	overflow: initial;
-}
-
-.wl_body .wrapper,
-.tax-promotion .wrapper,
-.tax-pa_brand .wrapper,
-.tax-product_cat .wrapper,
-.single-post .wrapper {
+.wrapper:has(.product-page),
+.wrapper:has(.compare) {
 	overflow: initial;
 }
 
@@ -1319,7 +1322,8 @@ ol.breadcrumb li.active {
 	border-bottom: 2px solid var(--accent-yellow);
 }
 
-.header__main__list__item>a {
+.header__main__list__item>a,
+.header__main__list__item>button {
 	display: block;
 	width: 25px;
 	height: 25px;
@@ -1328,7 +1332,7 @@ ol.breadcrumb li.active {
 	color: var(--accent);
 }
 
-.header__main__list__item>a.header-mini-cart {
+.header__main__list__item>button.header-mini-cart {
 	width: max-content;
 	height: auto;
 	display: flex;
@@ -1350,26 +1354,27 @@ ol.breadcrumb li.active {
 
 .header__counter {
 	position: absolute;
-	top: -7px;
-	right: -7px;
-	background-color: var(--accent-yellow);
-	width: 16px;
-	height: 16px;
-	border-radius: 50%;
+	top: -3px;
+	right: -5px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
+	width: 15px;
+	height: 12px;
+	border-radius: 100px;
+	background-color: #FF3F3F;
 }
 
 .header__counter__value {
 	display: block;
-	color: var(--accent);
+	color: #ffffff;
 	text-align: center;
-	font-size: 10px;
-	line-height: normal;
-	font-weight: 600;
-	margin-top: 2px;
+	font-size: 8px;
+	font-weight: 300;
+	letter-spacing: 0.3px;
+	line-height: 12px;
+	margin-top: 1px;
 }
 
 .header__search-block {
@@ -1942,14 +1947,16 @@ ol.breadcrumb li.active {
 		gap: 10px;
 	}
 
-	.header__main__list__item>a {
+	.header__main__list__item>a,
+	.header__main__list__item>button {
 		width: 20px;
 		height: 20px;
 		font-size: 20px;
 	}
 
 	.header__counter {
-		top: -12px;
+		top: -6px;
+		right: -6px;
 	}
 }
 
@@ -2304,11 +2311,40 @@ ol.breadcrumb li.active {
 	border-radius: 10px !important;
 }
 
+.video_container {
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 203/315;
+	position: relative;
+}
+
 .insta-slider .video {
 	width: 100%;
 	height: 100%;
+	aspect-ratio: 203/315;
 	object-fit: cover;
 	border-radius: 10px !important;
+}
+
+.play_button {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	top: 50%;
+	left: 50%;
+	opacity: 0.7;
+	transform: translate(-50%, -50%);
+	background: url('data:image/svg+xml,<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_4202_31963)"><path d="M12 0.893555C5.383 0.893555 0 6.27655 0 12.8936C0 19.5106 5.383 24.8936 12 24.8936C18.617 24.8936 24 19.5106 24 12.8936C24 6.27655 18.617 0.893555 12 0.893555ZM16.404 14.7666L11.192 17.6206C10.867 17.8036 10.509 17.8946 10.151 17.8946C9.778 17.8946 9.404 17.7956 9.064 17.5976C8.397 17.2076 8 16.5146 8 15.7426V10.0436C8 9.27155 8.397 8.57855 9.064 8.18855C9.729 7.79955 10.529 7.79255 11.202 8.17155L16.394 11.0146C17.09 11.4056 17.499 12.1056 17.499 12.8926C17.499 13.6796 17.09 14.3796 16.403 14.7656L16.404 14.7666ZM15.5 12.8936C15.5 12.9806 15.442 13.0126 15.434 13.0186L10.222 15.8736C10.203 15.8836 10.145 15.9156 10.075 15.8726C10.001 15.8296 10.001 15.7656 10.001 15.7446V10.0456C10.001 10.0246 10.001 9.96056 10.075 9.91755C10.102 9.90156 10.127 9.89655 10.149 9.89655C10.185 9.89655 10.214 9.91255 10.232 9.92255L15.424 12.7666C15.443 12.7776 15.5 12.8096 15.5 12.8966V12.8936Z" fill="white" fill-opacity="0.8"/></g><defs><clipPath id="clip0_4202_31963"><rect width="24" height="24" fill="white" transform="translate(0 0.893555)"/></clipPath></defs></svg>');
+	cursor: pointer;
+	transition: opacity .3s ease;
+}
+
+.play_button:hover {
+	opacity: 1;
+}
+
+.play_button.hide {
+	display: none;
 }
 
 @media (max-width: 768px) {
@@ -2408,6 +2444,114 @@ ol.breadcrumb li.active {
 	object-fit: cover;
 }
 
+.product__card__row {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.top .product__card__row {
+	justify-content: center;
+	gap: 4px;
+}
+
+
+.variant-dropdown-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 3px;
+	padding: 15px;
+	height: 40px;
+	min-width: 110px;
+	border-radius: 100px;
+	background: var(--accent-yellow);
+	text-align: center;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: normal;
+	color: var(--text-color);
+	cursor: pointer;
+	user-select: none;
+}
+
+.variant-dropdown-wrapper.active {
+	border-radius: 16px 16px 0 0;
+}
+
+.arrow {
+	font-size: 13px;
+	transition: all 0.2s ease;
+}
+
+.rotated {
+	transform: rotate(180deg);
+}
+
+.variant-dropdown {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	left: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 4px;
+	padding: 0 15px 10px;
+	list-style: none;
+	z-index: 99;
+	border-radius: 16px;
+	box-shadow: inherit;
+	background: inherit;
+	transform-origin: top;
+	user-select: none;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.2s ease;
+}
+
+.variant-dropdown li {
+	white-space: nowrap;
+	padding: 8px 15px;
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 100px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.variant-dropdown li:last-child {
+	border-bottom: none;
+}
+
+.variant-dropdown li:hover {
+	background-color: rgba(255, 255, 255, 0.85);
+}
+
+.variant-dropdown-wrapper.active .variant-dropdown {
+	opacity: 1;
+	visibility: visible;
+	border-radius: 0 0 16px 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .product__card .product__info,
 .gift-item .product__info {
 	width: 100%;
@@ -2418,15 +2562,6 @@ ol.breadcrumb li.active {
 	flex-direction: column;
 	gap: 16px;
 	padding: 10px;
-}
-
-.product__card__row {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 10px;
 }
 
 .product__card__brand {
@@ -2456,6 +2591,7 @@ ol.breadcrumb li.active {
 	font-size: 14px;
 	line-height: 130%;
 	text-transform: uppercase;
+	text-align: start;
 	height: 54px;
 	margin-bottom: 8px;
 	display: -webkit-box;

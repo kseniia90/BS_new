@@ -62,18 +62,6 @@
     transition: left 0.3s ease;
 }
 
-@media (max-width: 768px) {
-	
-	.compare-title {
-		flex-wrap: wrap;
-		gap: 20px;
-	}
-	
-	.compare-title .title {
-		margin-bottom: 0;
-	}
-}
-
 .compare-catregory-list {
     display: flex;
     align-items: center;
@@ -120,7 +108,6 @@
 }
 
 .compare-table-wrapper {
-    /* overflow: auto; */
     overflow: clip;
     position: relative;
 }
@@ -154,10 +141,9 @@
 }
 
 @media (max-width: 768px) {
-
-	.compare-table tr.sticky {
-		top: 95px;
-	}
+    .compare-table tr.sticky {
+        top: 95px;
+    }
 }
 
 .compare-table tr.sticky .product__info__header,
@@ -209,16 +195,13 @@
     overflow: hidden;
 }
 
-@media (max-width: 768px) {
-    
-    .compare-table tbody tr td {
-        text-align: start;
-        vertical-align: top;
-        padding: 16px 10px;
-    }
+.compare-table-wrapper .arrows {
+    position: sticky;
+    top: 150px;
+    z-index: 5;
 }
 
-.arrow {
+.compare-table-wrapper .arrow {
   position: absolute;
   top: 100px;
   bottom: auto;
@@ -253,4 +236,92 @@
   display: none;
 }
 
+@media (max-width: 768px) {
+    .compare-catregory-list.mobile-only {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .compare-catregory-list .item {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding: 16px;
+        border-radius: 16px;
+        border: 1px solid #D0D5DD;
+    }
+
+    .compare-catregory-list span:not(.count) {
+        color: var(--text-color); 
+    }
+
+    .compare-catregory-list .item .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .row .icons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 16px;
+        font-size: 20px;
+    }
+
+    .compare-catregory-list .bs-btn {
+        width: 100%;
+    }
+
+    .compare-catregory-list .count {
+        background: var(--accent-yellow);
+    }
+
+    .products-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .products-row .product-img {
+        flex: 1 0 100px;
+    }
+
+    .products-row .product-img img {
+        aspect-ratio: 100/100;
+    }
+
+
+
+
+   
+
+    .compare-title {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .compare-title .title {
+        margin-bottom: 0;
+    }
+
+     .compare-table-wrapper,
+     .products-slider-block {
+        display: none;
+    }
+
+    .compare-table tbody tr td {
+        text-align: start;
+        vertical-align: top;
+        padding: 16px 10px;
+    }
+
+    .compare-table-wrapper .arrows {
+        top: 110px;
+    }
+
+
+}
     

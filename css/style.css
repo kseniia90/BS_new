@@ -2319,6 +2319,7 @@ ol.breadcrumb li.active {
 
 .insta-block__slider .swiper-slide {
 	width: 203px;
+	min-width: 203px;
 	max-height: 315px !important;
 	border-radius: 10px !important;
 }
@@ -2389,6 +2390,7 @@ ol.breadcrumb li.active {
 
 	.insta-block__slider .swiper-slide {
 		width: 155px;
+		min-width: 155px;
 		height: 240px !important;
 		border-radius: 10px !important;
 	}

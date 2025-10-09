@@ -30,20 +30,16 @@
     border-bottom: 2px solid #E1F56F;
 }
 
-.brands-content .content {
+.brands-content {
     display: none;
 }
 
-.brands-content .content.active {
+.brands-content.active {
     display: block;
 
 }
 
-.brand-list {
-	margin-bottom: 40px;
-}
-
-.brand-list ul {
+.brands-filter ul {
 	width: 100%;
 	display: flex;
     flex-wrap: wrap;
@@ -51,7 +47,7 @@
 	text-transform: capitalize;
 }
 
-.brand-list ul a {
+.brands-filter ul a {
     min-width: 40px;
 	display: flex;
     justify-content: center;
@@ -65,13 +61,13 @@
 	transition: all 0.3s ease;
 }
 
-.brand-list ul .active a {
+.brands-filter ul .active a {
     background-color: var(--accent-yellow);
 }
 
 @media (min-width: 769px) {
 
-	.brand-list ul a:hover {
+	.brands-filter ul a:hover {
 		background-color: var(--accent-yellow);
 	}
 }
@@ -79,20 +75,19 @@
 
 @media (max-width: 768px) {
 
-    .brand-list ul {
+    .brands-filter ul {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
     }
 
-    .brand-list ul .full {
+    .brands-filter ul .full {
         grid-column: 1 / -1;
     }
 
-    .brand-list ul .full a {
+    .brands-filter ul .full a {
         width: max-content;
     }
 }
-
 
 .brand_block {
 	scroll-margin-top: 200px;
@@ -108,22 +103,27 @@
 	}
 }
 
-
 .brand_block:not(:last-of-type) {
 	margin-bottom: 40px;
 }
 
-.brand_block h2 {
+.all .brand_block .title {
     font-size: 30px;
     line-height: 38px;
     font-weight: 500;
 	margin-bottom: 16px;
+    padding-bottom: 0;
+    border: none;
 }
 
 .brand_block .list_brand {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(156px, 1fr));
     gap: 16px;
+}
+
+.popular .brand_block .list_brand:not(:last-of-type) {
+    margin-bottom: 80px;
 }
 
 .item_brand>a {

@@ -1,26 +1,19 @@
-var links = document.querySelectorAll('.brands-catregory-list .item>a');
-var content = document.querySelectorAll('.brands-content .content');
-var lis = document.querySelectorAll('.brands-catregory-list .item');
+$(function () {
+  var activeFilter = $(".brands-catregory-list .active").attr("data-filter"),
+    $contentbrands = $(".brands-content"),
+    $tabslis = $(".brands-catregory-list li");
 
-for (let i = 0; i < links.length; i++){
-	links[i].addEventListener('click', function(e){
+  $contentbrands.attr("data-filter", activeFilter);
+
+  $tabslis.on("click", function (e) {
     e.preventDefault();
-		var activLinks = document.querySelector('.brands-catregory-list .item.activ');
-		var activContent = document.querySelector('.brands-content .content.active');
+    var $current = $(e.currentTarget);
+    activeFilter = $current.attr("data-filter");
 
-		activLinks.classList.remove('activ');
-		activContent.classList.remove('activ');
+    console.log(activeFilter);
 
-		this.classList.add('activ');
-		var attr = this.getAttribute('href');
-
-		var activ = document.querySelector(attr);
-
-		activ.classList.add('activ');
-
-        var lisLength = lis.length;
-        var lisWidth = 100 / lisLength;
-        var position = i*lisWidth;
-
-	});
-}
+    $tabslis.removeClass("active");
+    $current.addClass("active");
+    $contentbrands.attr("data-filter", activeFilter);
+  });
+});

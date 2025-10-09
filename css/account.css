@@ -770,7 +770,7 @@
 }
 
 .bonus-date {
-    color: #555D6D;
+    color: var(--text-light);
 }
 
 .bonus__progress-bar-block {
@@ -919,7 +919,7 @@
 }
 
 .progress_percent_label {
-    color: #555D6D;
+    color: var(--text-light);
 }
 
 .bonus-info-content {

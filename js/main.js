@@ -18,71 +18,82 @@ let dropdownCloseTimeout;
 
 // Dropdown Open and Close function START
 function dropDownFunc(dropDown) {
-  if (window.innerWidth >= mobileBreakpoint) {
+
+  // if (window.innerWidth >= mobileBreakpoint) {
     if (dropDown.classList.contains("hover-dropdown") === true) {
+      
       dropDown.onmouseover = dropDown.onmouseout = dropdownHover;
 
       function dropdownHover(e) {
-        if (e.type == "mouseover" && !!this.nextElementSibling) {
-          // Close the opend dropdown
-          closeDropdown();
+        if (window.innerWidth >= mobileBreakpoint) {
+          if (e.type == "mouseover" && !!this.nextElementSibling) {
+            // Close the opend dropdown
+            closeDropdown();
 
-          // add the open and active class(Opening the DropDown)
-          this.parentElement.classList.add("dropdown-open");
-          this.nextElementSibling.classList.add("dropdown-active");
+            // add the open and active class(Opening the DropDown)
+            this.parentElement.classList.add("dropdown-open");
+            this.nextElementSibling.classList.add("dropdown-active");
+          }
         }
       }
     }
     // close the dropdown on mouse out from the dropdown list
     document.querySelectorAll(".header__submenu__list").forEach(function (dropDownList) {
         // close the dropdown after user leave the list
-        dropDownList.onmouseleave = closeDropdown;
+        dropDownList.onmouseleave = function(){
+          if (window.innerWidth >= mobileBreakpoint) {
+            closeDropdown;
+          }
+        } 
       });
     document.querySelectorAll(".header__nav-link").forEach(function (listItem) {
       listItem.onmouseleave = function () {
-        dropdownCloseTimeout = setTimeout(function () {
-          closeDropdown();
-        }, 200);
+        if (window.innerWidth >= mobileBreakpoint) {
+          dropdownCloseTimeout = setTimeout(function () {
+            closeDropdown();
+          }, 200);
+        }
       };
     });
     document.querySelectorAll(".header__submenu__list").forEach(function (dropDownList) {
         dropDownList.onmouseenter = function () {
-          clearTimeout(dropdownCloseTimeout);
+           if (window.innerWidth >= mobileBreakpoint) {
+             clearTimeout(dropdownCloseTimeout);
+           }
         };
       });
-  } else {
+  // } else {
     if (dropDown.classList.contains("dropdown-link") === true) {
       dropDown.addEventListener("click", function (e) {
-        if (
-          !!this.nextElementSibling &&
-          this.nextElementSibling.classList.contains("dropdown-active") === true
-        ) {
-          // Close the clicked dropdown
-          this.parentElement.classList.remove("dropdown-open");
-          this.nextElementSibling.classList.remove("dropdown-active");
+        if (window.innerWidth < mobileBreakpoint) {
+          if (!!this.nextElementSibling && this.nextElementSibling.classList.contains("dropdown-active") === true) {
+            // Close the clicked dropdown
+            this.parentElement.classList.remove("dropdown-open");
+            this.nextElementSibling.classList.remove("dropdown-active");
 
-          closeDropdown();
-        } else {
-          // Close the opend dropdown
-          closeDropdown();
+            closeDropdown();
+          } else {
+            // Close the opend dropdown
+            closeDropdown();
 
-          // add the open and active class(Opening the DropDown)
-          this.parentElement.classList.add("dropdown-open");
+            // add the open and active class(Opening the DropDown)
+            this.parentElement.classList.add("dropdown-open");
 
-          if (!!this.nextElementSibling) {
-            this.nextElementSibling.classList.add("dropdown-active");
+            if (!!this.nextElementSibling) {
+              this.nextElementSibling.classList.add("dropdown-active");
 
-            setTimeout(() => {
-              this.closest(".header__nav-container").scrollTo({
-                top: 0,
-                behavior: "smooth",
-              });
-            }, 300);
+              setTimeout(() => {
+                this.closest(".header__nav-container").scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }, 300);
+            }
           }
         }
       });
     }
-  }
+  // }
 }
 
 document.querySelectorAll(".header__nav-link > a").forEach(function (dropDown) {

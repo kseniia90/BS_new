@@ -827,6 +827,14 @@ main {
 	border-bottom: 1px solid var(--text-color)
 }
 
+.page-title {
+	text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 0;
+    border: none;
+    margin: 0;
+}
+
 .title_50 {
 	font-family: 'Montserrat';
 	font-weight: 700;
@@ -864,6 +872,10 @@ main {
 		margin-bottom: 24px;
 	}
 
+	.page-title {
+		margin: 0;
+	}
+
 	.title_50 {
 		font-size: 24px;
 	}
@@ -882,7 +894,7 @@ main {
 }
 
 .ligth-text {
-	color: #555D6D;
+	color: var(--text-light);
 }
 
 .breadcrumb {
@@ -3589,7 +3601,7 @@ ol.breadcrumb li.active {
 	font-size: 14px;
 	line-height: 17px;
 	letter-spacing: 0.3px;
-	color: #555D6D;
+	color: var(--text-light);
 }
 
 .gift-accordion-content {

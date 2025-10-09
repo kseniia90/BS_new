@@ -38,9 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-
-
 // DOM elements to track.
 const leftArrow = document.getElementById('leftArrow');
 const rightArrow = document.getElementById('rightArrow');
@@ -119,4 +116,18 @@ rightArrow.addEventListener('click', () => requestAnimationFrame(
 leftArrow.addEventListener('click', () => requestAnimationFrame(
 	timestamp => animationFramesSetup(timestamp, itemSize)
 ));
+
+document.querySelectorAll('.show-compare-table').forEach(button => {
+  button.addEventListener('click', () => {
+    document.querySelector('.compare-table-wrapper').style.display = 'block';
+    document.querySelector('.products-slider-block').style.display = 'block';
+    document.querySelector('.compare-toggle').style.display = 'block';
+    document.querySelector('.compare-catregory-list.mobile-only').classList.remove('mobile-only');
+    document.querySelectorAll('.compare-catregory-list').forEach(list => {
+      list.style.display = 'none';
+    })
+  });
+});
+  
+
 

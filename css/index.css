@@ -1,3 +1,8 @@
+.slider-banner {
+    padding: 0;
+    overflow: hidden;
+}
+
 .banner__img {
     width: 100%;
     height: 100%;
@@ -25,10 +30,10 @@
 
 .brands-wrapper {
   position: relative;
-  width: 100vw;
-  max-width: 100%;
+  /* width: 100vw;
+  max-width: 100%; */
   height: 150px;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .brands-wrapper::before,
@@ -52,33 +57,52 @@
   top: 0;
 }
 
-@keyframes scroll {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 7))}
-}
-
-.brands-list {  
-    animation: scroll 40s linear infinite;
-	width: calc(250px * 14);
+.scroll-box-wrapper {
+    overflow: hidden;
     display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 0 16px 10px;
-    margin-bottom: 15px;
+    flex-wrap: nowrap;
+    column-gap: 16px;
 }
 
-.brands-list li {
-    flex: 0 0 auto;
+.scroll-box {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
 }
 
-.brands-list li a {
+.scroll-box-wrapper.animate .scroll-box {
+    animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 16px));
+    }
+}
+
+.brands-item a {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 166px;
+    padding: 0 8px;
 }
 
-.brands-list li img {
+@media (max-width: 768px) {
+    .brands-item a {
+        width: 88px;
+        padding: 0 4px;
+    }
+    
+}
+
+.brands-item img {
     width: 100%;
     height: 100%;
     aspect-ratio: 150/150;

@@ -390,6 +390,194 @@ if (document.querySelector(".mini-cart-popup") !== null) {
 }
 // mini-cart end
 
+// authorization popup start
+
+if (document.querySelector(".authorization-popup") !== null) {
+  document.querySelectorAll(".authorization-popup-close").forEach(function (button) {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.body.style.overflow = "visible";
+      document.querySelectorAll(".authorization-popup").forEach(el => el.classList.remove("active"));
+    });
+  });
+  document.addEventListener('click', function(event) {
+  document.querySelectorAll('.authorization-popup.active').forEach(function(popup) {
+    if (!popup.querySelector('.authorization-popup-content').contains(event.target)) {
+      popup.classList.remove('active');
+    }
+  });
+});
+}
+
+// tab links
+function openOption(evt, optionName) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(optionName).style.display = "block";
+  evt.currentTarget.className += " active";
+
+}
+
+
+// forget-password popup
+
+
+// sing in email/phone
+$(".sign-in-btn").on("click", function (e) {
+  e.preventDefault();
+  $(".email-block, .phone-block").toggleClass("open");
+});
+
+// show sms verify 
+function showSmsVerify(){
+       
+  if (document.querySelector(".sign-in__phone-code") !== null) {
+    
+    document.querySelector(".sign-in__content>form").style.display = "none";
+    document.querySelector(".sign-in__phone-code").style.display = "flex";
+
+    window.addEventListener("click", function (e) {
+  
+      if (!e.target.closest(".sign-in__phone-code")) {
+        document.querySelector(".sign-in__content>form").style.display = "block";
+        document.querySelector(".sign-in__phone-code").style.display = "none";
+      }
+    });
+  }
+  countdownSmsVerify();
+}
+
+let timeoutSmsVerify;
+
+function countdownSmsVerify() {
+  document.getElementById("timer-counter").style.display= "block"
+  document.querySelector(".timer-block .repeat-code-btn").style.display= "none"
+  var seconds = 59;
+  function tick() {
+    var counter = document.getElementById("timer-counter");
+    seconds--;
+    counter.innerHTML =
+      "0:" + (seconds < 10 ? "0" : "") + String(seconds);
+    if (seconds > 0) {
+      timeoutSmsVerify = setTimeout(tick, 1000);
+    } else {
+      document.querySelector(".timer-block .repeat-code-btn").style.display= "block"
+      document.getElementById("timer-counter").style.display= "none"
+    }
+  }
+  tick();
+}
+
+// show email verify 
+function showEmailVerify(){
+       
+  if (document.querySelector(".contacts-input-block.email-block") !== null) {
+    
+    document.querySelector(".email-block-row.email").style.display = "none";
+    document.querySelector(".email-block-row.pass").style.display = "flex";
+
+    window.addEventListener("click", function (e) {
+  
+      if (!e.target.closest(".email-block-row.pass")) {
+        document.querySelector(".email-block-row.email").style.display = "flex";
+    document.querySelector(".email-block-row.pass").style.display = "none";
+      }
+    });
+  }
+}
+
+if (document.querySelector(".sign-in__choice") !== null) {
+  document.querySelector(".sign-in__choice-email").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".sign-in__choice").classList.remove("open");
+    document.querySelector(".sign-in__content>form").style.display = "block";
+    document.querySelector(".sign-in__phone-code").style.display = "none";
+    document.querySelector(".contacts-input-block.phone-block").classList.remove("open");
+    document.querySelector(".contacts-input-block.email-block").classList.add("open");
+  });
+}
+
+if (document.querySelector(".sign-in__choice") !== null) {
+  document.querySelector(".sign-in__choice-phone").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".sign-in__choice").classList.remove("open");
+    document.querySelector(".sign-in__content>form").style.display = "block";
+    document.querySelector(".sign-in__phone-code").style.display = "none";
+  });
+
+  document.querySelector(".sign-in__choice-cancel").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".sign-in__content>form").style.display = "flex";
+    document.querySelector(".sign-in__phone-code").style.display = "none";
+    clearTimeout(timeoutSmsVerify);
+  });
+
+}
+
+
+
+
+if (document.querySelector(".authorization-popup") !== null) {
+  document.querySelectorAll(".forget-password-btn").forEach(function (button) {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(".sign-in__content").classList.add("hide");
+      document.querySelector(".remind-password__content").classList.add("active");
+    });
+  });
+}
+
+if (document.querySelector(".authorization-popup .auth-link") !== null) {
+  document.querySelector(".authorization-popup .auth-link").addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(".authorization-popup").classList.remove("active");
+      document.body.style.overflow = "visible";
+    });
+}
+
+if (document.querySelector(".mini-cart-popup .auth-link") !== null) {
+  document.querySelector(".mini-cart-popup .auth-link").addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(".mini-cart-popup").classList.remove("active");
+      document.body.style.overflow = "visible";
+    });
+}
+
+//  authorization popup end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // show more-less
 
 document.querySelectorAll(".text-block").forEach((block) => {
@@ -441,7 +629,6 @@ selectedAll.forEach((selected) => {
       optionsList[0].innerHTML;
   }
 
-  // потім додаємо слухачі подій
   for (let o of optionsList) {
     o.addEventListener("click", () => {
       optionsList.forEach((el) => el.classList.remove("selected"));

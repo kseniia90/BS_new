@@ -180,53 +180,6 @@
 	background: transparent;
 }
 
-.blog-tags {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	overflow-x: auto;
-}
-
-.blog-tags::-webkit-scrollbar {
-	display: none;
-	height: 6px;
-}
-
-.blog-tags::-webkit-scrollbar-thumb {
-	background: #C8C8C8;
-	border-radius: 4px;
-}
-
-.blog-tags__item {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	padding: 4px 16px;
-	text-align: center;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 20px;
-	border-radius: 8px;
-	white-space: nowrap;
-	background: #F4F5F7;
-	transition: all 0.3s ease;
-	user-select: none;
-	cursor: pointer;
-}
-
-.blog-tags__item svg {
-	display: none;
-}
-
-.blog-tags__item.active {
-	background: #E7F471;
-}
-
-.blog-tags__item.active svg {
-	display: block;
-}
-
 .blog-search-empty {
 	padding: 130px 20px;
 	display: flex;

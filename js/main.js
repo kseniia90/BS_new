@@ -264,6 +264,7 @@ const swiperCards = new Swiper(".card-slider", {
 const swiperPosts = new Swiper(".posts-slider", {
   loop: true,
   slidesPerView: "auto",
+  cssMode: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -353,10 +354,10 @@ $("textarea").keyup(function () {
   current.text(characterCount);
 });
 
-$(".favorit_icon").on("click", function (e) {
-  e.preventDefault();
-  $(this).toggleClass("favorite");
-});
+// $(".favorit_icon").on("click", function (e) {
+//   e.preventDefault();
+//   $(this).toggleClass("favorite");
+// });
 
 // mini-cart popup start
 if (document.querySelector(".mini-cart-popup") !== null) {
@@ -390,8 +391,8 @@ if (document.querySelector(".mini-cart-popup") !== null) {
 }
 // mini-cart end
 
-// authorization popup start
 
+// authorization popup start
 if (document.querySelector(".authorization-popup") !== null) {
   document.querySelectorAll(".authorization-popup-close").forEach(function (button) {
     button.addEventListener("click", function (e) {
@@ -428,40 +429,37 @@ function openOption(evt, optionName) {
 
 }
 
-
-// forget-password popup
-
-
 // sing in email/phone
 $(".sign-in-btn").on("click", function (e) {
   e.preventDefault();
   $(".email-block, .phone-block").toggleClass("open");
 });
 
-// show sms verify 
+$(".toggle-password").click(function() {
+
+  $(this).toggleClass("hide");
+  var input = $(this).closest(".input-has-icon").find("input");
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});
+
 function showSmsVerify(){
        
   if (document.querySelector(".sign-in__phone-code") !== null) {
     
-    document.querySelector(".sign-in__content>form").style.display = "none";
+    document.querySelector(".phone-block-row").style.display = "none";
     document.querySelector(".sign-in__phone-code").style.display = "flex";
-
-    window.addEventListener("click", function (e) {
-  
-      if (!e.target.closest(".sign-in__phone-code")) {
-        document.querySelector(".sign-in__content>form").style.display = "block";
-        document.querySelector(".sign-in__phone-code").style.display = "none";
-      }
-    });
+    document.querySelector(".sign-in__choice").style.display = "block";
   }
-  countdownSmsVerify();
 }
 
 let timeoutSmsVerify;
 
 function countdownSmsVerify() {
   document.getElementById("timer-counter").style.display= "block"
-  document.querySelector(".timer-block .repeat-code-btn").style.display= "none"
   var seconds = 59;
   function tick() {
     var counter = document.getElementById("timer-counter");
@@ -471,61 +469,29 @@ function countdownSmsVerify() {
     if (seconds > 0) {
       timeoutSmsVerify = setTimeout(tick, 1000);
     } else {
-      document.querySelector(".timer-block .repeat-code-btn").style.display= "block"
       document.getElementById("timer-counter").style.display= "none"
     }
   }
   tick();
 }
 
-// show email verify 
-function showEmailVerify(){
-       
-  if (document.querySelector(".contacts-input-block.email-block") !== null) {
-    
-    document.querySelector(".email-block-row.email").style.display = "none";
-    document.querySelector(".email-block-row.pass").style.display = "flex";
-
-    window.addEventListener("click", function (e) {
-  
-      if (!e.target.closest(".email-block-row.pass")) {
-        document.querySelector(".email-block-row.email").style.display = "flex";
-    document.querySelector(".email-block-row.pass").style.display = "none";
-      }
-    });
-  }
-}
-
 if (document.querySelector(".sign-in__choice") !== null) {
-  document.querySelector(".sign-in__choice-email").addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(".sign-in__choice").classList.remove("open");
-    document.querySelector(".sign-in__content>form").style.display = "block";
-    document.querySelector(".sign-in__phone-code").style.display = "none";
-    document.querySelector(".contacts-input-block.phone-block").classList.remove("open");
-    document.querySelector(".contacts-input-block.email-block").classList.add("open");
-  });
-}
 
-if (document.querySelector(".sign-in__choice") !== null) {
-  document.querySelector(".sign-in__choice-phone").addEventListener("click", function (e) {
+   document.querySelector(".sign-in__choice-back").addEventListener("click", function (e) {
     e.preventDefault();
-    document.querySelector(".sign-in__choice").classList.remove("open");
-    document.querySelector(".sign-in__content>form").style.display = "block";
+    document.querySelector(".phone-block-row").style.display = "flex";
     document.querySelector(".sign-in__phone-code").style.display = "none";
+    document.querySelector(".sign-in__choice").style.display = "none";
   });
 
-  document.querySelector(".sign-in__choice-cancel").addEventListener("click", function (e) {
+  document.querySelector(".sign-in__choice-repeat").addEventListener("click", function (e) {
     e.preventDefault();
-    document.querySelector(".sign-in__content>form").style.display = "flex";
-    document.querySelector(".sign-in__phone-code").style.display = "none";
+    document.querySelector(".timer-block").style.display = "block";
+    document.querySelector(".repeat-btn_wrapper").style.display = "none";
     clearTimeout(timeoutSmsVerify);
+    countdownSmsVerify();
   });
-
 }
-
-
-
 
 if (document.querySelector(".authorization-popup") !== null) {
   document.querySelectorAll(".forget-password-btn").forEach(function (button) {
@@ -535,22 +501,6 @@ if (document.querySelector(".authorization-popup") !== null) {
       document.querySelector(".remind-password__content").classList.add("active");
     });
   });
-}
-
-if (document.querySelector(".authorization-popup .auth-link") !== null) {
-  document.querySelector(".authorization-popup .auth-link").addEventListener("click", function (e) {
-      e.preventDefault();
-      document.querySelector(".authorization-popup").classList.remove("active");
-      document.body.style.overflow = "visible";
-    });
-}
-
-if (document.querySelector(".mini-cart-popup .auth-link") !== null) {
-  document.querySelector(".mini-cart-popup .auth-link").addEventListener("click", function (e) {
-      e.preventDefault();
-      document.querySelector(".mini-cart-popup").classList.remove("active");
-      document.body.style.overflow = "visible";
-    });
 }
 
 //  authorization popup end

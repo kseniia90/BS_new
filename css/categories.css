@@ -115,76 +115,9 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.categories__content .clear_all_filters {
-    width: 100%;
-    margin-bottom: 15px;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 145.4%;
-    letter-spacing: 0.45px;
-    cursor: pointer;
-}
-
-.categories__content .clear_all_filters__btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-}
-
-@media (max-width: 768px) {
-    .categories__content .clear_all_filters {
-        display: none;
-    }
-}
-
 .categories__content__left {
-    min-width: 270px;
-    max-width: 270px;
+    min-width: 400px;
+    max-width: 400px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -226,7 +159,7 @@
         width: 100%;
         position: sticky;
         top: 115px;
-        z-index: 12;
+        z-index: 120;
         overflow-y: auto;
         overflow-x: hidden;
         max-height: calc(100vh - 185px);
@@ -268,7 +201,6 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 145.4%;
-    /* 26.172px */
     letter-spacing: 0.45px;
     display: none;
     padding: 10px 5px;
@@ -283,16 +215,6 @@
     }
 }
 
-.categories__content__left .filter__accordion .accordion__arrow {
-    width: 12px;
-    height: 12px;
-    background: url(./img/filters_plus.svg) center no-repeat;
-}
-
-.categories__content__left .filter__accordion .accordion__arrow.minus {
-    background: url(./img/filters_minus.svg) center no-repeat;
-}
-
 .categories__content__left .filter__accordion .accordion__content {
     display: block;
     padding: 15px 0;
@@ -304,17 +226,15 @@
 
 @media (max-width: 768px) {
 
-    /* .categories__content__left .filter__accordion .accordion__content {
-		display: none;
-	} */
     .categories__content__left .filter__accordion .accordion__content {
         display: block !important;
-        width: calc(100% - 30px);
+        width: 100%;
+        height: 100vh;
         position: fixed;
         left: -100%;
-        top: 140px;
-        bottom: 75px;
-        z-index: 120;
+        top: 0;
+        bottom: 0;
+        z-index: 200;
         overflow-y: auto;
         overflow-x: hidden;
         padding: 0 15px 15px;
@@ -350,6 +270,8 @@
         padding-right: 50px;
         font-size: 20px;
         margin-bottom: 0;
+        padding-bottom: 0;
+        border: none;
         color: var(--accent) !important;
     }
 
@@ -372,29 +294,10 @@
 
 /*categories filters*/
 
-.categories select.filter__select {
-    width: 100%;
-    min-height: 30px;
-    padding: 10px 30px 10px 8px;
-    border: 1px solid var(--accent) !important;
-    border-radius: 10px;
-    background-color: transparent;
-    outline: none;
-    -moz-appearance: none;
-    /* Firefox */
-    -webkit-appearance: none;
-    /* Safari and Chrome */
-    appearance: none;
-    background: url(./arrow_down.svg) no-repeat;
-    background-size: 10px;
-    background-position: calc(100% - 12px) center;
-}
-
 .categories .filter__item {
     margin: 0;
-    border-top: 1px solid rgba(33, 50, 53, 0.1);
     border-bottom: 1px solid rgba(33, 50, 53, 0.1);
-    margin-bottom: 10px;
+    margin-bottom: 14px;
     padding-top: 10px;
     padding-bottom: 16px;
 }
@@ -413,7 +316,7 @@
 }
 
 .categories .filter__inner {
-    margin-top: 0.5em;
+    margin-top: 24px;
     font-size: 14px;
 }
 
@@ -440,15 +343,16 @@
 }
 
 .categories .pc-range-slider__control .ui-slider-range {
-    background: var(--accent);
-    height: 3px !important;
+    background: var(--text-color);
+    height: 4px !important;
 }
 
 .categories .pc-range-slider__control .ui-slider-handle {
     background: white;
-    width: 10px !important;
-    height: 10px !important;
-    border: 2px solid var(--accent);
+    width: 12px !important;
+    height: 12px !important;
+    background: var(--text-color);
+    border-radius: 50%;
     transform: translateY(50%);
 }
 
@@ -486,7 +390,7 @@
     width: 16px;
     height: 16px;
     border-radius: 3px;
-    border: 1px solid var(--text-color);
+    border: 1px solid #D0D5DD;
     padding: 0;
     outline: none;
     accent-color: white;
@@ -496,19 +400,24 @@
 .categories .filter__item input[type="checkbox"]:checked {
     position: relative;
     outline: none;
+    border: 1px solid transparent;
+    background-color: var(--text-color);
 }
 
 .categories .filter__item input[type="checkbox"]:checked::before {
     content: "";
-    display: block;
-    width: 9px;
-    height: 9px;
-    border-radius: 2px;
-    background-color: var(--accent);
-    position: absolute;
+     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: block;
+    width: 9px;
+    height: 7px;
+    border-radius: 2px;
+    background-image: url('data:image/svg+xml,<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 0.892578L3.5 6.39258L1 3.89258" stroke="white" stroke-width="1.6666" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
 }
 
 .categories .filter__inner--scroll::-webkit-scrollbar {
@@ -518,6 +427,12 @@
 .categories .filter__inner--scroll::-webkit-scrollbar-thumb {
     background: #C8C8C8;
     border-radius: 4px;
+}
+
+.filter__buttons {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 
@@ -667,7 +582,7 @@
 }
 
 .filter__properties-item:not(:last-child) {
-    margin-bottom: 3px
+    margin-bottom: 16px
 }
 
 .filter__scroll {
@@ -741,7 +656,6 @@
 .filter__checkgroup-title {
     padding-right: 4px;
     padding-left: 4px;
-    color: #333;
     text-decoration: none;
     cursor: pointer;
     margin: 0
@@ -769,6 +683,7 @@
     display: -ms-flexbox;
     display: flex;
     align-items: center;
+    gap: 8px;
     text-decoration: none
 }
 
@@ -837,7 +752,7 @@
 }
 
 .pc-range-slider__control {
-    background: #fff;
+    background: #F4F5F7;
     border: 1px solid #c7c7c7;
     height: 4px;
     margin-top: 8px
@@ -853,7 +768,7 @@
     -ms-touch-action: none;
     touch-action: none;
     position: absolute;
-    top: 0
+    top: -2px;
 }
 
 .pc-range-slider__control .ui-slider-handle:after,.pc-range-slider__control .ui-slider-handle:before {
@@ -873,7 +788,7 @@
     top: 50% !important;
     margin-top: -2.5px;
     height: 5px !important;
-    background: #999
+    background: #999;
 }
 
 .pc-active-filter__list-item {

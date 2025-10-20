@@ -319,7 +319,7 @@
                                 </a>
                             </li>
                             <li class="header__nav-link">
-                                <a class="dropdown-link hover-dropdown" href="#">
+                                <a class="dropdown-link hover-dropdown" href="aktsii.html">
                                     <span>Акції</span>
                                     <span class="icon icon-Property-137"></span>
                                 </a>
@@ -592,7 +592,7 @@
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
-                                                <span class="icon icon-Property-151"></span>
+                                                <span class="icon icon-Property-151 added"></span>
                                                 <div class="favorit_icon">
                                                     <span class="icon icon-Property-148"></span>
                                                     <span class="icon icon-Property-130"></span>
@@ -662,7 +662,7 @@
                                         <div class="product__info__header product__card__row">
                                             <a class="product__card__brand" href="">The seam</a>
                                             <div class="product__card__icons">
-                                                <span class="icon icon-Property-151"></span>
+                                                <span class="icon icon-Property-151 added"></span>
                                                 <div class="favorit_icon">
                                                     <span class="icon icon-Property-148"></span>
                                                     <span class="icon icon-Property-130"></span>
@@ -3677,7 +3677,7 @@
 
 
             <!-- authorization popup -->
-            <div class="bs-popup authorization-popup active">
+            <div class="bs-popup authorization-popup">
                 <div class="bs-popup-dialog authorization-popup-dialog">
                     <div class="bs-popup-content authorization-popup-content">
 
@@ -3700,21 +3700,41 @@
                             <!-- Tab content -->
                             <div id="sign-in" class="tabcontent" style="display: block;">
                                 <div class="sign-in__content">   
-                                    
-                                    <form action="" class="contacts__form sign-in__form">
-                                        <div class="contacts__form__input-block contacts-input-block phone-block open">
-                                            <p class="contacts__form__lable contacts-lable">Номер телефону</p>
-                                            <input type="phone" name="user-phone" maxlength="13" value="+380">
+
+                                    <!-- if error add class 'error' to form -->                                    
+                                    <form action="" class="bs-form">
+                                        <div class="phone-block open">
+                                            <div class="input-block phone-block-row">
+                                                <label for="user_phone">Номер телефону</label>
+                                                <input type="phone" name="user_phone" maxlength="13" value="+380">
+                                                <span class="error-text">Користувача не знайдено</span>
+                                            </div>
+
+                                            <div class="sign-in__phone-code">
+                                                <p class="popup-title">Введіть код з SMS</p>
+                                                    <div class="inputs">
+                                                        <input type="text" maxlength="1">
+                                                        <input type="text" maxlength="1">
+                                                        <input type="text" maxlength="1">
+                                                        <input type="text" maxlength="1">
+                                                    </div>      
+                                            </div>
                                         </div>
                                         
-                                        <div class="contacts__form__input-block contacts-input-block email-block">
-                                            <div class="email-block-row email">
-                                                <p class="contacts__form__lable contacts-lable">E-mail</p>
-                                                <input type="email" name="user_email">
+                                        <div class="email-block">
+                                            <div class="input-block email-block-row email">
+                                                <label for="user_email">E-mail</label>
+                                                <input type="email" name="user_email" placeholder="E-mail">
                                             </div>
-                                            <div class="email-block-row pass">
-                                                <p class=" contacts__form__lable contacts-lable">Пароль</p>
-                                                <input type="text" name="user_password">
+                                            <div class="input-block email-block-row pass">
+                                                <label for="user_password">Пароль</label>
+                                                <div class="input-has-icon">
+                                                    <input type="password" name="user_password" placeholder="Пароль">
+                                                    <div class="toggle-password icon hide">
+                                                        <img src="./images/eye_icon_hide.png" class="eye-icon hide" alt="hide" width="23" height="23">
+                                                        <img src="./images/eye_icon_show.png" class="eye-icon show" alt="show" width="20" height="20">
+                                                    </div>  
+                                                </div>
                                             </div>
                                             
                                             <div class="input-row links">
@@ -3723,90 +3743,86 @@
                                         </div>
             
                                         <p class="sign-in-text">Відправляючи форму для авторизації/реєстрації ви приймаєте умови <a href="#">Угоди користувача</a></p>
-                                        <p class="sign-in-btn phone-block open">Увiйти через E-mail</p>  
-                                        <p class="sign-in-btn email-block">Увiйти по номеру телефону</p>        
-                                        <button id="login_site" class="contacts__form__btn product__card__info__button not-active"><span>Далі</span></button>
-                                    </form>
+                                              
+                                        <button id="login_site" class="bs-btn bs-btn-yellow not-active"><span>Далі</span></button>
+                                        <p class="bs-btn bs-btn-gray sign-in-btn phone-block open"><span>Увійти за допомогою e-mail</span></p>  
+                                        <p class="bs-btn bs-btn-gray sign-in-btn email-block"><span>Увійти за допомогою телефону</span></p>  
 
-                                    <div class="sign-in__phone-code">
-                                        <p class="popup-title">+38 063 123 45 67</p>
-                                        <p class="light">Будь ласка, введіть 4-значний код, надісланий на ваш номер.</p>
-                                        <!-- add to form class error -->
-                                        <form action="" name="verify-SMS">
-                                            <div class="inputs">
-                                                <input type="text" maxlength="1">
-                                                <input type="text" maxlength="1">
-                                                <input type="text" maxlength="1">
-                                                <input type="text" maxlength="1">
-                                            </div>
-                                            <p class="error-text">Код не підходить, спробуйте ще раз</p>
-                                        </form>
-                                        <div class="row-bottom">
-                                            <p>Код повинен бути в бізнес чаті Viber або SMS</p>
-                                            <div class="timer-block">
-                                                <span class="timer">
-                                                    <span id="timer-counter"></span>
-                                                  </span>
-                                                <button class="contacts__form__btn product__card__info__button repeat-code-btn"><span>Не отримали код?</span></button>
-                                            </div>
-
-                                            <button class="contacts__form__btn product__card__info__button"><span>Далі</span></button>
+                                       <div class="timer-block">
+                                            <span class="timer">
+                                                <span id="timer-counter"></span>
+                                                </span>
                                         </div>
+
                                         <div class="sign-in__choice">
                                             <div class="sign-in__choice-body">
-                                                <div>
-                                                    <button class="sign-in__choice-email">Ввійти за допомогою E-mail</button>
-                                                    <button class="sign-in__choice-repeat">Відправити код ще раз</button>
-                                                    <button class="sign-in__choice-phone">Ввести інший номер</button>
+                                                <div class="repeat-btn_wrapper">
+                                                    <span>Не отримали код?</span>
+                                                    <button class="sign-in__choice-repeat">Надіслати повторно</button>
                                                 </div>
-                                                <button class="sign-in__choice-cancel">Скасувати</button>
+                                                <button class="sign-in__choice-back"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.8327 10.0003H4.16602M4.16602 10.0003L9.99935 15.8337M4.16602 10.0003L9.99935 4.16699"
+                                                            stroke="#1B1B1D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <span>Повернутися</span></button>
                                             </div>
                                         </div>
-            
-                                    </div>
+                                    </form>                                    
 
                                 </div>
                                 <div class="remind-password__content">
                                     <h3>Відновлення паролю</h3>
-                                    <form class="contacts__form">
-                                        <div class="contacts__form__input-block">
-                                            <p class="contacts__form__lable">E-mail</p>
+                                    <form class="bs-form">
+                                        <div class="input-block">
+                                            <label for="user_email">E-mail</label>
                                             <input type="email" name="user_email">
                                         </div>
-                                        <button id="reset_password"
-                                            class="contacts__form__btn product__card__info__button"><span>Нагадати</span></button>
+                                        <button id="reset_password" class="bs-btn bs-btn-yellow"><span>Нагадати</span></button>
                                     </form>
                                 </div>
                             </div>
 
                             <div id="sign-up" class="tabcontent">
-                                <form class="contacts__form">
-                                    <div class="contacts__form__input-block">
-                                        <p class="contacts__form__lable">Ім’я</p>
+                                <form class="bs-form">
+                                    <div class="input-block">
+                                        <label for="user_name">Ім’я</label>
                                         <input type="text" name="user_name">
                                     </div>
-                                    <div class="contacts__form__input-block">
-                                        <p class="contacts__form__lable">Номер телефону</p>
+                                    <div class="input-block">
+                                        <label for="user_phone">Номер телефону</label>
                                         <input type="phone" name="user_phone" maxlength="13">
                                     </div>
-                                    <div class="contacts__form__input-block">
-                                        <p class="contacts__form__lable">E-mail</p>
+                                    <div class="input-block">
+                                        <label for="user_email">E-mail</label>
                                         <input type="email" name="user_email">
                                     </div>
-                                    <div class="contacts__form__input-block">
-                                        <p class="contacts__form__lable">Пароль</p>
-                                        <input type="text" name="user_password">
+                                    <div class="input-block">
+                                        <label for="user_password">Пароль</label>
+                                        <div class="input-has-icon">
+                                            <input type="password" name="user_password" placeholder="Пароль">
+                                            <div class="toggle-password icon hide">
+                                                <img src="./images/eye_icon_hide.png" class="eye-icon hide" alt="hide" width="23" height="23">
+                                                <img src="./images/eye_icon_show.png" class="eye-icon show" alt="show" width="20" height="20">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="contacts__form__input-block">
-                                        <p class="contacts__form__lable">Повторіть пароль</p>
-                                        <input type="text" name="user_password_repeat">
+                                    <div class="input-block">
+                                        <label for="user_password_repeat">Повторіть пароль</label>
+                                        <div class="input-has-icon">
+                                            <input type="password" name="user_password_repeat" placeholder="Пароль">
+                                            <div class="toggle-password icon hide">
+                                                <img src="./images/eye_icon_hide.png" class="eye-icon hide" alt="hide" width="23" height="23">
+                                                <img src="./images/eye_icon_show.png" class="eye-icon show" alt="show" width="20" height="20">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <label class="contacts__form__checkbox">
+                                    <label class="checkbox">
                                         <input type="checkbox">
                                         <p>Натискаючи Ви погоджуєтесь з правилами нашої <a href="#"
                                                 target="_blank">політики конфіденційності</a></p>
                                     </label>
-                                    <button class="contacts__form__btn product__card__info__button">Вхід</button>
+                                    <button class="bs-btn bs-btn-yellow"><span>Вхід</span></button>
                                 </form>
                                
                             </div>

@@ -10,7 +10,6 @@
 }
 
 .slider-banner .swiper-pagination {
-    display: none;
     position: static !important;
     margin-top: 16px;
     max-width: none;

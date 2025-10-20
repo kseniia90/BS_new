@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'BS_new';
-  src:  url('fonts/BS_new.eot?hfcyrl');
-  src:  url('fonts/BS_new.eot?hfcyrl#iefix') format('embedded-opentype'),
-    url('fonts/BS_new.ttf?hfcyrl') format('truetype'),
-    url('fonts/BS_new.woff?hfcyrl') format('woff'),
-    url('fonts/BS_new.svg?hfcyrl#BS_new') format('svg');
+  src:  url('fonts/BS_new.eot?w189c2');
+  src:  url('fonts/BS_new.eot?w189c2#iefix') format('embedded-opentype'),
+    url('fonts/BS_new.ttf?w189c2') format('truetype'),
+    url('fonts/BS_new.woff?w189c2') format('woff'),
+    url('fonts/BS_new.svg?w189c2#BS_new') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,28 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-vip_icon:before {
+  content: "\e904";
+  color: #4b6d74;
+}
+.icon-compare_icon_added .path1:before {
+  content: "\e90b";
+  color: rgb(75, 109, 116);
+}
+.icon-compare_icon_added .path2:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(27, 27, 29);
+}
+.icon-compare_icon_added .path3:before {
+  content: "\e91e";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-resident:before {
+  content: "\e906";
+  color: #4b6d74;
+}
 .icon-tg:before {
   content: "\e903";
 }

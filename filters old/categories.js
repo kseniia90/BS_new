@@ -1,4 +1,4 @@
-  $(".filters__title").on("click", function (e) {
+  $(".filter__accordion__title").on("click", function (e) {
     e.preventDefault();
     var $this = $(this);
 

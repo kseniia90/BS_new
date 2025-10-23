@@ -400,7 +400,7 @@
                 <div class="categories__title">
                     <h1 class="title page-title">Засоби для догляду за волоссям</h1>
                     <div class="categories-sorting">
-                        <form class="woocommerce-ordering" method="get">
+                        <form class="categories-sorting__form" method="get">
                             <select name="orderby" class="orderby">
                                 <option value="menu_order">Сортування за замовчуванням </option>
                                 <option value="popularity">Сортувати за популярністю </option>
@@ -413,285 +413,454 @@
                     </div>
                 </div>
 
+                <div class="filters__title__wrapper mobile-only">
+                    <div class="filters__view-btns">
+                        <button class="filters-view-btn filters-view-btn-multi active">&nbsp;</button>
+                        <button class="filters-view-btn filters-view-btn-list">&nbsp;</button>
+                    </div>
+                    <div class="filters__title filters__title-open">
+                        <svg class="icon" width="19" height="14" viewBox="0 0 19 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.3085 2.07042H15.2495C15.0883 1.47598 14.7358 0.951142 14.2466 0.576946C13.7574 0.202749 13.1586 0 12.5426 0C11.9267 0 11.3279 0.202749 10.8387 0.576946C10.3494 0.951142 9.99699 1.47598 9.83574 2.07042H0.752543C0.552956 2.07042 0.361544 2.14971 0.220415 2.29084C0.0792856 2.43197 0 2.62338 0 2.82297C0 3.02255 0.0792856 3.21396 0.220415 3.35509C0.361544 3.49622 0.552956 3.57551 0.752543 3.57551H9.83574C9.99699 4.16995 10.3494 4.69479 10.8387 5.06898C11.3279 5.44318 11.9267 5.64593 12.5426 5.64593C13.1586 5.64593 13.7574 5.44318 14.2466 5.06898C14.7358 4.69479 15.0883 4.16995 15.2495 3.57551H17.3085C17.5081 3.57551 17.6995 3.49622 17.8406 3.35509C17.9818 3.21396 18.061 3.02255 18.061 2.82297C18.061 2.62338 17.9818 2.43197 17.8406 2.29084C17.6995 2.14971 17.5081 2.07042 17.3085 2.07042ZM12.5426 4.13992C12.2822 4.13992 12.0275 4.06268 11.811 3.91797C11.5944 3.77326 11.4256 3.56758 11.3259 3.32694C11.2263 3.0863 11.2002 2.8215 11.251 2.56604C11.3018 2.31058 11.4272 2.07592 11.6114 1.89174C11.7956 1.70756 12.0302 1.58213 12.2857 1.53132C12.5412 1.4805 12.806 1.50659 13.0466 1.60626C13.2873 1.70594 13.4929 1.87474 13.6376 2.09131C13.7823 2.30788 13.8596 2.5625 13.8596 2.82297C13.8592 3.17212 13.7203 3.50686 13.4734 3.75375C13.2265 4.00064 12.8918 4.13952 12.5426 4.13992Z"
+                                fill="black" />
+                            <path
+                                d="M17.3085 9.71617H8.22605C8.06453 9.12187 7.71193 8.59722 7.22266 8.22318C6.7334 7.84914 6.13464 7.64648 5.51877 7.64648C4.90291 7.64648 4.30416 7.84914 3.81489 8.22318C3.32562 8.59722 2.97302 9.12187 2.8115 9.71617H0.752543C0.552956 9.71617 0.361544 9.79546 0.220415 9.93659C0.0792856 10.0777 0 10.2691 0 10.4687C0 10.6683 0.0792856 10.8597 0.220415 11.0008C0.361544 11.142 0.552956 11.2213 0.752543 11.2213H2.8115C2.97302 11.8156 3.32562 12.3402 3.81489 12.7143C4.30416 13.0883 4.90291 13.2909 5.51877 13.2909C6.13464 13.2909 6.7334 13.0883 7.22266 12.7143C7.71193 12.3402 8.06453 11.8156 8.22605 11.2213H17.3085C17.5081 11.2213 17.6995 11.142 17.8406 11.0008C17.9818 10.8597 18.061 10.6683 18.061 10.4687C18.061 10.2691 17.9818 10.0777 17.8406 9.93659C17.6995 9.79546 17.5081 9.71617 17.3085 9.71617ZM5.5184 11.7857C5.25793 11.7857 5.00331 11.7084 4.78674 11.5637C4.57017 11.419 4.40137 11.2133 4.3017 10.9727C4.20202 10.7321 4.17594 10.4673 4.22675 10.2118C4.27757 9.95633 4.403 9.72167 4.58717 9.53749C4.77135 9.35331 5.00601 9.22789 5.26147 9.17707C5.51694 9.12626 5.78173 9.15234 6.02237 9.25201C6.26302 9.35169 6.46869 9.52049 6.6134 9.73706C6.75811 9.95363 6.83535 10.2082 6.83535 10.4687C6.83475 10.8178 6.69581 11.1524 6.44896 11.3993C6.20212 11.6461 5.86749 11.7851 5.5184 11.7857Z"
+                                fill="black" />
+                        </svg>
+
+                        <span>Фільтр (0)</span>
+                    </div>
+                </div>
+
                 <div class="categories__content margin-bottom">
                     <div class="categories__content__left">
 
                         <div class="filters__wrapper">
-                            <div class="filters__title">
-                                    <span class="accordion__title-text">Фільтри</span>
-                                    <div class="accordion__arrow"></div>
+
+                            <div class="filters__list__wrapper">
+                                <div class="filters__list-heder">
+                                    <div class="filters__title">
+                                        <svg class="icon" width="19" height="14" viewBox="0 0 19 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M17.3085 2.07042H15.2495C15.0883 1.47598 14.7358 0.951142 14.2466 0.576946C13.7574 0.202749 13.1586 0 12.5426 0C11.9267 0 11.3279 0.202749 10.8387 0.576946C10.3494 0.951142 9.99699 1.47598 9.83574 2.07042H0.752543C0.552956 2.07042 0.361544 2.14971 0.220415 2.29084C0.0792856 2.43197 0 2.62338 0 2.82297C0 3.02255 0.0792856 3.21396 0.220415 3.35509C0.361544 3.49622 0.552956 3.57551 0.752543 3.57551H9.83574C9.99699 4.16995 10.3494 4.69479 10.8387 5.06898C11.3279 5.44318 11.9267 5.64593 12.5426 5.64593C13.1586 5.64593 13.7574 5.44318 14.2466 5.06898C14.7358 4.69479 15.0883 4.16995 15.2495 3.57551H17.3085C17.5081 3.57551 17.6995 3.49622 17.8406 3.35509C17.9818 3.21396 18.061 3.02255 18.061 2.82297C18.061 2.62338 17.9818 2.43197 17.8406 2.29084C17.6995 2.14971 17.5081 2.07042 17.3085 2.07042ZM12.5426 4.13992C12.2822 4.13992 12.0275 4.06268 11.811 3.91797C11.5944 3.77326 11.4256 3.56758 11.3259 3.32694C11.2263 3.0863 11.2002 2.8215 11.251 2.56604C11.3018 2.31058 11.4272 2.07592 11.6114 1.89174C11.7956 1.70756 12.0302 1.58213 12.2857 1.53132C12.5412 1.4805 12.806 1.50659 13.0466 1.60626C13.2873 1.70594 13.4929 1.87474 13.6376 2.09131C13.7823 2.30788 13.8596 2.5625 13.8596 2.82297C13.8592 3.17212 13.7203 3.50686 13.4734 3.75375C13.2265 4.00064 12.8918 4.13952 12.5426 4.13992Z"
+                                                fill="black" />
+                                            <path
+                                                d="M17.3085 9.71617H8.22605C8.06453 9.12187 7.71193 8.59722 7.22266 8.22318C6.7334 7.84914 6.13464 7.64648 5.51877 7.64648C4.90291 7.64648 4.30416 7.84914 3.81489 8.22318C3.32562 8.59722 2.97302 9.12187 2.8115 9.71617H0.752543C0.552956 9.71617 0.361544 9.79546 0.220415 9.93659C0.0792856 10.0777 0 10.2691 0 10.4687C0 10.6683 0.0792856 10.8597 0.220415 11.0008C0.361544 11.142 0.552956 11.2213 0.752543 11.2213H2.8115C2.97302 11.8156 3.32562 12.3402 3.81489 12.7143C4.30416 13.0883 4.90291 13.2909 5.51877 13.2909C6.13464 13.2909 6.7334 13.0883 7.22266 12.7143C7.71193 12.3402 8.06453 11.8156 8.22605 11.2213H17.3085C17.5081 11.2213 17.6995 11.142 17.8406 11.0008C17.9818 10.8597 18.061 10.6683 18.061 10.4687C18.061 10.2691 17.9818 10.0777 17.8406 9.93659C17.6995 9.79546 17.5081 9.71617 17.3085 9.71617ZM5.5184 11.7857C5.25793 11.7857 5.00331 11.7084 4.78674 11.5637C4.57017 11.419 4.40137 11.2133 4.3017 10.9727C4.20202 10.7321 4.17594 10.4673 4.22675 10.2118C4.27757 9.95633 4.403 9.72167 4.58717 9.53749C4.77135 9.35331 5.00601 9.22789 5.26147 9.17707C5.51694 9.12626 5.78173 9.15234 6.02237 9.25201C6.26302 9.35169 6.46869 9.52049 6.6134 9.73706C6.75811 9.95363 6.83535 10.2082 6.83535 10.4687C6.83475 10.8178 6.69581 11.1524 6.44896 11.3993C6.20212 11.6461 5.86749 11.7851 5.5184 11.7857Z"
+                                                fill="black" />
+                                        </svg>
+
+                                        <span>Фільтри</span>
+                                    </div>
+                                    <p class="close"><span class="icon icon-Property-142"></span></p>
                                 </div>
 
-                                <div class="accordion__content">
-                                    <div class="filters-heder">
-                                        <p class="close"><span class="icon icon-Property-142"></span></p>
-                                        <p class="title">Фільтри</p>
+                                <div class="filters__list">
+                                    <div class="categories-sorting mobile-only">
+                                        <form class="categories-sorting__form" method="get">
+                                            <select name="orderby" class="orderby">
+                                                <option value="" selected="selected" disabled="disabled">Сортування
+                                                </option>
+                                                <option value="menu_order">Сортування за замовчуванням </option>
+                                                <option value="popularity">Сортувати за популярністю </option>
+                                                <option value="rating">Сортувати за оцінкою </option>
+                                                <option value="date">Сортувати за останніми </option>
+                                                <option value="price">Сортувати за ціною: від нижчої до вищої </option>
+                                                <option value="price-desc">Сортувати за ціною: від вищої до нижчої
+                                                </option>
+                                            </select>
+                                        </form>
                                     </div>
 
-                                    <aside id="secondary" class="widget-area">
-
-                                        <section id="premmerce_filter_filter_widget-6"
-                                            class="widget widget_premmerce_filter_filter_widget">
-
-                                            <div class="filter filter--style-default premmerce-filter-body">
-
-                                                <div class="filter__item  filter__item- filter__item--type-slider">
-
-                                                    <div class="filter__header">
-                                                        <div class="filter__title">Фільтрувати по ціні </div>
+                                    <div class="filter__item">
+                                        <div class="filter__header_range">
+                                            <div class="filter__title">Фільтрувати по ціні </div>
+                                        </div>
+                                        <div class="filter__inner">
+                                            <form action="" method="" class="filter__slider-form">
+                                                <div class="filter__slider-control-group">
+                                                    <div class="filter__slider-control-column">
+                                                        <input class="filter__slider-control" type="number"
+                                                            autocomplete="off" name="min_price" value="59">
                                                     </div>
-
-                                                    <div class="filter__inner">
-                                                        <div class="filter__inner">
-                                                            <form action="" method="GET" class="filter__slider-form">
-                                                                <div class="filter__slider-control-group">
-                                                                    <div class="filter__slider-control-column">
-                                                                        <input class="filter__slider-control"
-                                                                            type="number" autocomplete="off"
-                                                                            name="min_price" value="59">
-                                                                    </div>
-                                                                    <div class="filter__slider-control-column">
-                                                                        <input class="filter__slider-control"
-                                                                            type="number" autocomplete="off"
-                                                                            name="max_price" value="1875">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="filter__range-slider">
-                                                                    <div class="pc-range-slider">
-                                                                        <div class="pc-range-slider__wrapper">
-                                                                            <div class="pc-range-slider__control">
-                                                                                <div class="ui-slider-range ui-corner-all ui-widget-header"
-                                                                                    style="left: 0%; width: 66.2996%;">
-                                                                                </div>
-                                                                                <span tabindex="0"
-                                                                                    class="ui-slider-handle ui-corner-all ui-state-default"
-                                                                                    style="left: 0%;"></span>
-                                                                                <span tabindex="0"
-                                                                                    class="ui-slider-handle ui-corner-all ui-state-default"
-                                                                                    style="left: 66.2996%;"></span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                            </form>
+                                                    <div class="filter__slider-control-column">
+                                                        <input class="filter__slider-control" type="number"
+                                                            autocomplete="off" name="max_price" value="1875">
+                                                    </div>
+                                                </div>
+                                                <div class="filter__range">
+                                                    <div class="filter__range__wrapper">
+                                                        <div class="filter__range__control">
+                                                            <div class="slider-range"
+                                                                style="left: 0%; width: 66.2996%;"></div>
+                                                            <span tabindex="0" class="filter__range-handle"
+                                                                style="left: 0%;"></span>
+                                                            <span tabindex="0" class="filter__range-handle"
+                                                                style="left: 66.2996%;"></span>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div
-                                                    class="filter__item  filter__item-dropdown filter__item--type-checkbox">
+                                            </form>
+                                        </div>
+                                    </div>
 
-                                                    <div class="filter__header filter__header-dropdown">
-                                                        <div class="filter__title">Категорія </div>
-
-                                                        <div class="filter__handle">
-                                                            <div class="filter__handle-ico filter__handle-ico--plus">
-                                                                <div class="filter__icon-plus"></div>
-                                                            </div>
-                                                            <div
-                                                                class="filter__handle-ico filter__handle-ico--minus hidden">
-                                                                <div class="filter__icon-minus"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="filter__inner filter__inner-dropdown">
-
-                                                        <div class="filter__properties-list">
-
-                                                            <div class="filter__properties-item">
-                                                                <div class="filter__checkgroup">
-                                                                    <div class="filter__checkgroup-body">
-                                                                        <div class="filter__checkgroup-link">
-                                                                            <input class="filter__checkgroup-control" type="checkbox" id="filter-checkgroup-id-product_cat-new" autocomplete="off">
-                                                                            <label class="filter__checkgroup-check" for="filter-checkgroup-id-product_cat-new"></label>
-                                                                            <label class="filter__checkgroup-title" for="filter-checkgroup-id-product_cat-new">
-                                                                                <a style="pointer-events: none!important; cursor: default!important;" href="">New</a></label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="filter__checkgroup-aside">
-                                                                        <span class="filter__checkgroup-count">37
-                                                                        </span>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="filter__item  filter__item- filter__item--type-checkbox">
-
-                                                    <div class="filter__header filter__header-">
-                                                        <div class="filter__title"> Наявність</div>
-                                                        <div class="filter__handle">
-                                                            <div class="filter__handle-ico filter__handle-ico--plus">
-                                                                <div class="filter__icon-plus"></div>
-                                                            </div>
-                                                            <div class="filter__handle-ico filter__handle-ico--minus hidden">
-                                                                <div class="filter__icon-minus"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="filter__inner filter__inner-">
-
-                                                        <div class="filter__properties-list">
-                                                            <div class="filter__properties-item">
-                                                                <div class="filter__checkgroup" -checkgroup>
-                                                                    <div class="filter__checkgroup-body">
-                                                                        <div class="filter__checkgroup-link">
-                                                                            <input class="filter__checkgroup-control" type="checkbox" id="filter-checkgroup-id-stock-instock" autocomplete="off">
-                                                                            <label class="filter__checkgroup-check" for="filter-checkgroup-id-stock-instock"></label>
-                                                                            <label class="filter__checkgroup-title" for="filter-checkgroup-id-stock-instock">
-                                                                                <a style="pointer-events: none!important; cursor: default!important;" href="">В
-                                                                                    наявності</a>                                                                            
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="filter__checkgroup-aside">
-                                                                        <span class="filter__checkgroup-count"> 36 </span>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="filter__properties-item ">
-                                                                <div class="filter__checkgroup" -checkgroup>
-                                                                    <div class="filter__checkgroup-body">
-                                                                        <div class="filter__checkgroup-link">
-                                                                            <input class="filter__checkgroup-control" type="checkbox" id="filter-checkgroup-id-stock-outofstock" autocomplete="off">
-                                                                            <label class="filter__checkgroup-check" for="filter-checkgroup-id-stock-outofstock"></label>
-                                                                            <label class="filter__checkgroup-title " for="filter-checkgroup-id-stock-outofstock">
-                                                                                <a style="pointer-events: none!important; cursor: default!important;" href=" ">Немає
-                                                                                    в наявності</a>                                                                            
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="filter__checkgroup-aside">
-                                                                        <span class="filter__checkgroup-count"> 4 </span>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="filter__item  filter__item-dropdown filter__item--type-checkbox">
-
-                                                    <div class="filter__header filter__header-dropdown">
-                                                        <div class="filter__title"> Діючі активи </div>
-                                                    
-                                                        <div class="filter__handle">
-                                                            <div class="filter__handle-ico filter__handle-ico--plus ">
-                                                                <div class="filter__icon-plus"></div>
-                                                            </div>
-                                                            <div class="filter__handle-ico filter__handle-ico--minus hidden">
-                                                                <div class="filter__icon-minus"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="filter__inner filter__inner-dropdown filter__inner--js-hidden">
-
-                                                        <div class="filter__properties-list">
-                                                            <div class="filter__properties-item  ">
-                                                                <div class="filter__checkgroup" -checkgroup>
-                                                                    <div class="filter__checkgroup-body">
-                                                                        <div class="filter__checkgroup-link">
-                                                                            <input class="filter__checkgroup-control" type="checkbox" id="filter-checkgroup-id-actives-azulen" autocomplete="off">
-                                                                            <label class="filter__checkgroup-check" for="filter-checkgroup-id-actives-azulen"></label>
-                                                                            <label class="filter__checkgroup-title" for="filter-checkgroup-id-actives-azulen">
-                                                                                <a style="pointer-events: none!important; cursor: default!important;"
-                                                                                    href="">Азулен</a>                                                                        
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="filter__checkgroup-aside">
-                                                                        <span class="filter__checkgroup-count"> 1 </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="filter__properties-item ">
-                                                                <div class="filter__checkgroup" -checkgroup>
-                                                                    <div class="filter__checkgroup-body">
-                                                                        <div class="filter__checkgroup-link">
-                                                                            <input class="filter__checkgroup-control" type="checkbox" id="filter-checkgroup-id-actives-bakuchiol"
-                                                                                autocomplete="off">
-                                                                            <label class="filter__checkgroup-check" for="filter-checkgroup-id-actives-bakuchiol"></label>
-                                                                            <label class="filter__checkgroup-title " for="filter-checkgroup-id-actives-bakuchiol">
-                                                                                <a style="pointer-events: none!important; cursor: default!important;" href="">Бакучіол</a>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="filter__checkgroup-aside">
-                                                                        <span class="filter__checkgroup-count"> 1 </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="filter__item  filter__item-dropdown filter__item--type-checkbox">
-
-                                                    <div class="filter__header filter__header-dropdown">
-                                                        <div class="filter__title"> Бренд </div>
-                                                    
-                                                        <div class="filter__handle">
-                                                            <div class="filter__handle-ico filter__handle-ico--plus ">
-                                                                <div class="filter__icon-plus"></div>
-                                                            </div>
-                                                            <div class="filter__handle-ico filter__handle-ico--minus hidden">
-                                                                <div class="filter__icon-minus"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="filter__inner filter__inner-dropdown filter__inner--js-hidden">
-                                                    
-                                                        <div class="filter__properties-list">
-                                                            <div class="filter__properties-item">
-                                                                <div class="filter__checkgroup" -checkgroup>
-                                                                    <div class="filter__checkgroup-body">
-                                                                        <div class="filter__checkgroup-link">
-                                                                            <input class="filter__checkgroup-control" type="checkbox"  id="filter-checkgroup-id-brand-by-wishtrend" autocomplete="off">
-                                                                            <label class="filter__checkgroup-check" for="filter-checkgroup-id-brand-by-wishtrend"></label>
-                                                                            <label class="filter__checkgroup-title " for="filter-checkgroup-id-brand-by-wishtrend">
-                                                                                <a style="pointer-events: none!important; cursor: default!important;"
-                                                                                    href="">By Wishtrend</a>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="filter__checkgroup-aside">
-                                                                        <span class="filter__checkgroup-count">
-                                                                            1 </span>
-                                                                    </div>
-                                                    
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="filter__buttons">
-
-                                                    <button class="bs-btn bs-btn-gray">
-                                                        <span class="icon icon-Property-142"></span>
-                                                        <span>Скинути фільтри</span>
-                                                    </button>
-
-                                                    <button
-                                                        class="bs-btn bs-btn-yellow"><span>Фільтрувати</span></button>
-                                                </div>
+                                    <div class="filter__item">
+                                        <div class="filter__header">
+                                            <p>Наявність</p>
+                                            <div class="filter__handle">
+                                                <div class="filter__icon filter__icon-plus icon-Property-140"></div>
+                                                <div class="filter__icon filter__icon-minus icon-Property-139"></div>
                                             </div>
+                                        </div>
+                                        <div class="filter__inner">
 
-                                        </section>
+                                            <div class="filter__properties-list">
+                                                <div class="filter__properties-item">
+                                                    <div class="filter__checkgroup">
+                                                        <div class="filter__checkgroup-body">
+                                                            <div class="filter__checkgroup-link">
+                                                                <input class="filter__checkgroup-control"
+                                                                    type="checkbox"
+                                                                    id="filter-checkgroup-id-stock-instock"
+                                                                    autocomplete="off">
+                                                                <label class="filter__checkgroup-title"
+                                                                    for="filter-checkgroup-id-stock-instock">В
+                                                                    наявності</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__checkgroup-aside">
+                                                            <span class="filter__checkgroup-count"> 36 </span>
+                                                        </div>
 
-                                    </aside>
+                                                    </div>
+                                                </div>
+
+                                                <div class="filter__properties-item">
+                                                    <div class="filter__checkgroup">
+                                                        <div class="filter__checkgroup-body">
+                                                            <div class="filter__checkgroup-link">
+                                                                <input class="filter__checkgroup-control"
+                                                                    type="checkbox"
+                                                                    id="filter-checkgroup-id-stock-outofstock"
+                                                                    autocomplete="off">
+                                                                <label class="filter__checkgroup-title"
+                                                                    for="filter-checkgroup-id-stock-outofstock">Немає в
+                                                                    наявності</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__checkgroup-aside">
+                                                            <span class="filter__checkgroup-count"> 4 </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter__item">
+                                        <div class="filter__header">
+                                            <p>Категорія</p>
+                                            <div class="filter__handle">
+                                                <div class="filter__icon filter__icon-plus icon-Property-140"></div>
+                                                <div class="filter__icon filter__icon-minus icon-Property-139"></div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__inner">
+
+                                            <div class="filter__properties-list">
+                                                <div class="filter__properties-item">
+                                                    <div class="filter__checkgroup">
+                                                        <div class="filter__checkgroup-body">
+                                                            <div class="filter__checkgroup-link">
+                                                                <input class="filter__checkgroup-control"
+                                                                    type="checkbox" id="category1" autocomplete="off">
+                                                                <label class="filter__checkgroup-title"
+                                                                    for="category1">category1</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__checkgroup-aside">
+                                                            <span class="filter__checkgroup-count"> 36 </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="filter__properties-item">
+                                                    <div class="filter__checkgroup">
+                                                        <div class="filter__checkgroup-body">
+                                                            <div class="filter__checkgroup-link">
+                                                                <input class="filter__checkgroup-control"
+                                                                    type="checkbox" id="category2" autocomplete="off">
+                                                                <label class="filter__checkgroup-title"
+                                                                    for="category2">category2</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__checkgroup-aside">
+                                                            <span class="filter__checkgroup-count"> 4 </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter__item">
+                                        <div class="filter__header">
+                                            <p>Проблема</p>
+                                            <div class="filter__handle">
+                                                <div class="filter__icon filter__icon-plus icon-Property-140"></div>
+                                                <div class="filter__icon filter__icon-minus icon-Property-139"></div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__inner">
+
+                                            <div class="filter__properties-list">
+                                                <div class="filter__properties-item">
+                                                    <div class="filter__checkgroup">
+                                                        <div class="filter__checkgroup-body">
+                                                            <div class="filter__checkgroup-link">
+                                                                <input class="filter__checkgroup-control"
+                                                                    type="checkbox" id="problem1" autocomplete="off">
+                                                                <label class="filter__checkgroup-title"
+                                                                    for="problem1">problem1</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__checkgroup-aside">
+                                                            <span class="filter__checkgroup-count"> 36 </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="filter__properties-item">
+                                                    <div class="filter__checkgroup">
+                                                        <div class="filter__checkgroup-body">
+                                                            <div class="filter__checkgroup-link">
+                                                                <input class="filter__checkgroup-control"
+                                                                    type="checkbox" id="problem2" autocomplete="off">
+                                                                <label class="filter__checkgroup-title"
+                                                                    for="problem2">problem2</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__checkgroup-aside">
+                                                            <span class="filter__checkgroup-count"> 4 </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="filter__properties-item">
+                                                    <div class="filter__checkgroup">
+                                                        <div class="filter__checkgroup-body">
+                                                            <div class="filter__checkgroup-link">
+                                                                <input class="filter__checkgroup-control"
+                                                                    type="checkbox" id="problem3" autocomplete="off">
+                                                                <label class="filter__checkgroup-title"
+                                                                    for="problem3">problem3</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__checkgroup-aside">
+                                                            <span class="filter__checkgroup-count"> 36 </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="filter__properties-item">
+                                                    <div class="filter__checkgroup">
+                                                        <div class="filter__checkgroup-body">
+                                                            <div class="filter__checkgroup-link">
+                                                                <input class="filter__checkgroup-control"
+                                                                    type="checkbox" id="problem4" autocomplete="off">
+                                                                <label class="filter__checkgroup-title"
+                                                                    for="problem4">problem4</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__checkgroup-aside">
+                                                            <span class="filter__checkgroup-count"> 4 </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="filter__properties-item">
+                                                    <div class="filter__checkgroup">
+                                                        <div class="filter__checkgroup-body">
+                                                            <div class="filter__checkgroup-link">
+                                                                <input class="filter__checkgroup-control"
+                                                                    type="checkbox" id="problem5" autocomplete="off">
+                                                                <label class="filter__checkgroup-title"
+                                                                    for="problem5">problem5</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__checkgroup-aside">
+                                                            <span class="filter__checkgroup-count"> 36 </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="filter__properties-item">
+                                                    <div class="filter__checkgroup">
+                                                        <div class="filter__checkgroup-body">
+                                                            <div class="filter__checkgroup-link">
+                                                                <input class="filter__checkgroup-control"
+                                                                    type="checkbox" id="problem6" autocomplete="off">
+                                                                <label class="filter__checkgroup-title"
+                                                                    for="problem6">problem6</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__checkgroup-aside">
+                                                            <span class="filter__checkgroup-count"> 4 </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="filter__properties-item">
+                                                    <div class="filter__checkgroup">
+                                                        <div class="filter__checkgroup-body">
+                                                            <div class="filter__checkgroup-link">
+                                                                <input class="filter__checkgroup-control"
+                                                                    type="checkbox" id="problem7" autocomplete="off">
+                                                                <label class="filter__checkgroup-title"
+                                                                    for="problem7">problem7</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__checkgroup-aside">
+                                                            <span class="filter__checkgroup-count"> 36 </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="filter__properties-item">
+                                                    <div class="filter__checkgroup">
+                                                        <div class="filter__checkgroup-body">
+                                                            <div class="filter__checkgroup-link">
+                                                                <input class="filter__checkgroup-control"
+                                                                    type="checkbox" id="problem8" autocomplete="off">
+                                                                <label class="filter__checkgroup-title"
+                                                                    for="problem8">problem8</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__checkgroup-aside">
+                                                            <span class="filter__checkgroup-count"> 4 </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="filter__properties-item">
+                                                    <div class="filter__checkgroup">
+                                                        <div class="filter__checkgroup-body">
+                                                            <div class="filter__checkgroup-link">
+                                                                <input class="filter__checkgroup-control"
+                                                                    type="checkbox" id="problem9" autocomplete="off">
+                                                                <label class="filter__checkgroup-title"
+                                                                    for="problem9">problem9</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__checkgroup-aside">
+                                                            <span class="filter__checkgroup-count"> 36 </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="filter__properties-item">
+                                                    <div class="filter__checkgroup">
+                                                        <div class="filter__checkgroup-body">
+                                                            <div class="filter__checkgroup-link">
+                                                                <input class="filter__checkgroup-control"
+                                                                    type="checkbox" id="problem10" autocomplete="off">
+                                                                <label class="filter__checkgroup-title"
+                                                                    for="problem10">problem10</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__checkgroup-aside">
+                                                            <span class="filter__checkgroup-count"> 4 </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter__item">
+                                        <div class="filter__header">
+                                            <p>Бренд</p>
+                                            <div class="filter__handle">
+                                                <div class="filter__icon filter__icon-plus icon-Property-140"></div>
+                                                <div class="filter__icon filter__icon-minus icon-Property-139"></div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__inner">
+
+                                            <div class="filter__properties-list">
+                                                <div class="filter__properties-item">
+                                                    <div class="filter__checkgroup">
+                                                        <div class="filter__checkgroup-body">
+                                                            <div class="filter__checkgroup-link">
+                                                                <input class="filter__checkgroup-control"
+                                                                    type="checkbox" id="brand1" autocomplete="off">
+                                                                <label class="filter__checkgroup-title"
+                                                                    for="brand1">brand1</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__checkgroup-aside">
+                                                            <span class="filter__checkgroup-count"> 36 </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="filter__properties-item">
+                                                    <div class="filter__checkgroup">
+                                                        <div class="filter__checkgroup-body">
+                                                            <div class="filter__checkgroup-link">
+                                                                <input class="filter__checkgroup-control"
+                                                                    type="checkbox" id="brand2" autocomplete="off">
+                                                                <label class="filter__checkgroup-title"
+                                                                    for="brand2">brand2</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__checkgroup-aside">
+                                                            <span class="filter__checkgroup-count"> 4 </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter__buttons">
+
+                                        <button class="bs-btn bs-btn-gray filter-reset">
+                                            <span>
+                                                <span class="icon icon-Property-142"></span>
+                                                <span>Скинути фільтри</span>
+                                            </span>
+                                        </button>
+
+                                        <button class="bs-btn bs-btn-yellow filter-submit">
+                                            <span>Застосувати фільтри</span>
+                                        </button>
+                                    </div>
 
                                 </div>
+
+                            </div>
                         </div>
                     </div>
                     <div class="categories__content__right">

@@ -119,11 +119,8 @@ window.addEventListener("click", function (e) {
     }
   } else {
     // close burger menu
-    if (
-      !e.target.closest(".header__nav-container") &&
-      !e.target.classList.contains("burger-menu__icon")
-    ) {
-      document.body.classList.remove("lock");
+    if ( !e.target.closest(".header__nav-container") &&  !e.target.classList.contains("burger-menu__icon") ) {
+      // document.body.classList.remove("lock");
       burgerMenuBody.classList.remove("active");
       burgerMenuIcon.classList.remove("active");
 
@@ -208,11 +205,11 @@ const swiperProducts = new Swiper(".products-slider", {
   loop: true,
   slidesPerView: "auto",
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".products-slider .swiper-button-next",
+    prevEl: ".products-slider .swiper-button-prev",
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".products-slider .swiper-pagination",
   },
 
   breakpoints: {
@@ -240,8 +237,8 @@ const swiperReviews = new Swiper(".reviews-slider", {
   slidesPerView: "auto",
   cssMode: true,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".reviews-slider .swiper-button-next",
+    prevEl: ".reviews-slider .swiper-button-prev",
   },
   pagination: {
     el: ".swiper-pagination",
@@ -253,8 +250,8 @@ const swiperCards = new Swiper(".card-slider", {
   spaceBetween: 16,
   slidesPerView: "auto",
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".card-slider .swiper-button-next",
+    prevEl: ".card-slider .swiper-button-prev",
   },
   pagination: {
     el: ".swiper-pagination",
@@ -266,8 +263,8 @@ const swiperPosts = new Swiper(".posts-slider", {
   slidesPerView: "auto",
   cssMode: true,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".posts-slider .swiper-button-next",
+    prevEl: ".posts-slider .swiper-button-prev",
   },
   pagination: {
     el: ".swiper-pagination",
@@ -286,7 +283,7 @@ const swiperGifts = new Swiper(".gifts-slider", {
   loop: true,
   slidesPerView: "auto",
   pagination: {
-    el: ".swiper-pagination",
+    el: ".gifts-slider .swiper-pagination",
   },
   breakpoints: {
     0: {
@@ -361,29 +358,20 @@ $("textarea").keyup(function () {
 
 // mini-cart popup start
 if (document.querySelector(".mini-cart-popup") !== null) {
-  document
-    .querySelector(".header-mini-cart")
-    .addEventListener("click", function (e) {
+  document.querySelector(".header-mini-cart").addEventListener("click", function (e) {
       e.preventDefault();
       document.querySelector(".mini-cart-popup").classList.add("active");
       document.body.classList.add("lock");
     });
 
   window.addEventListener("click", function (e) {
-    if (
-      e.target.closest(".mini-cart-popup__close") ||
-      e.target.closest(".mini-cart-popup .btn-continue")
-    ) {
+    if (e.target.closest(".mini-cart-popup__close") || e.target.closest(".mini-cart-popup .btn-continue")) {
       e.preventDefault();
       document.querySelector(".mini-cart-popup").classList.remove("active");
       document.body.classList.remove("lock");
     }
 
-    if (
-      document.querySelector(".mini-cart-popup.active") &&
-      !e.target.closest(".mini-cart-popup-content") &&
-      !e.target.closest(".header-mini-cart")
-    ) {
+    if (document.querySelector(".mini-cart-popup.active") && !e.target.closest(".mini-cart-popup-content") && !e.target.closest(".header-mini-cart")) {
       document.querySelector(".mini-cart-popup").classList.remove("active");
       document.body.classList.remove("lock");
     }
@@ -505,31 +493,7 @@ if (document.querySelector(".authorization-popup") !== null) {
 
 //  authorization popup end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // show more-less
-
 document.querySelectorAll(".text-block").forEach((block) => {
   const hiddenText = block.querySelector(".hidden-text");
   const button = block.querySelector(".show-more-btn");

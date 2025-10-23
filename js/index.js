@@ -4,7 +4,7 @@ const swiperBanner = new Swiper('.banner-carousel', {
     delay: 5000,
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: '.banner-carousel .swiper-pagination',
   }
 });
 
@@ -13,11 +13,11 @@ const swiperPhotos = new Swiper('.photo-slider', {
   spaceBetween: 8,
   slidesPerView: 'auto',
    navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.photo-slider .swiper-button-next',
+    prevEl: '.photo-slider .swiper-button-prev',
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: '.photo-slider .swiper-pagination',
   }
 });
 

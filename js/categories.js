@@ -1,36 +1,45 @@
-  $(".filters__title").on("click", function (e) {
-    e.preventDefault();
-    var $this = $(this);
+$(".filters__title-open").on("click", function (e) {
+  e.preventDefault();
+  var $this = $(this);
 
-    $this.toggleClass("accordion-active");
-    $('body').addClass("lock");
-  });
-
-  $(".filters-heder .close").on("click", function (e) {
-    $(".accordion__title").removeClass("accordion-active");
-    $('body').removeClass("lock");
+  $(".categories__content__left").toggleClass("open");
+  $("body").addClass("lock");
 });
 
-//BEGIN filters accordion
+$(".filters__list-heder .close").on("click", function (e) {
+  $(".categories__content__left").removeClass("open");
+  $("body").removeClass("lock");
+});
 
-  $(".filters__accordion .accordion__title").on("click", function (e) {
-    e.preventDefault();
-    var $this = $(this);
+$(".filter__header").on("click", function (e) {
+  e.preventDefault();
+  var $this = $(this);
 
-    $this.toggleClass("accordion-active");
-    $this.parent().toggleClass("border");
-    $this.next().slideToggle();
-    $(".accordion__arrow", this).toggleClass("minus");
-  });
-  //END
+  $this.toggleClass("open");
+  $this.next().slideToggle();
+});
 
-  const swiperAktsii = new Swiper(".aktsii-slider", {
+$(".filters-view-btn-list").on("click", function (e) {
+  e.preventDefault();
+  $(".filters-view-btn").removeClass("active");
+  $(this).addClass("active");
+  $(".categories-result").addClass("list");
+});
+
+$(".filters-view-btn-multi").on("click", function (e) {
+  e.preventDefault();
+   $(".filters-view-btn").removeClass("active");
+   $(this).addClass("active");
+  $(".categories-result").removeClass("list");
+});
+
+const swiperAktsii = new Swiper(".aktsii-slider", {
   loop: true,
   slidesPerView: 4,
   cssMode: true,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".aktsii-slider .swiper-button-next",
+    prevEl: ".aktsii-slider .swiper-button-prev",
   },
   breakpoints: {
     0: {
@@ -43,4 +52,25 @@
     },
   },
 });
-  
+
+const swiperBrand = new Swiper(".brand-slider", {
+  loop: true,
+  spaceBetween: 16,
+  cssMode: true,
+  navigation: {
+    nextEl: ".brand-slider .swiper-button-next",
+    prevEl: ".brand-slider .swiper-button-prev",
+  },
+
+   pagination: {
+    el: '.brand-slider .swiper-pagination',
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: "auto",
+    },
+    1300: {
+      slidesPerView: 4,
+    },
+  },
+});

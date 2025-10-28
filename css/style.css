@@ -1189,6 +1189,31 @@ ol.breadcrumb li.active {
 	object-fit: contain;
 }
 
+.preloader {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 150;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(255, 255, 255, 0.45);
+	transition: opacity 200ms ease-in;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.preloader img {
+	width: 100px;
+	height: 100px;
+}
+
+.preloader.active {
+	display: flex;
+}
+
 /* header start */
 
 .header {
@@ -4040,7 +4065,7 @@ ol.breadcrumb li.active {
 }
 
 .guest .cart-progress-bar,
-.guest .mini-cart__foot-row.add-coupon,
+/* .guest .mini-cart__foot-row.add-coupon, */
 .vip .not-free-del,
 .resident .free-del,
 .for-empty.cart-progress-bar,
@@ -4123,10 +4148,20 @@ ol.breadcrumb li.active {
 	font-size: 16px;
 }
 
-.add-cupon-form {
+.bs-form .input-block.add-coupon-block,
+.bs-form .input-block.added-coupon-block {
 	display: grid;
 	grid-template-columns: 1fr 48px;
 	gap: 8px;
+}
+
+.bs-form .input-block.added-coupon-block {
+	display: none;
+}
+
+.bs-form .input-block.added-coupon-block input {
+	background: #ffffff;
+	border: 1px solid var(--accent);
 }
 
 .add-cupon-form  input {
@@ -4141,7 +4176,9 @@ ol.breadcrumb li.active {
 	font-size: 14px;
 	line-height: 20px;
 	font-weight: 400;
-	padding: 10px;
+	padding: 12px 10px;
+	border-radius: 8px;
+	background: #FFFFFF;
 }
 
 .added .add-coupon__status {

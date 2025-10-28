@@ -387,6 +387,11 @@
             </div>
         </header>
         <main class="main">
+
+            <div class="preloader active">
+                <img src="./images/BS_preloader.svg" alt="">
+            </div>
+
             <!-- banner slider -->
             <div class="slider-banner margin-bottom container">
                 <div class="banner-carousel swiper">
@@ -3006,9 +3011,9 @@
             <!-- коистувач не зараєстрований - add  class 'guest' -->
             <!-- VIP коистувач - add class 'vip' -->
             <!-- кошик попрожній - add class 'empty' -->
-            <div class="bs-popup mini-cart-popup resident">
+            <div class="bs-popup mini-cart-popup guest">
                 <div class="bs-popup-dialog mini-cart-popup-dialog">
-                    <div class="bs-popup-content mini-cart-popup-content">
+                    <div class="bs-popup-content mini-cart-popup-content">                    
 
                         <div class="bs-popup-body mini-cart-popup-body">
                             <div class="cart">
@@ -3345,10 +3350,14 @@
                                                             </div>
                                                             <div class="accordion__content" style="display: none;">
                                                                 <form action="" class="bs-form add-cupon-form">
-                                                                    <input type="text" id="add_cupon"
-                                                                        placeholder="Введи промокод">
-                                                                    <button class="bs-btn"><span
-                                                                            class="icon icon-Property-124"></span></button>
+                                                                    <div class="input-block add-coupon-block">
+                                                                        <input type="text" id="add_cupon" placeholder="Введи промокод">
+                                                                        <button class="bs-btn add-cupon-btn"><span class="icon icon-Property-124"></span></button>
+                                                                    </div>
+                                                                    <div class="input-block added-coupon-block">
+                                                                        <input type="text" id="added_cupon">
+                                                                        <button class="bs-btn bs-btn-gray delete-cupon-btn"><span class="icon icon-Property-1-7"></span></button>
+                                                                    </div>
                                                                 </form>
                                                             </div>
                                                         </div>

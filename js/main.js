@@ -651,3 +651,26 @@ document.querySelectorAll(".video_container").forEach(container => {
     playButton.classList.remove("hide");
   });
 });
+
+// add coupon block
+$(".add-cupon-btn").on("click", function (e) {
+  e.preventDefault();
+  if ($("#add_cupon").val() === "") {
+    return;
+  } else {
+    $("#added_cupon").val($("#add_cupon").val());
+    $(".bs-form .input-block.add-coupon-block").hide();
+    $(".bs-form .input-block.added-coupon-block").css("display", "grid").hide().fadeIn();
+    $(".add-coupon .accordion__title").removeClass("accordion-active");
+    $(".add-coupon .accordion__content").hide();
+    $(".add-coupon").addClass("added");
+  }
+  
+});
+
+$(".delete-cupon-btn").on("click", function (e) {
+  e.preventDefault();
+  $(".bs-form .input-block.added-coupon-block").hide();
+  $(".bs-form .input-block.add-coupon-block").css("display", "grid").hide().fadeIn();
+  $(".add-coupon").removeClass("added");
+});

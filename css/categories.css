@@ -678,6 +678,105 @@
         height: 32px !important;
     }
 }
+
+.sale-timer-block {
+	display: flex;
+	justify-content: space-between;
+	gap: 24px;
+}
+
+.sale-timer-left {
+    max-width: 620px;
+    line-height: 160%;
+	color: var(--text-light);
+}
+
+.sale-timer-left .title {
+    line-height: normal;
+    color: var(--text-color);
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.sale-timer-left .hidden-text {
+    max-height: none;
+}
+
+.sale-timer-left .show-more-btn,
+.sale-timer-left .hidden-text::after {
+    display: none;
+}
+
+.coutndown {
+	margin: 0 auto;
+	display: inline-flex;
+	justify-content: center;
+}
+
+.coutndown ul>span {
+	font-size: 32px;
+	line-height: 45px;
+}
+
+.coutndown ul {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.coutndown ul li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 70px;
+	height: 60px;
+	padding: 10px;
+    line-height: 100%;
+	white-space: nowrap;
+	background: #FFF7D3;
+	border-radius: 10px;
+	list-style-type: none;
+}
+
+.coutndown ul li span:first-child {
+    font-size: 25px;
+	line-height: normal;
+	font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    
+	.sale-timer-block {
+		flex-direction: column-reverse;
+        margin-bottom: 40px;
+	}
+
+	.sale-timer-right {
+        align-self: center;
+    }
+
+    .sale-timer-left .title {
+        font-size: 20px;
+    }
+
+    .sale-timer-left .hidden-text {
+        max-height: 75px;
+    }
+
+    .sale-timer-left .show-more-btn,
+    .sale-timer-left .hidden-text::after {
+        display: flex;
+    }
+    
+}
+
+
+
+
+
 /* aktsii end */
 
 /* brand start */
@@ -761,7 +860,5 @@
         font-size: 12px;
         line-height: 120%;
     }
-    
 }
-
 /* brand end */

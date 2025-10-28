@@ -2207,7 +2207,7 @@ ol.breadcrumb li.active {
 
 .social-list li a {
 	display: grid;
-	grid-template-columns: 20px 1fr;
+	grid-template-columns: 38px 1fr;
 	justify-content: flex-start;
 	align-items: center;
 	gap: 12px;
@@ -2215,7 +2215,14 @@ ol.breadcrumb li.active {
 }
 
 .social-list .icon {
+	width: 38px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	font-size: 20px;
+	border-radius: 50%;
+	background-color: var(--accent-yellow);
 }
 
 .social-list .icon-fb {
@@ -3331,6 +3338,12 @@ ol.breadcrumb li.active {
 	gap: 16px;
 }
 
+.bs-form__row {
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
 .bs-form .input-block {
 	display: flex;
 	flex-direction: column;
@@ -3339,7 +3352,10 @@ ol.breadcrumb li.active {
 }
 
 .bs-form input,
-.bs-form textarea {
+.bs-form textarea,
+.bs-form select {
+	width: 100%;
+	font-weight: 400;
 	font-size: 14px;
     line-height: 24px;
 	/* color: #ABAFB6; */
@@ -3353,6 +3369,57 @@ ol.breadcrumb li.active {
 .bs-form textarea {
 	resize: none;
 	padding-bottom: 35px;
+}
+
+.bs-form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('data:image/svg+xml,<svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.99742 5.4512C5.23409 5.4512 4.51742 5.15453 3.97742 4.61453L0.295752 1.17203C0.128252 1.01536 0.119086 0.751195 0.276586 0.582862C0.433252 0.415362 0.697419 0.406195 0.865752 0.563695L4.55742 4.0162C5.34159 4.7987 6.66325 4.78953 7.42825 4.0262L11.1291 0.564528C11.2974 0.407861 11.5616 0.416195 11.7183 0.583695C11.8749 0.752029 11.8666 1.0162 11.6991 1.17286L8.00742 4.62536C7.47742 5.15536 6.76075 5.45203 5.99742 5.45203V5.4512Z" fill="%234B6D74"/></svg>') no-repeat right 10px center;
+}
+
+.bs-form input[type="radio"] {
+	appearance: none;
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	border-radius: 50%;
+	vertical-align: middle;
+	position: relative;
+	cursor: pointer;
+	outline: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+	border: 1px solid var(--text-color);
+}
+
+.bs-form input[type="radio"]:after {
+	position: absolute;
+	content: "";
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	border: 4px solid var(--text-color);
+	transform: translate3d(-50%, -50%, 0) scale(0, 0);
+	transition: all .1s;
+}
+
+.bs-form input[type="radio"]:checked:after {
+	transform: translate3d(-50%, -50%, 0) scale(1, 1);
+}
+
+.bs-form input[type="number"] {
+	appearance: none;
+}
+
+.bs-form input::-webkit-outer-spin-button,
+.bs-form input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+.bs-form input[type=number] {
+    -moz-appearance:textfield; 
 }
 
 .characters-count {
@@ -3386,6 +3453,56 @@ ol.breadcrumb li.active {
 
 .bs-form .bs-btn {
 	width: 100%;
+}
+
+.bs-form .checkgroup {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bs-form .checkgroup-title {
+    font-size: 14px;
+    line-height: normal;
+    /* text-transform: lowercase; */
+    cursor: pointer;
+}
+
+.bs-form .checkgroup-control {
+    flex: 1 0 16px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+	max-width: 16px;
+    border-radius: 3px;
+    border: 1px solid #D0D5DD;
+    padding: 0;
+    outline: none;
+    accent-color: white;
+    appearance: none;
+}
+
+.bs-form .checkgroup-control:checked {
+    position: relative;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: var(--text-color);
+}
+
+.bs-form .checkgroup-control:checked::before {
+    content: "";
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 9px;
+    height: 7px;
+    border-radius: 2px;
+    background-image: url('data:image/svg+xml,<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 0.892578L3.5 6.39258L1 3.89258" stroke="white" stroke-width="1.6666" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
 }
 
 /* bs-popup */
@@ -3601,7 +3718,8 @@ ol.breadcrumb li.active {
 }
 
 .cart-products__left {
-	max-height: 38vh;
+	/* max-height: 38vh; */
+	height: 100%;
 	overflow-y: auto;
 	display: flex;
 	flex-direction: column;
@@ -3712,13 +3830,15 @@ ol.breadcrumb li.active {
 	padding: 10px 16px;
 }
 
-.gifts-list .product__card__img {
+.gifts-list .product__card__img,
+.checkout-gifts-slider .product__card__img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.gifts-list .product__card__img img {
+.gifts-list .product__card__img img,
+.checkout-gifts-slider .product__card__img img {
 	width: 100%;
 	height: auto;
 	object-fit: cover;
@@ -3803,6 +3923,10 @@ ol.breadcrumb li.active {
 
 .cart__col.cart__delete .icon:hover {
 	color: var(--accent);
+}
+
+.cart__name .product__card__brand {
+	margin-bottom: 16px;
 }
 
 .cart__name .product__name {
@@ -4144,6 +4268,31 @@ ol.breadcrumb li.active {
 	padding: 5px;
 	font-size: 12px;
 	background: var(--accent-yellow);
+}
+
+.product-page__info .cart__sing-in__title {
+	margin-bottom: 24px;
+}
+
+.product-page__info .cart__sing-in__list {
+	gap: 12px;
+	margin-bottom: 24px;
+}
+
+.product-page__info .cart__sing-in__list li {
+	grid-template-columns: 36px 1fr;
+}
+
+.product-page__info .sing-in__list__icon {
+	width: 36px;
+	height: 36px;
+	font-size: 16px;
+	background: #ffffff;
+}
+
+.product-page__info .bs-btn {
+	width: 100%;
+	font-size: 14px;
 }
 
 .cart__sing-in__content .bs-btn {
@@ -4995,6 +5144,7 @@ ol.breadcrumb li.active {
 	align-self: flex-end;
 	font-size: 20px;
 	color: var(--text-color);
+	cursor: pointer;
 }
 
 .authorization-popup .logo {
@@ -5365,3 +5515,26 @@ label.checkbox {
 }
 
 /* filter tegs end */
+
+
+.catregory-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.catregory-list .item {
+    font-size: 18px;
+    line-height: normal;
+    color: #939DAF;
+    padding-bottom: 8px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.catregory-list .item.active {
+    color: var(--text-color);
+    border-bottom: 2px solid #E1F56F;
+}

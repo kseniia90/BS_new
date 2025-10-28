@@ -301,6 +301,12 @@ const swiperCart = new Swiper(".cart-slider", {
   slidesPerView: "auto",
 });
 
+const swiperVariants = new Swiper(".product__variants-slider", {
+  loop: true,
+  spaceBetween: 8,
+  slidesPerView: "auto",
+});
+
 // sliders end
 
 // accordion start
@@ -389,13 +395,16 @@ if (document.querySelector(".authorization-popup") !== null) {
       document.querySelectorAll(".authorization-popup").forEach(el => el.classList.remove("active"));
     });
   });
-  document.addEventListener('click', function(event) {
-  document.querySelectorAll('.authorization-popup.active').forEach(function(popup) {
-    if (!popup.querySelector('.authorization-popup-content').contains(event.target)) {
-      popup.classList.remove('active');
-    }
-  });
-});
+   if (document.querySelector(".authorization-popup.active")) {
+     document.addEventListener('click', function(event) {
+      console.log("click");
+      document.querySelectorAll('.authorization-popup.active').forEach(function(popup) {
+        if (!popup.querySelector('.authorization-popup-content').contains(event.target)) {
+          popup.classList.remove('active');
+        }
+      });
+    });
+   }
 }
 
 // tab links

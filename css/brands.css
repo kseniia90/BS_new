@@ -8,28 +8,6 @@
     margin-bottom: 32px;
 }
 
-.brands-catregory-list {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    font-weight: 500;
-    margin-bottom: 24px;
-}
-
-.brands-catregory-list .item {
-    font-size: 18px;
-    line-height: normal;
-    color: #939DAF;
-    padding-bottom: 8px;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s ease;
-}
-
-.brands-catregory-list .item.active {
-    color: var(--text-color);
-    border-bottom: 2px solid #E1F56F;
-}
-
 .brands-filter ul {
     width: 100%;
     display: flex;

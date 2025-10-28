@@ -25,6 +25,7 @@
     --product-view-height: 600px;
     position: sticky;
     top: 180px;
+    overflow: hidden;
 }
 
 .product-page__carousel {
@@ -323,7 +324,8 @@
     scroll-snap-align: start;
 }
 
-.product__variants li a {
+.product__variants li a,
+.product__variants__item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -337,15 +339,27 @@
     line-height: normal;
     letter-spacing: 0.4px;
     border: 1px solid #F1F1F1;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
+.product__variants-slider {
+    padding-left: 2px;
+}
+
+.product__variants-slider .swiper-slide {
+    max-width: max-content;
+}
+
 .product__variants li a:hover,
-.product__variants li.active a {
+.product__variants li.active a,
+.product__variants__item.active,
+.product__variants__item:hover {
+    /* background-color: var(--accent); */
     border: 1px solid var(--accent);
 }
 
-.product__variants li a>img {
+.product__variants__item>img {
     width: auto;
     max-height: 40px;
     object-fit: contain;
@@ -366,21 +380,30 @@
 
 .buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
     gap: 8px;
     align-items: center;
 }
 
 .buttons .bs-btn,
-.gifts-slider-block .bs-btn {
+.gifts-slider-block .bs-btn,
+.product__subscribe .bs-btn {
     width: 100%;
     font-size: 14px;
     line-height: 17px;
 }
 
 .buttons .bs-btn>span,
-.gifts-slider-block .bs-btn>span {
+.gifts-slider-block .bs-btn>span,
+.product__subscribe .bs-btn>span {
     padding: 16px 18px;
+}
+
+.product__subscribe .bs-form {
+     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 8px;
+    align-items: center;
 }
 
 .advantages-row {
@@ -390,13 +413,16 @@
     display: flex;
     gap: 24px;
     padding-bottom: 10px;
-    font-family: 'Montserrat';
     font-weight: 400;
     font-size: 12px;
     line-height: 120%;
     letter-spacing: 0;
     text-transform: uppercase;
     margin-bottom: 40px;
+}
+
+.product-page__info .advantages-row {
+    font-family: 'Montserrat';
 }
 
 .advantages-row::-webkit-scrollbar {

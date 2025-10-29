@@ -1,0 +1,149 @@
+.yana-club-block {
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    gap: 36px;
+    padding-top: 80px;
+}
+
+.yana-club-img__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.yana-club-img__wrapper::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: auto 0 0 0;
+    z-index: -1;
+    background: url('data:image/svg+xml,<svg width="544" height="366" viewBox="0 0 544 366" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="272" cy="272" r="272" fill="%23E1F56F"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+.yana-club-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.thanks-label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px 10px;
+    text-align: left;
+    line-height: 140%;
+    background: #FFF7D3;
+    margin-bottom: 32px;
+}
+
+.thanks-label .icon {
+    font-size: 20px;
+}
+
+.yana-club-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0;
+    margin-bottom: 40px;
+}
+
+.yana-club-list li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.yana-club-list li .icon {
+    flex: 1 0 20px;
+    max-width: 20px;
+}
+
+.yana-club-block .bs-btn {
+    width: 100%;
+    display: inline-flex;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    margin-bottom: 40px;
+}
+
+.yana-club-block .bs-btn>span {
+    padding: 12px 15px;
+}
+
+@media (max-width: 992px) {
+    .yana-club-block {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 30px;
+    }
+
+    .yana-club-list {
+        margin-bottom: 10px;
+        max-width: none;
+    }
+
+    .yana-club-img {
+        order: 2;
+        position: static;
+        align-self: center;
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .yana-club-block .bs-btn {
+        order: 3;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .yana-club-block {
+        padding: 30px 0 0;
+        border-radius: 0;
+        border: none;
+        background: transparent;
+        position: relative;
+    }
+
+   .yana-club-img__wrapper {
+        margin: 0 -60px;
+        padding: 0 60px;
+    }
+
+    .yana-club-title {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .yana-club-img {
+        padding-bottom: 20px;
+    }
+
+    .yana-club-block .bs-btn {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        background: #FFFFFF;
+    }
+}

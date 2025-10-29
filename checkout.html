@@ -395,27 +395,63 @@
                 <li class="breadcrumb-item">Доглядова косметика для обличчя</li>
             </ol>
 
-            <div class="checkout container">
+            <div class="checkout container margin-bottom guest">
                 <h1 class="title page-title"><span>Оформити замовлення</span></h1>
 
                 <div class="checkout__content">
                     <div class="checkout__left">
+
                         <ul class="catregory-list brands-catregory-list">
                             <li class="item" data-filter="guest">
                                 <a href="#">
                                     <span>Я замовляю вперше</span>
                                 </a>
                             </li>
-                            <li class="item active" data-filter="resident">
+                            <li class="item" data-filter="resident">
                                 <a href="#">
                                     <span>Я вже клієнт</span>
                                 </a>
                             </li>
                         </ul>
+
+                         <div class="cart__sing-in margin-bottom_40"
+                            style="background-image: url(./images/mini-cart-bg.jpg), linear-gradient(to left, var(--accent-yellow), #668b90)">
+                            <div class="cart__sing-in__content">
+                                <h3 class="cart__sing-in__title">Ставай резиденткою — відкрий більше можливостей!</h3>
+                                <ul class="cart__sing-in__list">
+                                    <li>
+                                        <img class="sing-in__list__icon" src="./images/logo-icon.svg" alt="logo" width="24" height="24">
+                                        <span>5% кешбек</span>
+                                    </li>
+                                    <li>
+                                        <span class="sing-in__list__icon icon-Property-138"></span>
+                                        <span>подарунки до замовлення</span>
+                                    </li>
+                                    <li>
+                                        <span class="sing-in__list__icon icon icon-Property-136"></span>
+                                        <span>сертифікат 500 грн на День народження</span>
+                                    </li>
+                                    <li>
+                                        <span class="sing-in__list__icon icon icon-Property-146"></span>
+                                        <span>безкоштовна доставка від 1500 грн</span>
+                                    </li>
+                                    <li>
+                                        <span class="sing-in__list__icon icon-Property-149"></span>
+                                        <span>доступ до Приватного Клубу</span>
+                                    </li>
+                                </ul>
+                                <a class="bs-btn bs-btn-yellow" href="">
+                                    <span>
+                                        <span class="icon icon-Property-1Arrow"></span>
+                                        <span>Створити картку клієнта</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
                 
                         <div class="checkout-info margin-bottom_40">
                             <h2 class="checkout-info-title">Твої дані</h2>
-                            <div class="checkout-info__item">
+                            <div class="checkout-info__item margin-bottom_40">
                                 <div class="checkout-info__item__content">
                                     <h3>Вербовецька Марина Олександрівна</h3>
                                     <p class="ligth-text">+380 66 589 67 21</p>
@@ -455,11 +491,7 @@
                             <h2 class="checkout-info-title">Доставка</h2>
                             <div class="checkout-info__item">
                                 <div class="checkout-info__item__content">
-                                    <h3>Тернопіль, Відділення №27</h3>
-                                    <div class="checkgroup">
-                                        <input class="checkgroup-control" type="checkbox" id="recipient-check">
-                                        <label class="checkgroup-title" for="recipient-check">Я одержувач</label>
-                                    </div>
+                                    <h3>Тернопіль, Відділення №27</h3>                                   
                                 </div>
                                 <button class="checkout-info__change-btn">Редагувати</button>
                             </div>
@@ -501,6 +533,12 @@
                                     </div>
                                 </form>
                             </div>
+                            <form action="" class="bs-form">
+                                <div class="checkgroup">
+                                    <input class="checkgroup-control" type="checkbox" id="recipient-check">
+                                    <label class="checkgroup-title" for="recipient-check">Я одержувач</label>
+                                </div>
+                            </form>
                         </div>
                 
                         <div class="checkout-info margin-bottom_40">
@@ -744,8 +782,14 @@
                                     </div>
                                     <div class="accordion__content">
                                         <form action="" class="bs-form add-cupon-form">
-                                            <input type="text" id="add_cupon" placeholder="Введи промокод">
-                                            <button class="bs-btn"><span class="icon icon-Property-124"></span></button>
+                                            <div class="input-block add-coupon-block">
+                                                <input type="text" class="add_cupon" placeholder="Введи промокод">
+                                                <button class="bs-btn add-cupon-btn"><span class="icon icon-Property-124"></span></button>
+                                            </div>
+                                            <div class="input-block added-coupon-block">
+                                                <input type="text" class="added_cupon">
+                                                <button class="bs-btn bs-btn-gray delete-cupon-btn"><span class="icon icon-Property-1-7"></span></button>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -776,7 +820,7 @@
                                     <p>Доставка:</p>
                                     <p>Безкоштовно</p>
                                 </div>
-                                <div class="mini-cart__foot-row">
+                                <div class="mini-cart__foot-row cupons">
                                     <p>Бʼютіки:</p>
                                     <p>21₴</p>
                                 </div>
@@ -797,27 +841,31 @@
                                     <p>2000₴</p>
                                 </div>
                                 <p class="new-cupon">+6 б’ютиків до наступних покупок</p>
-                                <button class="bs-btn bs-btn-yellow" id="checkout-btn">
-                                    <span>
-                                        <span class="icon icon-Property-1Arrow"></span>
-                                        <span>Оформити замовлення</span>
-                                    </span>
-                                </button>
+                                <div class="row">
+                                    <button class="bs-btn bs-btn-sign">
+                                        <span>
+                                            <img src="./images/logo-icon.svg" alt="logo" width="16" height="16">
+                                            <span>Увійди, щоб отримати кешбек 80₴</span>
+                                        </span>
+                                    </button>
+                                    <button class="bs-btn bs-btn-yellow" id="checkout-btn">
+                                        <span>
+                                            <span class="icon icon-Property-1Arrow"></span>
+                                            <span>Оформити замовлення</span>
+                                        </span>
+                                    </button>
+                                </div>
                             
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-
-
-
             </div>
 
             <div class="bs-popup mini-cart-popup resident">
                 <div class="bs-popup-dialog mini-cart-popup-dialog">
-                    <div class="bs-popup-content mini-cart-popup-content">
+                    <div class="bs-popup-content mini-cart-popup-content">                    
 
                         <div class="bs-popup-body mini-cart-popup-body">
                             <div class="cart">
@@ -1090,23 +1138,23 @@
                                                             бонуси з цього
                                                             замовлення</h3>
                                                         <ul class="cart__sing-in__list">
-                                                            <li class="item">
+                                                            <li>
                                                                 <img class="sing-in__list__icon"
                                                                     src="./images/logo-icon.svg" alt="logo" width="24"
                                                                     height="24">
                                                                 <span>+35₴ кешбек</span>
                                                             </li>
-                                                            <li class="item">
+                                                            <li>
                                                                 <span
                                                                     class="sing-in__list__icon icon-Property-138"></span>
                                                                 <span>подарунки до замовлення</span>
                                                             </li>
-                                                            <li class="item">
+                                                            <li>
                                                                 <span
                                                                     class="sing-in__list__icon icon icon-Property-146"></span>
                                                                 <span>безкоштовна доставка</span>
                                                             </li>
-                                                            <li class="item">
+                                                            <li>
                                                                 <span
                                                                     class="sing-in__list__icon icon-Property-149"></span>
                                                                 <span>доступ до Приватного Клубу</span>
@@ -1154,10 +1202,14 @@
                                                             </div>
                                                             <div class="accordion__content" style="display: none;">
                                                                 <form action="" class="bs-form add-cupon-form">
-                                                                    <input type="text" id="add_cupon"
-                                                                        placeholder="Введи промокод">
-                                                                    <button class="bs-btn"><span
-                                                                            class="icon icon-Property-124"></span></button>
+                                                                    <div class="input-block add-coupon-block">
+                                                                        <input type="text" class="add_cupon" placeholder="Введи промокод">
+                                                                        <button class="bs-btn add-cupon-btn"><span class="icon icon-Property-124"></span></button>
+                                                                    </div>
+                                                                    <div class="input-block added-coupon-block">
+                                                                        <input type="text" class="added_cupon">
+                                                                        <button class="bs-btn bs-btn-gray delete-cupon-btn"><span class="icon icon-Property-1-7"></span></button>
+                                                                    </div>
                                                                 </form>
                                                             </div>
                                                         </div>

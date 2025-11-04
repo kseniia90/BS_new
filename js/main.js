@@ -654,24 +654,11 @@ document.querySelectorAll(".video_container").forEach(container => {
 
 // add coupon block
 
-$(".add-cupon-btn").each(function () {
-  $(this).on("click", function (e) {
-    e.preventDefault();
-
-    const parent = $(this).closest(".add-coupon");
-    const addInput = parent.find(".add_cupon");
-    const addedInput = parent.find(".added_cupon");
-
-    if (addInput.val().trim() === "") return;
-
-    addedInput.val(addInput.val());
-    parent.find(".bs-form .input-block.add-coupon-block").hide();
-    parent.find(".bs-form .input-block.added-coupon-block").css("display", "grid").hide().fadeIn();
-    parent.find(".accordion__title").removeClass("accordion-active");
-    parent.find(".accordion__content").hide();
-    parent.addClass("added");
-  });
-});
+// function addCupon(){
+//     $(".add-coupon .input-block.add-coupon-block").hide();
+//     $(".add-coupon .input-block.added-coupon-block").css("display", "grid").hide().fadeIn();
+//     $(".add-coupon").addClass("added");
+// }
 
 $(".delete-cupon-btn").each(function () {
   $(this).on("click", function (e) {
@@ -680,6 +667,6 @@ $(".delete-cupon-btn").each(function () {
     const parent = $(this).closest(".add-coupon");
     parent.find(".bs-form .input-block.added-coupon-block").hide();
     parent.find(".bs-form .input-block.add-coupon-block").css("display", "grid").hide().fadeIn();
-    parent.removeClass("added");
+    // parent.removeClass("added");
   });
 });

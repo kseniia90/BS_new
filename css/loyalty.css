@@ -3,15 +3,16 @@
 }
 
 .loyalty_new__banner {
+    padding: 120px 0;
     background: #FBFBFB;
 }
 
-.loyalty_new__banner__container {
+/* .loyalty_new__banner__container {
     display: grid;
     grid-template-columns: 1fr 60%;
     position: relative;
-}
-
+} */
+/* 
 .loyalty_video__banner__container {
     display: flex;
     justify-self: center;
@@ -28,37 +29,36 @@
     min-height: 100%;
     object-fit: cover;
     object-position: center;
-}
+} */
 
 
 .loyalty_new__banner__content {
-    z-index: 5;
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    padding: 25px 30px;
-    margin-right: -125px;
-    background: #FBFBFB;
+    justify-self: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
 }
 
-.loyalty_new__banner__content p {
+/* .loyalty_new__banner__content p {
     font-family: 'Montserrat';
     line-height: 160%;
     color: var(--text-light);
-}
+} */
 
 .loyalty_new__title {
-    font-family: 'Comfortaa';
     font-weight: 600;
     font-size: 36px;
     line-height: 120%;
     letter-spacing: 0.3px;
+    text-wrap: balance;
 }
 
-.loyalty_new__banner__content .bs-btn {
+/* .loyalty_new__banner__content .bs-btn {
     align-self: flex-start;
-}
-
+} */
+/* 
 .loyalty_new__banner__img {
     height: 100%;
 }
@@ -68,7 +68,7 @@
     height: 100%;
     object-position: right;
     object-fit: cover;
-}
+} */
 
 .loyalty_new__info,
 .loyalty_new__levels,
@@ -177,7 +177,7 @@
 }
 
 
-.loyalty_new__info__content__img .mobile-only,
+/* .loyalty_new__info__content__img .mobile-only,
 .loyalty_new__info__content__img.mobile-only,
 .loyalty_new__banner__img .tablet-only,
 .loyalty_new__banner__img .mobile-only {
@@ -192,9 +192,9 @@
     .loyalty_new__banner__img .tablet-only {
         display: block !important;
     }
-}
+} */
 
-
+/* 
 @media (max-width: 768px) {
 
     .loyalty_new__info__content__img .desktop-only,
@@ -215,7 +215,7 @@
         width: 100%;
         object-position: bottom;
     }
-}
+} */
 
 .loyalty_new .bonus__card-title {
     font-weight: 700;
@@ -488,11 +488,11 @@
         border-radius: 0;
     }
 
-    .loyalty_new__banner__img img {
+    /* .loyalty_new__banner__img img {
         width: 100%;
         border-radius: 16px;
         object-position: center;
-    }
+    } */
 
     .loyalty_new-carousel.card-slider .swiper-slide {
         max-width: 340px;

@@ -606,22 +606,21 @@ function handleDropdown(dropdown, arrow, open) {
 // video play
 
 document.querySelectorAll(".video_container").forEach(container => {
-  const video = container.querySelector(".video");
+  const video = container.querySelector("video"); 
   const playButton = container.querySelector(".play_button");
+  if (!video) return;
 
-  // Функція, що зупиняє всі інші відео
   function pauseAllOthers() {
     document.querySelectorAll(".video_container").forEach(otherContainer => {
-      const otherVideo = otherContainer.querySelector(".video");
+      const otherVideo = otherContainer.querySelector("video");
       const otherButton = otherContainer.querySelector(".play_button");
-      if (otherVideo !== video) {
+      if (otherVideo && otherVideo !== video) {
         otherVideo.pause();
-        otherButton.classList.remove("hide");
+        if (otherButton) otherButton.classList.remove("hide");
       }
     });
   }
 
-  // Обробка кліку по кнопці
   playButton.addEventListener("click", function () {
     pauseAllOthers();
 
@@ -634,7 +633,6 @@ document.querySelectorAll(".video_container").forEach(container => {
     }
   });
 
-  // Обробка кліку по самому відео
   video.addEventListener("click", function () {
     if (video.paused) {
       pauseAllOthers();
@@ -646,11 +644,11 @@ document.querySelectorAll(".video_container").forEach(container => {
     }
   });
 
-  // Показати кнопку знову, коли відео закінчиться
   video.addEventListener("ended", function () {
     playButton.classList.remove("hide");
   });
 });
+
 
 // add coupon block
 

@@ -92,6 +92,10 @@
 	height: 100%;
 }
 
+.icon-vip_icon:before {
+  content: "\e904";
+  color: #4b6d74;
+}
 
 .icon-compare_icon_added .path1:before {
   content: "\e90b";
@@ -913,6 +917,14 @@ main {
 	.title_20 {
 		font-size: 18px;
 	}
+}
+
+.fz-40 {
+	font-size: 40px;
+}
+
+.fz-33 {
+	font-size: 33px;
 }
 
 .blue-text {
@@ -3386,7 +3398,8 @@ ol.breadcrumb li.active {
 
 .bs-form input,
 .bs-form textarea,
-.bs-form select {
+.bs-form select,
+.bs-form .select2-selection {
 	width: 100%;
 	font-weight: 400;
 	font-size: 14px;
@@ -3394,9 +3407,17 @@ ol.breadcrumb li.active {
 	/* color: #ABAFB6; */
 	padding: 12px 14px;
 	background: transparent;
-	border: 1px solid #D0D5DD;
-	border-radius: 8px;
+	border: 1px solid #D0D5DD !important;
+	border-radius: 8px !important;
 	outline: none;
+}
+
+.bs-form .select2-selection {
+	height: 50px !important;
+}
+
+.bs-form .select2-selection__arrow {
+	display: none;
 }
 
 .bs-form textarea {
@@ -3404,7 +3425,8 @@ ol.breadcrumb li.active {
 	padding-bottom: 35px;
 }
 
-.bs-form select {
+.bs-form select,
+.bs-form .select2-selection {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -3929,6 +3951,16 @@ ol.breadcrumb li.active {
 	grid-area: 1 / 2 / 2 / 4;
 }
 
+.cart__table .cart__col.cart__name {
+	display: flex;
+	flex-direction: column;
+}
+
+.cart__table .cart__col.cart__name .product__price {
+	margin-top: 16px;
+	font-size: 14px;
+}
+
 .cart__table .cart__col.cart__quantity {
 	grid-area: 2 / 2 / 3 / 4;
 }
@@ -3960,6 +3992,7 @@ ol.breadcrumb li.active {
 
 .cart__name .product__card__brand {
 	margin-bottom: 16px;
+	align-self: flex-start;
 }
 
 .cart__name .product__name {
@@ -4848,6 +4881,76 @@ ol.breadcrumb li.active {
 
 .bonus__card .bs-btn {
 	width: 100%;
+}
+
+
+.grid-table {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(10, minmax(76px, auto));
+    font-size: 18px;
+}
+
+.grid-table__col {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: 1 / -1;
+}
+
+.grid-table__col.resident {
+    border-radius: 20px;
+    border: 2px solid #ecd48a;
+}
+
+.grid-table__col.vip {
+    border-radius: 20px;
+    color: #ffffff;
+    background: url(../images/card_vip_bg.webp) no-repeat;
+    background-size: cover;
+    border: 4px solid #ecd48a;
+}
+
+.grid-table__col.vip .icon-vip_icon::before {
+    color: #ecd48a;
+}
+
+.grid-table__row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px;
+    border-bottom: 1px solid #D0D5DD80;
+}
+
+.grid-table__col:not(.first-col) .grid-table__row {
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .grid-table {
+        grid-template-columns: 32% 15% 25% 28%;
+        grid-template-rows: repeat(10, minmax(66px, auto));
+        font-size: 12px;
+        line-height: 100%;
+    }
+
+    .grid-table__col.resident {
+        border-radius: 8px;
+    }
+
+    .grid-table__col.vip {
+        border-radius: 8px;
+        border: 2px solid #ecd48a;
+    }
+
+    .grid-table__row {
+        padding: 18px 8px;
+    }
+
+    .grid-table__row.first-row {
+        flex-direction: column-reverse;
+    }
 }
 
 /* bonus and tarif cards end */

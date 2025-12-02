@@ -98,36 +98,56 @@ const swiperBrand = new Swiper(".brand-slider", {
 });
 
 // countDown on banner
-if (document.querySelector(".sale-coutndown") !== null) {
-  let days = document.getElementById("days"),
-    hours = document.getElementById("hours"),
-    minutes = document.getElementById("minutes"),
-    seconds = document.getElementById("seconds");
-  const second = 1000,
-    minute = second * 60,
-    hour = minute * 60,
-    day = hour * 24;
 
-  let timeleft = JSON.parse(document.querySelector(".sale-timer-right").getAttribute("data-timeleft")),
-    distance = timeleft.days * day + timeleft.hours * hour + timeleft.minutes * minute + timeleft.seconds * second,
-    x = setInterval(function () {
-        
-      days = Math.floor(distance / day);
-      days = days < 10 ? "0" + days : days;
-      (document.getElementById("days").innerText = days),
-        (hours = Math.floor((distance % day) / hour));
-      hours = hours < 10 ? "0" + hours : hours;
-      (document.getElementById("hours").innerText = hours),
-        (minutes = Math.floor((distance % hour) / minute)),
-        (minutes = minutes < 10 ? "0" + minutes : minutes);
-      (document.getElementById("minutes").innerText = minutes),
-        (seconds = Math.floor((distance % minute) / second)),
-        (seconds = seconds < 10 ? "0" + seconds : seconds);
-      document.getElementById("seconds").innerText = seconds;
-      var sec = Math.floor((distance % minute) / second);
-      distance = distance - second;
-    }, second);
-};
+if (document.querySelector(".sale-coutndown") !== null) {
+
+  const second = 1000,
+        minute = second * 60,
+        hour   = minute * 60,
+        day    = hour * 24;
+
+  const timeleft = JSON.parse(
+    document.querySelector(".sale-timer-right").getAttribute("data-timeleft")
+  );
+
+  let distance =
+      (timeleft.days * day) +
+      (timeleft.hours * hour) +
+      (timeleft.minutes * minute) +
+      (timeleft.seconds * second);
+
+  const x = setInterval(() => {
+
+    if (distance <= 0) {
+      document.getElementById("days").innerText    = "00";
+      document.getElementById("hours").innerText   = "00";
+      document.getElementById("minutes").innerText = "00";
+      document.getElementById("seconds").innerText = "00";
+      clearInterval(x);
+      return;
+    }
+
+    let days    = Math.floor(distance / day);
+    let hours   = Math.floor((distance % day) / hour);
+    let minutes = Math.floor((distance % hour) / minute);
+    let seconds = Math.floor((distance % minute) / second);
+
+    days    = days.toString().padStart(2, "0");
+    hours   = hours.toString().padStart(2, "0");
+    minutes = minutes.toString().padStart(2, "0");
+    seconds = seconds.toString().padStart(2, "0");
+
+    document.getElementById("days").innerText    = days;
+    document.getElementById("hours").innerText   = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+
+    distance -= second;
+
+  }, second);
+}
+
+
 
 const rangeMinValue = document.querySelector("#range-min-value");
 const rangeMaxValue = document.querySelector("#range-max-value");

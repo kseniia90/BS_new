@@ -102,6 +102,10 @@
     margin-top: 24px;
 }
 
+.checkout-gifts-slider {
+    padding: 5px 0;
+}
+
 .checkout-gifts-slider .swiper-slide {
     max-width: 302px;
 }

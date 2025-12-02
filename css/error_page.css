@@ -1,0 +1,82 @@
+.error_page-content {
+    width: 100%;
+    max-width: 740px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    padding: 80px 0;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.error_page-content img,
+.error_page-content .error_icon {
+    aspect-ratio: 1/1;
+}
+
+.error_page-order {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 16px;
+    text-align: start;
+    background: #FBFBFB;
+    border-radius: 8px;
+}
+
+.error_page-order .oder-title {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+.error_page-order .order-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.error_page-order .order-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* error page */
+
+.error_page_main-content {
+    gap: 36px;
+    max-width: 604px;
+}
+
+.error_page_text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.error_page-content h2 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+
+    .error_page-content img,
+    .error_page-content .error_icon {
+        width: 80px;
+    }
+
+}

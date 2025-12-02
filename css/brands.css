@@ -67,14 +67,14 @@
     padding-bottom: 0;
     border: none;
 }
-
+/* 
 [data-filter="popular"] .title-letter {
     display: none;
 }
 
 .brands-content:not([data-filter="popular"]) .title-popular {
     display: none;
-}
+} */
 
 .brand_block .list_brand {
     display: grid;

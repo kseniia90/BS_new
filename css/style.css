@@ -972,14 +972,14 @@ ol.breadcrumb li.active {
 	color: var(--accent);
 }
 
-.breadcrumb-item+.breadcrumb-item::before {
+/* .breadcrumb-item+.breadcrumb-item::before {
 	display: inline-block;
 	padding: 0 5px;
 	opacity: 0.6;
 	position: relative;
 	top: 1px;
 	content: "/";
-}
+} */
 
 .bs-btn {
 	position: relative;
@@ -2551,6 +2551,10 @@ ol.breadcrumb li.active {
 	background-color: #F4DAFF;
 }
 
+.product-label.not_stock {
+ background-color: #E1F56F;
+}
+
 .product__card .product__card__img>img {
 	height: 140px;
 	aspect-ratio: 1/1;
@@ -3529,8 +3533,8 @@ ol.breadcrumb li.active {
     width: 16px;
     height: 16px;
 	max-width: 16px;
-    border-radius: 3px;
-    border: 1px solid #D0D5DD;
+    border-radius: 3px !important;
+    border: 1px solid #D0D5DD !important;
     padding: 0;
     outline: none;
     accent-color: white;
@@ -4215,8 +4219,21 @@ ol.breadcrumb li.active {
 	gap: 8px;
 }
 
-.bs-form .input-block.added-coupon-block {
+/* .bs-form .input-block.added-coupon-block {
 	display: none;
+} */
+
+.add-coupon {
+	margin-bottom: 15px;
+}
+
+.add-cupon-form:has(.added-coupon-block),
+.added .accordion__item {
+	display: none;
+}
+
+.added .add-cupon-form:has(.added-coupon-block) {
+	display: flex;
 }
 
 .bs-form .input-block.added-coupon-block input {
@@ -4985,6 +5002,10 @@ ol.breadcrumb li.active {
 	transition: all 0.2s ease;
 }
 
+.pagination .page-number.active {
+	background: var(--accent-yellow);
+}
+
 @media (min-width: 769px) {
 
     .pagination .page-number:hover {
@@ -5624,9 +5645,10 @@ label.checkbox {
 }
 
 .banner .banner__img {
-	width: 100%;
+	 width: 100%;
 	height: 100%;
 	object-fit: cover;
+	border-radius: 50px;
 }
 
 /* banner end */

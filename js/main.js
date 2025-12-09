@@ -604,59 +604,102 @@ function handleDropdown(dropdown, arrow, open) {
 // product variants dropdown end
 
 // video play
+jQuery(function ($) {
 
-document.querySelectorAll(".video_container").forEach(container => {
-  const video = container.querySelector("video"); 
-  const playButton = container.querySelector(".play_button");
-  if (!video) return;
+  function loadVideo($video) {
+    // Уже загружали
+    if ($video.data('loaded') === 1) return;
 
-  function pauseAllOthers() {
-    document.querySelectorAll(".video_container").forEach(otherContainer => {
-      const otherVideo = otherContainer.querySelector("video");
-      const otherButton = otherContainer.querySelector(".play_button");
-      if (otherVideo && otherVideo !== video) {
-        otherVideo.pause();
-        if (otherButton) otherButton.classList.remove("hide");
+    var videoEl = $video.get(0);
+    var src    = $video.data('src');
+
+    var $source = $video.find('source[data-src]');
+
+    if (!src && $source.length) {
+      src = $source.data('src');
+      $source.attr('src', src);
+    } else if (src) {
+      if (!$video.find('source').length) {
+        $source = $('<source>', {
+          src: src,
+          type: 'video/mp4'
+        });
+        $video.append($source);
+      } else {
+        $source = $video.find('source').first();
+        $source.attr('src', src);
       }
-    });
+    }
+
+    if (src) {
+      videoEl.load();
+      $video.data('loaded', 1);
+    }
   }
 
-  playButton.addEventListener("click", function () {
-    pauseAllOthers();
+  $('.video_container').each(function () {
+    var $container  = $(this);
+    var $video      = $container.find('video');
+    var $playButton = $container.find('.play_button');
 
-    if (video.paused) {
-      video.play();
-      this.classList.add("hide");
-    } else {
-      video.pause();
-      this.classList.remove("hide");
+    if (!$video.length) return;
+
+    var videoEl = $video.get(0);
+
+    function pauseAllOthers() {
+      $('.video_container').each(function () {
+        var $otherContainer = $(this);
+        var $otherVideo     = $otherContainer.find('video');
+        var $otherButton    = $otherContainer.find('.play_button');
+
+        if (!$otherVideo.length) return;
+
+        if ($otherVideo.get(0) !== videoEl) {
+          $otherVideo.get(0).pause();
+          if ($otherButton.length) {
+            $otherButton.removeClass('hide');
+          }
+        }
+      });
     }
-  });
 
-  video.addEventListener("click", function () {
-    if (video.paused) {
+    $playButton.on('click', function (e) {
+      e.preventDefault();
+
+      loadVideo($video);
+
       pauseAllOthers();
-      video.play();
-      playButton.classList.add("hide");
-    } else {
-      video.pause();
-      playButton.classList.remove("hide");
-    }
+
+      if (videoEl.paused) {
+        videoEl.play().catch(function () {});
+        $playButton.addClass('hide');
+      } else {
+        videoEl.pause();
+        $playButton.removeClass('hide');
+      }
+    });
+
+    $video.on('click', function () {
+      loadVideo($video);
+
+      if (videoEl.paused) {
+        pauseAllOthers();
+        videoEl.play().catch(function () {});
+        $playButton.addClass('hide');
+      } else {
+        videoEl.pause();
+        $playButton.removeClass('hide');
+      }
+    });
+
+    $video.on('ended', function () {
+      $playButton.removeClass('hide');
+    });
+
   });
 
-  video.addEventListener("ended", function () {
-    playButton.classList.remove("hide");
-  });
 });
 
-
-// add coupon block
-
-// function addCupon(){
-//     $(".add-coupon .input-block.add-coupon-block").hide();
-//     $(".add-coupon .input-block.added-coupon-block").css("display", "grid").hide().fadeIn();
-//     $(".add-coupon").addClass("added");
-// }
 
 $(".delete-cupon-btn").each(function () {
   $(this).on("click", function (e) {

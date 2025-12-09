@@ -1,12 +1,12 @@
 if (document.querySelector(".product-page") !== null) {
-  const productCarousel = new Carousel(
-    document.getElementById("productCarousel"),
-    {
+  const productCarousel = new Carousel(document.getElementById("productCarousel"),{
       transition: "slide",
       preload: 3, // Smoother navigation when using lazy loaded images
 
       Dots: false,
       Thumbs: {
+        autoStart : true,
+        showOnStart: true,
         type: "classic",
         Carousel: {
           dragFree: false,
@@ -39,7 +39,12 @@ if (document.querySelector(".product-page") !== null) {
     hideClass: false,
 
     Hash: false,
-    Thumbs: false,
+    Thumbs: true,
+
+    Thumbs: {
+      autoStart : true,
+      showOnStart: true,
+    },
 
     Toolbar: {
       display: {
@@ -62,7 +67,8 @@ if (document.querySelector(".product-page") !== null) {
       },
     },
   });
-}
+};
+
 
 $(".product-page__accordion .accordion__title").on("click", function (e) {
   e.preventDefault();

@@ -2688,6 +2688,17 @@ ol.breadcrumb li.active {
 	border-radius: 0 0 16px 16px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 .product__card .product__info,
 .gift-item .product__info {
 	width: 100%;
@@ -5074,7 +5085,12 @@ ol.breadcrumb li.active {
 
 }
 
+
 /* blog posts start */
+
+
+
+
 .blog__content {
 	width: 100%;
 	display: grid;
@@ -5735,40 +5751,4 @@ label.checkbox {
 .guest .catregory-list .item[data-filter="guest"] {
     color: var(--text-color);
     border-bottom: 2px solid #E1F56F;
-}
-
-/* text-common  */
-
-.text-common p {
-    margin-bottom: 1rem;
-}
-
-.text-common ul {
-	margin: 5px 0px 24px;
-    list-style: none;
-    padding-left: 24px;
-    text-indent: 0em;
-}
-
-.text-common ul li {
-	position: relative;
-	padding-left: 28px;
-	margin-bottom: 10px
-}
-
-.text-common ul li::before {
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 0;
-	width: 20px;
-	height: 20px;
-	transform: translateY(-50%);
-	background: url(../images/logo-icon.svg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	border-radius: 50%;
-}
-.text-common ol {
-	margin: 5px 0px 24px;
 }

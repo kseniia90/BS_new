@@ -28,9 +28,15 @@
     overflow: hidden;
 }
 
-.product-page__carousel {
+.product-page__carousel:has(.f-thumbs) {
     display: grid;
     grid-template-columns: 140px minmax(300px, 1fr);
+    height: var(--product-view-height);
+}
+
+.product-page__carousel {
+    display: grid;
+    grid-template-columns: 1fr;
     height: var(--product-view-height);
 }
 
@@ -1060,6 +1066,12 @@
     }
 
     .product-page__carousel {
+        grid-template-columns: 1fr;
+        --product-view-height: 350px;
+        height: auto;
+    }
+
+    .product-page__carousel:has(.f-thumbs) {
         grid-template-columns: 1fr;
         --product-view-height: 350px;
         height: auto;

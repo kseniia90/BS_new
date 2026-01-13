@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/categories.css">
 
-    <title>BS_brand</title>
+    <title>BS_vybir_yany</title>
 </head>
 
 <body>
@@ -393,24 +393,54 @@
                 <li class="breadcrumb-item"><a href="index.html">Головна</a></li>
                 <li class="breadcrumb-item"><a href="#">Доглядова косметика для обличчя</a></li>
                 <li class="breadcrumb-item"><a href="">Сироватки для обличчя</a></li>
-                <li class="breadcrumb-item"><a href="">Сироватка освітлююча з галактомісісом та вітамінним комплексом</a></li>
+                <li class="breadcrumb-item"><a href="">Сироватка освітлююча з галактомісісом та вітамінним
+                        комплексом</a></li>
             </ol>
 
-            <div class="container categories brand">
+            <div class="container categories vybir_yany">
+                <div class="banner">
+                    <img class="banner__img desktop-only" src="./images/vybir-yany_banner_desktop.jpg" alt="banner" width="1440" height="637">
+                    <img class="banner__img mobile-only" src="./images/vybir-yany_banner_mob.jpg" alt="banner" width="390" height="390">
+                </div>
 
-                <div class="categories__title">
-                    <h1 class="title page-title">Бренд</h1>
-                    <div class="categories-sorting">
-                        <form class="woocommerce-ordering" method="get">
-                            <select name="orderby" class="orderby">
-                                <option value="menu_order">Сортування за замовчуванням </option>
-                                <option value="popularity">Сортувати за популярністю </option>
-                                <option value="rating">Сортувати за оцінкою </option>
-                                <option value="date">Сортувати за останніми </option>
-                                <option value="price">Сортувати за ціною: від нижчої до вищої </option>
-                                <option value="price-desc">Сортувати за ціною: від вищої до нижчої </option>
-                            </select>
-                        </form>
+                <h1 class="title">Вибір Яни</h1> 
+
+                <div class="text-block text-common">
+                    <div class="hidden-text">
+                        <p>У цьому розділі представлені засоби для догляду, які особисто тестувала і оцінювала засновниця Beauty Systema
+                            Яна Коломієць. Маючи шестирічний досвід у косметиці, Яна ретельно оцінювала кожен з продуктів і відібрала
+                            для себе найефективніші на її особисту думку, які пропонує обирати і вам.</p>
+                        <p>Яна має комбіновану шкіру обличчя з підвищеною чутливістю і віковими змінами, а також жирну шкіру голови і
+                            пористе, фарбоване волосся, що потребує відновлення і зволоження. Вона рекомендує ці засоби людям зі схожим
+                            типом шкіри або радить обирати продукти з такої ж лінійки. </p>
+                        <p>Кожен засіб тут пройшов строгий відбір і перевірку, щоб гарантувати максимальну ефективність.</p>
+                        <p>Відкрийте для себе продукти, які Яна рекомендує своїм людям з упевненістю!</p>
+                    </div>
+                    <button class="show-more-btn">Розгорнути</button>
+                </div>
+
+                <div class="categories-sorting desktop-only">
+                    <form class="categories-sorting__form" method="get">
+                        <select name="orderby" class="orderby">
+                            <option value="menu_order">Сортування за замовчуванням </option>
+                            <option value="popularity">Сортувати за популярністю </option>
+                            <option value="rating">Сортувати за оцінкою </option>
+                            <option value="date">Сортувати за останніми </option>
+                            <option value="price">Сортувати за ціною: від нижчої до вищої </option>
+                            <option value="price-desc">Сортувати за ціною: від вищої до нижчої </option>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="filters__title__wrapper mobile-only">
+                    <div class="filters__view-btns">
+                        <button class="filters-view-btn filters-view-btn-multi active">&nbsp;</button>
+                        <button class="filters-view-btn filters-view-btn-list">&nbsp;</button>
+                    </div>
+                    <div class="filters__title filters__title-open">
+                        <span class="icon icon-icon_filter"></span>
+
+                        <span>Фільтр (0)</span>
                     </div>
                 </div>
 
@@ -451,31 +481,37 @@
                                             <div class="filter__title">Фільтрувати по ціні </div>
                                         </div>
                                         <div class="filter__inner">
-                                            <form action="" method="" class="filter__slider-form">
-                                                <div class="filter__slider-control-group">
-                                                    <div class="filter__slider-control-column">
-                                                        <input class="filter__slider-control" type="number"
-                                                            autocomplete="off" name="min_price" value="59">
+                                            <form action="" method="" class="filter__slider-form">                                               
+                                                <div class="range-container">
+                                                    <div class="filter__slider-control-group">
+                                                        <div class="filter__slider-control-column">
+                                                            <input id="input-min-value" class="filter__slider-control"
+                                                                type="number" autocomplete="off" name="min_price"
+                                                                value="59">
+                                                        </div>
+                                                        <div class="filter__slider-control-column">
+                                                            <input id="input-max-value" class="filter__slider-control"
+                                                                type="number" autocomplete="off" name="max_price"
+                                                                value="1875">
+                                                        </div>
                                                     </div>
-                                                    <div class="filter__slider-control-column">
-                                                        <input class="filter__slider-control" type="number"
-                                                            autocomplete="off" name="max_price" value="1875">
-                                                    </div>
-                                                </div>
-                                                <div class="filter__range">
-                                                    <div class="filter__range__wrapper">
-                                                        <div class="filter__range__control">
-                                                            <div class="slider-range"
-                                                                style="left: 0%; width: 66.2996%;"></div>
-                                                            <span tabindex="0" class="filter__range-handle"
-                                                                style="left: 0%;"></span>
-                                                            <span tabindex="0" class="filter__range-handle"
-                                                                style="left: 66.2996%;"></span>
+
+                                                    <div class="slider-range">
+                                                        <div class="track"></div>
+                                                        <div class="progress"></div>
+                                                        <div class="thumbs">
+                                                            <input class="range-input" id="range-min-value" type="range"
+                                                                min="0" max="100" value="0" step="1" aria-valuemin="0"
+                                                                aria-valuemax="100" aria-orientation="horizontal" />
+
+                                                            <input class="range-input" id="range-max-value" type="range"
+                                                                min="0" max="100" value="75" step="1" aria-valuemin="0"
+                                                                aria-valuemax="100" aria-orientation="horizontal" />
                                                         </div>
                                                     </div>
                                                 </div>
-
                                             </form>
+
                                         </div>
                                     </div>
 
@@ -838,499 +874,285 @@
                     </div>
                     <div class="categories__content__right">
 
-                        <div class="banner">
-                            <img class="banner__img" src="./images/aktsii_banner_d.jpg" alt="banner" width="1440"
-                                height="280">
+                        <div class="categories-result">
+
+                            <div class="product__card">
+                                <div class="top">
+                                    <a class="product__card__img" href="product-page.html">
+                                        <img src="./images/product.png" alt="product-img" width="140" height="140">
+                                    </a>
+                                    <div class="labels-block">
+                                        <div class="product-label new">
+                                            <span>new</span>
+                                        </div>
+                                    </div>
+                                    <div class="bs-buy-btn">
+                                        <span class="icon icon-Property-154"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="product__info">
+
+                                    <div class="product__info__header product__card__row">
+                                        <a class="product__card__brand" href="">The seam</a>
+                                        <div class="product__card__icons">
+                                            <span class="icon icon-Property-151"></span>
+                                            <div class="favorit_icon">
+                                                <span class="icon icon-Property-148"></span>
+                                                <span class="icon icon-Property-130"></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <a href="product-page.html" class="product__name">
+                                            <span>Відновлюючий бальзам для губ</span>
+                                        </a>
+                                        <p class="product__description">Overnight Restoring Lip-Treatment</p>
+                                    </div>
+
+                                    <div class="product__parameters">
+                                        <div class="product-parameter">Niacinamide</div>
+                                        <div class="product-parameter">SPF30</div>
+                                    </div>
+
+                                    <div class="bottom">
+                                        <div class="product__card__row">
+                                            <div class="product__price">
+                                                <p class="price">1260₴</p>
+                                                <p class="old-price">1699₴</p>
+                                            </div>
+                                            <p class="cashback">+23₴ кешбек</p>
+
+                                        </div>
+                                        <div class="product__reviews-block">
+                                            <div class="product__reviews">
+                                                <div class="product__star yellow"></div>
+                                                <div class="product__star yellow"></div>
+                                                <div class="product__star yellow"></div>
+                                                <div class="product__star yellow"></div>
+                                                <div class="product__star gray"></div>
+                                            </div>
+                                            <p class="product__reviews-count">4.8 <span>(54)</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="product__card">
+                                <div class="top">
+                                    <a class="product__card__img" href="product-page.html">
+                                        <img src="./images/product.png" alt="product-img" width="140" height="140">
+                                    </a>
+                                    <div class="labels-block">
+                                        <div class="product-label new">
+                                            <span>new</span>
+                                        </div>
+                                    </div>
+                                    <div class="bs-buy-btn">
+                                        <span class="icon icon-Property-154"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="product__info">
+
+                                    <div class="product__info__header product__card__row">
+                                        <a class="product__card__brand" href="">The seam</a>
+                                        <div class="product__card__icons">
+                                            <span class="icon icon-Property-151"></span>
+                                            <div class="favorit_icon">
+                                                <span class="icon icon-Property-148"></span>
+                                                <span class="icon icon-Property-130"></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <a href="product-page.html" class="product__name">
+                                            <span>Відновлюючий бальзам для губ</span>
+                                        </a>
+                                        <p class="product__description">Overnight Restoring Lip-Treatment</p>
+                                    </div>
+
+                                    <div class="product__parameters">
+                                        <div class="product-parameter">Niacinamide</div>
+                                        <div class="product-parameter">SPF30</div>
+                                    </div>
+
+                                    <div class="bottom">
+                                        <div class="product__card__row">
+                                            <div class="product__price">
+                                                <p class="price">1260₴</p>
+                                                <p class="old-price">1699₴</p>
+                                            </div>
+                                            <p class="cashback">+23₴ кешбек</p>
+
+                                        </div>
+                                        <div class="product__reviews-block">
+                                            <div class="product__reviews">
+                                                <div class="product__star yellow"></div>
+                                                <div class="product__star yellow"></div>
+                                                <div class="product__star yellow"></div>
+                                                <div class="product__star yellow"></div>
+                                                <div class="product__star gray"></div>
+                                            </div>
+                                            <p class="product__reviews-count">4.8 <span>(54)</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="product__card">
+                                <div class="top">
+                                    <a class="product__card__img" href="product-page.html">
+                                        <img src="./images/product.png" alt="product-img" width="140" height="140">
+                                    </a>
+                                    <div class="labels-block">
+                                        <div class="product-label new">
+                                            <span>new</span>
+                                        </div>
+                                    </div>
+                                    <div class="bs-buy-btn">
+                                        <span class="icon icon-Property-154"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="product__info">
+
+                                    <div class="product__info__header product__card__row">
+                                        <a class="product__card__brand" href="">The seam</a>
+                                        <div class="product__card__icons">
+                                            <span class="icon icon-Property-151"></span>
+                                            <div class="favorit_icon">
+                                                <span class="icon icon-Property-148"></span>
+                                                <span class="icon icon-Property-130"></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <a href="product-page.html" class="product__name">
+                                            <span>Відновлюючий бальзам для губ</span>
+                                        </a>
+                                        <p class="product__description">Overnight Restoring Lip-Treatment</p>
+                                    </div>
+
+                                    <div class="product__parameters">
+                                        <div class="product-parameter">Niacinamide</div>
+                                        <div class="product-parameter">SPF30</div>
+                                    </div>
+
+                                    <div class="bottom">
+                                        <div class="product__card__row">
+                                            <div class="product__price">
+                                                <p class="price">1260₴</p>
+                                                <p class="old-price">1699₴</p>
+                                            </div>
+                                            <p class="cashback">+23₴ кешбек</p>
+
+                                        </div>
+                                        <div class="product__reviews-block">
+                                            <div class="product__reviews">
+                                                <div class="product__star yellow"></div>
+                                                <div class="product__star yellow"></div>
+                                                <div class="product__star yellow"></div>
+                                                <div class="product__star yellow"></div>
+                                                <div class="product__star gray"></div>
+                                            </div>
+                                            <p class="product__reviews-count">4.8 <span>(54)</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="product__card">
+                                <div class="top">
+                                    <a class="product__card__img" href="product-page.html">
+                                        <img src="./images/product.png" alt="product-img" width="140" height="140">
+                                    </a>
+                                    <div class="labels-block">
+                                        <div class="product-label new">
+                                            <span>new</span>
+                                        </div>
+                                    </div>
+                                    <div class="bs-buy-btn">
+                                        <span class="icon icon-Property-154"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="product__info">
+
+                                    <div class="product__info__header product__card__row">
+                                        <a class="product__card__brand" href="">The seam</a>
+                                        <div class="product__card__icons">
+                                            <span class="icon icon-Property-151"></span>
+                                            <div class="favorit_icon">
+                                                <span class="icon icon-Property-148"></span>
+                                                <span class="icon icon-Property-130"></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <a href="product-page.html" class="product__name">
+                                            <span>Відновлюючий бальзам для губ</span>
+                                        </a>
+                                        <p class="product__description">Overnight Restoring Lip-Treatment</p>
+                                    </div>
+
+                                    <div class="product__parameters">
+                                        <div class="product-parameter">Niacinamide</div>
+                                        <div class="product-parameter">SPF30</div>
+                                    </div>
+
+                                    <div class="bottom">
+                                        <div class="product__card__row">
+                                            <div class="product__price">
+                                                <p class="price">1260₴</p>
+                                                <p class="old-price">1699₴</p>
+                                            </div>
+                                            <p class="cashback">+23₴ кешбек</p>
+
+                                        </div>
+                                        <div class="product__reviews-block">
+                                            <div class="product__reviews">
+                                                <div class="product__star yellow"></div>
+                                                <div class="product__star yellow"></div>
+                                                <div class="product__star yellow"></div>
+                                                <div class="product__star yellow"></div>
+                                                <div class="product__star gray"></div>
+                                            </div>
+                                            <p class="product__reviews-count">4.8 <span>(54)</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div class="posts-slider-block brand-slider-block margin-bottom_40">
-                            <div class="slider-container">
-                                <div class="brand-slider swiper overflow">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="post-item brand-item">
-                                                <a href="" class="post-item-img">
-                                                    <img src="./images/brand-categ_1.jpg" alt="brand" width="208"
-                                                        height="240">
-                                                </a>
-                                                <h3 class="brand-item-title">Догляд за обличчям</h3>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="post-item brand-item">
-                                                <a href="" class="post-item-img">
-                                                    <img src="./images/brand-categ_2.jpg" alt="brand" width="208"
-                                                        height="240">
-                                                </a>
-                                                <h3 class="brand-item-title">Догляд за тілом</h3>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="post-item brand-item">
-                                                <a href="" class="post-item-img">
-                                                    <img src="./images/brand-categ_3.jpg" alt="brand" width="208"
-                                                        height="240">
-                                                </a>
-                                                <h3 class="brand-item-title">Догляд для очей</h3>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="post-item brand-item">
-                                                <a href="" class="post-item-img">
-                                                    <img src="./images/brand-categ_4.jpg" alt="brand" width="208"
-                                                        height="240">
-                                                </a>
-                                                <h3 class="brand-item-title">SPF</h3>
-                                            </div>
-                                        </div>
-
-                                        <!-- <div class="swiper-slide">
-                                            <div class="post-item brand-item">
-                                                <a href="" class="post-item-img">
-                                                    <img src="./images/brand-categ_2.jpg" alt="brand" width="208"
-                                                        height="240">
-                                                </a>
-                                                <h3 class="brand-item-title">Догляд за тілом</h3>
-                                            </div>
-                                        </div> -->
-
-                                        <!-- <div class="swiper-slide">
-                                            <div class="post-item brand-item">
-                                                <a href="" class="post-item-img">
-                                                    <img src="./images/brand-categ_3.jpg" alt="brand" width="208"
-                                                        height="240">
-                                                </a>
-                                                <h3 class="brand-item-title">Догляд для очей</h3>
-                                            </div>
-                                        </div> -->
-                                    </div>
-
-                                    <div class="swiper-buttons">
-                                        <div class="swiper-button-prev"></div>
-                                        <div class="swiper-pagination"></div>
-                                        <div class="swiper-button-next"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="filters__title__wrapper mobile-only">
-                            <div class="filters__view-btns">
-                                <button class="filters-view-btn filters-view-btn-multi active">&nbsp;</button>
-                                <button class="filters-view-btn filters-view-btn-list">&nbsp;</button>
-                            </div>
-                            <div class="filters__title filters__title-open">
-                                <span class="icon icon-icon_filter"></span>
-
-                                <span>Фільтр (0)</span>
-                            </div>
-                        </div>
-
-                        <div class="categories-result__wrapper margin-bottom">
-                            <div class="categories-result">
-
-                                <div class="product__card">
-                                    <div class="top">
-                                        <a class="product__card__img" href="product-page.html">
-                                            <img src="./images/product.png" alt="product-img" width="140" height="140">
-                                        </a>
-                                        <div class="labels-block">
-                                            <div class="product-label new">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="bs-buy-btn">
-                                            <span class="icon icon-Property-154"></span>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="product__info">
-
-                                        <div class="product__info__header product__card__row">
-                                            <a class="product__card__brand" href="">The seam</a>
-                                            <div class="product__card__icons">
-                                                <span class="icon icon-Property-151"></span>
-                                                <div class="favorit_icon">
-                                                    <span class="icon icon-Property-148"></span>
-                                                    <span class="icon icon-Property-130"></span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div>
-                                            <a href="product-page.html" class="product__name">
-                                                <span>Відновлюючий бальзам для губ</span>
-                                            </a>
-                                            <p class="product__description">Overnight Restoring Lip-Treatment</p>
-                                        </div>
-
-                                        <div class="product__parameters">
-                                            <div class="product-parameter">Niacinamide</div>
-                                            <div class="product-parameter">SPF30</div>
-                                        </div>
-
-                                        <div class="bottom">
-                                            <div class="product__card__row">
-                                                <div class="product__price">
-                                                    <p class="price">1260₴</p>
-                                                    <p class="old-price">1699₴</p>
-                                                </div>
-                                                <p class="cashback">+23₴ кешбек</p>
-
-                                            </div>
-                                            <div class="product__reviews-block">
-                                                <div class="product__reviews">
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star gray"></div>
-                                                </div>
-                                                <p class="product__reviews-count">4.8 <span>(54)</span>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="product__card">
-                                    <div class="top">
-                                        <a class="product__card__img" href="product-page.html">
-                                            <img src="./images/product.png" alt="product-img" width="140" height="140">
-                                        </a>
-                                        <div class="labels-block">
-                                            <div class="product-label new">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="bs-buy-btn">
-                                            <span class="icon icon-Property-154"></span>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="product__info">
-
-                                        <div class="product__info__header product__card__row">
-                                            <a class="product__card__brand" href="">The seam</a>
-                                            <div class="product__card__icons">
-                                                <span class="icon icon-Property-151"></span>
-                                                <div class="favorit_icon">
-                                                    <span class="icon icon-Property-148"></span>
-                                                    <span class="icon icon-Property-130"></span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div>
-                                            <a href="product-page.html" class="product__name">
-                                                <span>Відновлюючий бальзам для губ</span>
-                                            </a>
-                                            <p class="product__description">Overnight Restoring Lip-Treatment</p>
-                                        </div>
-
-                                        <div class="product__parameters">
-                                            <div class="product-parameter">Niacinamide</div>
-                                            <div class="product-parameter">SPF30</div>
-                                        </div>
-
-                                        <div class="bottom">
-                                            <div class="product__card__row">
-                                                <div class="product__price">
-                                                    <p class="price">1260₴</p>
-                                                    <p class="old-price">1699₴</p>
-                                                </div>
-                                                <p class="cashback">+23₴ кешбек</p>
-
-                                            </div>
-                                            <div class="product__reviews-block">
-                                                <div class="product__reviews">
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star gray"></div>
-                                                </div>
-                                                <p class="product__reviews-count">4.8 <span>(54)</span>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="product__card">
-                                    <div class="top">
-                                        <a class="product__card__img" href="product-page.html">
-                                            <img src="./images/product.png" alt="product-img" width="140" height="140">
-                                        </a>
-                                        <div class="labels-block">
-                                            <div class="product-label new">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="bs-buy-btn">
-                                            <span class="icon icon-Property-154"></span>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="product__info">
-
-                                        <div class="product__info__header product__card__row">
-                                            <a class="product__card__brand" href="">The seam</a>
-                                            <div class="product__card__icons">
-                                                <span class="icon icon-Property-151"></span>
-                                                <div class="favorit_icon">
-                                                    <span class="icon icon-Property-148"></span>
-                                                    <span class="icon icon-Property-130"></span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div>
-                                            <a href="product-page.html" class="product__name">
-                                                <span>Відновлюючий бальзам для губ</span>
-                                            </a>
-                                            <p class="product__description">Overnight Restoring Lip-Treatment</p>
-                                        </div>
-
-                                        <div class="product__parameters">
-                                            <div class="product-parameter">Niacinamide</div>
-                                            <div class="product-parameter">SPF30</div>
-                                        </div>
-
-                                        <div class="bottom">
-                                            <div class="product__card__row">
-                                                <div class="product__price">
-                                                    <p class="price">1260₴</p>
-                                                    <p class="old-price">1699₴</p>
-                                                </div>
-                                                <p class="cashback">+23₴ кешбек</p>
-
-                                            </div>
-                                            <div class="product__reviews-block">
-                                                <div class="product__reviews">
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star gray"></div>
-                                                </div>
-                                                <p class="product__reviews-count">4.8 <span>(54)</span>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="product__card">
-                                    <div class="top">
-                                        <a class="product__card__img" href="product-page.html">
-                                            <img src="./images/product.png" alt="product-img" width="140" height="140">
-                                        </a>
-                                        <div class="labels-block">
-                                            <div class="product-label new">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="bs-buy-btn">
-                                            <span class="icon icon-Property-154"></span>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="product__info">
-
-                                        <div class="product__info__header product__card__row">
-                                            <a class="product__card__brand" href="">The seam</a>
-                                            <div class="product__card__icons">
-                                                <span class="icon icon-Property-151"></span>
-                                                <div class="favorit_icon">
-                                                    <span class="icon icon-Property-148"></span>
-                                                    <span class="icon icon-Property-130"></span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div>
-                                            <a href="product-page.html" class="product__name">
-                                                <span>Відновлюючий бальзам для губ</span>
-                                            </a>
-                                            <p class="product__description">Overnight Restoring Lip-Treatment</p>
-                                        </div>
-
-                                        <div class="product__parameters">
-                                            <div class="product-parameter">Niacinamide</div>
-                                            <div class="product-parameter">SPF30</div>
-                                        </div>
-
-                                        <div class="bottom">
-                                            <div class="product__card__row">
-                                                <div class="product__price">
-                                                    <p class="price">1260₴</p>
-                                                    <p class="old-price">1699₴</p>
-                                                </div>
-                                                <p class="cashback">+23₴ кешбек</p>
-
-                                            </div>
-                                            <div class="product__reviews-block">
-                                                <div class="product__reviews">
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star gray"></div>
-                                                </div>
-                                                <p class="product__reviews-count">4.8 <span>(54)</span>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="product__card">
-                                    <div class="top">
-                                        <a class="product__card__img" href="product-page.html">
-                                            <img src="./images/product.png" alt="product-img" width="140" height="140">
-                                        </a>
-                                        <div class="labels-block">
-                                            <div class="product-label new">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="bs-buy-btn">
-                                            <span class="icon icon-Property-154"></span>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="product__info">
-
-                                        <div class="product__info__header product__card__row">
-                                            <a class="product__card__brand" href="">The seam</a>
-                                            <div class="product__card__icons">
-                                                <span class="icon icon-Property-151"></span>
-                                                <div class="favorit_icon">
-                                                    <span class="icon icon-Property-148"></span>
-                                                    <span class="icon icon-Property-130"></span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div>
-                                            <a href="product-page.html" class="product__name">
-                                                <span>Відновлюючий бальзам для губ</span>
-                                            </a>
-                                            <p class="product__description">Overnight Restoring Lip-Treatment</p>
-                                        </div>
-
-                                        <div class="product__parameters">
-                                            <div class="product-parameter">Niacinamide</div>
-                                            <div class="product-parameter">SPF30</div>
-                                        </div>
-
-                                        <div class="bottom">
-                                            <div class="product__card__row">
-                                                <div class="product__price">
-                                                    <p class="price">1260₴</p>
-                                                    <p class="old-price">1699₴</p>
-                                                </div>
-                                                <p class="cashback">+23₴ кешбек</p>
-
-                                            </div>
-                                            <div class="product__reviews-block">
-                                                <div class="product__reviews">
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star gray"></div>
-                                                </div>
-                                                <p class="product__reviews-count">4.8 <span>(54)</span>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="product__card">
-                                    <div class="top">
-                                        <a class="product__card__img" href="product-page.html">
-                                            <img src="./images/product.png" alt="product-img" width="140" height="140">
-                                        </a>
-                                        <div class="labels-block">
-                                            <div class="product-label new">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="bs-buy-btn">
-                                            <span class="icon icon-Property-154"></span>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="product__info">
-
-                                        <div class="product__info__header product__card__row">
-                                            <a class="product__card__brand" href="">The seam</a>
-                                            <div class="product__card__icons">
-                                                <span class="icon icon-Property-151"></span>
-                                                <div class="favorit_icon">
-                                                    <span class="icon icon-Property-148"></span>
-                                                    <span class="icon icon-Property-130"></span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div>
-                                            <a href="product-page.html" class="product__name">
-                                                <span>Відновлюючий бальзам для губ</span>
-                                            </a>
-                                            <p class="product__description">Overnight Restoring Lip-Treatment</p>
-                                        </div>
-
-                                        <div class="product__parameters">
-                                            <div class="product-parameter">Niacinamide</div>
-                                            <div class="product-parameter">SPF30</div>
-                                        </div>
-
-                                        <div class="bottom">
-                                            <div class="product__card__row">
-                                                <div class="product__price">
-                                                    <p class="price">1260₴</p>
-                                                    <p class="old-price">1699₴</p>
-                                                </div>
-                                                <p class="cashback">+23₴ кешбек</p>
-
-                                            </div>
-                                            <div class="product__reviews-block">
-                                                <div class="product__reviews">
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star yellow"></div>
-                                                    <div class="product__star gray"></div>
-                                                </div>
-                                                <p class="product__reviews-count">4.8 <span>(54)</span>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
+                        <div class="pagination">
+                            <span class="page-number current">1</span>
+                            <a class="page-number" href="">2</a>
+                            <a class="page-number" href="">3</a>
+                            <span class="page-number dots">…</span>
+                            <a class="page-number" href="">42</a>
+                            <a class="next page-number" href="">»</a>
                         </div>
                     </div>
+
+
                 </div>
 
                 <div class="tg-banner margin-bottom"
@@ -1494,7 +1316,7 @@
 
             <div class="bs-popup mini-cart-popup resident">
                 <div class="bs-popup-dialog mini-cart-popup-dialog">
-                    <div class="bs-popup-content mini-cart-popup-content">                    
+                    <div class="bs-popup-content mini-cart-popup-content">
 
                         <div class="bs-popup-body mini-cart-popup-body">
                             <div class="cart">
@@ -1832,12 +1654,16 @@
                                                             <div class="accordion__content" style="display: none;">
                                                                 <form action="" class="bs-form add-cupon-form">
                                                                     <div class="input-block add-coupon-block">
-                                                                        <input type="text" class="add_cupon" placeholder="Введи промокод">
-                                                                        <button class="bs-btn add-cupon-btn"><span class="icon icon-Property-124"></span></button>
+                                                                        <input type="text" class="add_cupon"
+                                                                            placeholder="Введи промокод">
+                                                                        <button class="bs-btn add-cupon-btn"><span
+                                                                                class="icon icon-Property-124"></span></button>
                                                                     </div>
                                                                     <div class="input-block added-coupon-block">
                                                                         <input type="text" class="added_cupon">
-                                                                        <button class="bs-btn bs-btn-gray delete-cupon-btn"><span class="icon icon-Property-1-7"></span></button>
+                                                                        <button
+                                                                            class="bs-btn bs-btn-gray delete-cupon-btn"><span
+                                                                                class="icon icon-Property-1-7"></span></button>
                                                                     </div>
                                                                 </form>
                                                             </div>

@@ -231,7 +231,7 @@ document.querySelectorAll(".products-slider").forEach((slider) => {
 
 document.querySelectorAll(".insta-slider").forEach((slider) => {
   const slides = slider.querySelectorAll(".swiper-slide");
-  const hasMultipleSlides = slides.length > 4;
+  const hasMultipleSlides = slides.length > 1;
 
   new Swiper(slider, {
     loop: hasMultipleSlides,
@@ -245,7 +245,7 @@ document.querySelectorAll(".insta-slider").forEach((slider) => {
 
 document.querySelectorAll(".reviews-slider").forEach((slider) => {
   const slides = slider.querySelectorAll(".swiper-slide");
-  const hasMultipleSlides = slides.length > 3;
+  const hasMultipleSlides = slides.length > 1;
 
   new Swiper(slider, {
     loop: hasMultipleSlides,
@@ -264,7 +264,7 @@ document.querySelectorAll(".reviews-slider").forEach((slider) => {
 
 document.querySelectorAll(".card-slider").forEach((slider) => {
   const slides = slider.querySelectorAll(".swiper-slide");
-  const hasMultipleSlides = slides.length > 4;
+  const hasMultipleSlides = slides.length > 1;
 
   new Swiper(slider, {
     loop: hasMultipleSlides,
@@ -282,7 +282,7 @@ document.querySelectorAll(".card-slider").forEach((slider) => {
 
 document.querySelectorAll(".posts-slider").forEach((slider) => {
   const slides = slider.querySelectorAll(".swiper-slide");
-  const hasMultipleSlides = slides.length > 3;
+  const hasMultipleSlides = slides.length > 1;
 
   new Swiper(slider, {
     loop: hasMultipleSlides,
@@ -350,6 +350,91 @@ document.querySelectorAll(".product__variants-slider").forEach((slider) => {
   
   });
 });
+
+// const swiperInsta = new Swiper(".insta-slider", {
+//   loop: true,
+//   spaceBetween: 8,
+//   slidesPerView: "auto",
+//   pagination: {
+//     clickable: true,
+//   },
+// });
+
+// const swiperReviews = new Swiper(".reviews-slider", {
+//   loop: true,
+//   spaceBetween: 32,
+//   slidesPerView: "auto",
+//   cssMode: true,
+//   navigation: {
+//     nextEl: ".reviews-slider .swiper-button-next",
+//     prevEl: ".reviews-slider .swiper-button-prev",
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
+// });
+
+// const swiperCards = new Swiper(".card-slider", {
+//   loop: true,
+//   spaceBetween: 16,
+//   slidesPerView: "auto",
+//   navigation: {
+//     nextEl: ".card-slider .swiper-button-next",
+//     prevEl: ".card-slider .swiper-button-prev",
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
+// });
+
+// const swiperPosts = new Swiper(".posts-slider", {
+//   loop: true,
+//   slidesPerView: "auto",
+//   cssMode: true,
+//   navigation: {
+//     nextEl: ".posts-slider .swiper-button-next",
+//     prevEl: ".posts-slider .swiper-button-prev",
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
+//   breakpoints: {
+//     0: {
+//       spaceBetween: 16,
+//     },
+//     768: {
+//       spaceBetween: 32,
+//     },
+//   },
+// });
+
+// const swiperGifts = new Swiper(".gifts-slider", {
+//   loop: true,
+//   slidesPerView: "auto",
+//   pagination: {
+//     el: ".gifts-slider .swiper-pagination",
+//   },
+//   breakpoints: {
+//     0: {
+//       spaceBetween: 16,
+//     },
+//     768: {
+//       spaceBetween: 32,
+//     },
+//   },
+// });
+
+// const swiperCart = new Swiper(".cart-slider", {
+//   loop: true,
+//   spaceBetween: 16,
+//   slidesPerView: "auto",
+// });
+
+// const swiperVariants = new Swiper(".product__variants-slider", {
+//   loop: true,
+//   spaceBetween: 8,
+//   slidesPerView: "auto",
+// });
 
 // sliders end
 
@@ -742,4 +827,16 @@ jQuery(function ($) {
 
   });
 
+});
+
+
+$(".delete-cupon-btn").each(function () {
+  $(this).on("click", function (e) {
+    e.preventDefault();
+
+    const parent = $(this).closest(".add-coupon");
+    parent.find(".bs-form .input-block.added-coupon-block").hide();
+    parent.find(".bs-form .input-block.add-coupon-block").css("display", "grid").hide().fadeIn();
+    // parent.removeClass("added");
+  });
 });

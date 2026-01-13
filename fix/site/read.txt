@@ -1,0 +1,20 @@
+блок "Зведена інформація про товари" на сторінці категорій:
+
+<div class="info-table margin-bottom">
+    <h2 class="title"><span>Зведена інформація про товари</span></h2>
+    <ul class="info-list">
+        <li><p><span class="icon icon-Property-124"></span> <span>Дата</span></p><span><b>12.12.2025</b></span></li>
+        <li><p><span class="icon icon-Property-124"></span> <span>Категорія</span></p><span><b>Очищення</b></span></li>
+        <li><p><span class="icon icon-Property-124"></span> <span>Кількість виробників</span></p><span><b>23</b></span></li>
+        <li><p><span class="icon icon-Property-124"></span> <span>Кількість товарів у категорії</span></p><span><b>123</b></span></li>
+    </ul>
+</div>
+
+
+
+New label:
+
+<div class="product-label present">
+    <span>ОТРИМАЙ</span>
+    <span class="icon icon-Property-138"></span>
+</div>

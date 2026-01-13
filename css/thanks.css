@@ -35,6 +35,10 @@
     margin-bottom: 16px;
 }
 
+.order_mini_info {
+    margin-bottom: 16px;
+}
+
 .thanks-label {
     display: flex;
     justify-content: flex-start;

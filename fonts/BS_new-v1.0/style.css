@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'BS_new';
-  src:  url('fonts/BS_new.eot?ju3u5n');
-  src:  url('fonts/BS_new.eot?ju3u5n#iefix') format('embedded-opentype'),
-    url('fonts/BS_new.ttf?ju3u5n') format('truetype'),
-    url('fonts/BS_new.woff?ju3u5n') format('woff'),
-    url('fonts/BS_new.svg?ju3u5n#BS_new') format('svg');
+  src:  url('fonts/BS_new.eot?8y00nk');
+  src:  url('fonts/BS_new.eot?8y00nk#iefix') format('embedded-opentype'),
+    url('fonts/BS_new.ttf?8y00nk') format('truetype'),
+    url('fonts/BS_new.woff?8y00nk') format('woff'),
+    url('fonts/BS_new.svg?8y00nk#BS_new') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-warning_icon:before {
+  content: "\e959";
+}
 .icon-new_present:before {
   content: "\e958";
 }

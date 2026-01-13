@@ -31,40 +31,51 @@ $(document).on("click", ".order__accordion .accordion__title", function (e) {
   });
 
 /*Account tab start*/
-
 $(function () {
-  if (location.hash) {
-    $('.account-section[data-id="' + location.hash + '"]').addClass("active");
-    $('.account-nav a[href="' + location.hash + '"').parent().addClass("active");
-     if ($(window).width() < 768) {
-      $(".account-sidebar").slideUp();
-      $(".account-title").slideUp();
-    }
-  } else {
-    if ($(window).width() > 768) {
-      $(".account-section").first().addClass("active");
-      $(".account-nav li").first().addClass("active");
-    }
-  }
 
-  $('.account-nav a[href*="#"]').click(function (e) {
-    e.preventDefault();
+  function setActiveByHash(hash, fromChange) {
+    if (!hash) {
+      if ($(window).width() > 768) {
+        $(".account-section").removeClass("active").first().addClass("active");
+        $(".account-nav li").removeClass("active").first().addClass("active");
+      }
+      return;
+    }
+
     $(".account-section, .account-nav li").removeClass("active");
-    $('.account-section[data-id="' + this.hash + '"]').addClass("active");
-    $('.account-nav a[href="' + this.hash + '"').parent().addClass("active");
-    location.hash = this.hash;
+    $('.account-section[data-id="' + hash + '"]').addClass("active");
+    $('.account-nav a[href="' + hash + '"]').parent().addClass("active");
+
     if ($(window).width() < 768) {
       $(".account-sidebar").slideUp();
       $(".account-title").slideUp();
     }
+  }
+
+  setActiveByHash(location.hash);
+
+  $(window).on("hashchange", function () {
+    setActiveByHash(location.hash, true);
   });
 
-  $(".account-item-title").click(function (e) {
+  $('.account-nav a[href*="#"]').on("click", function (e) {
+    e.preventDefault();
+
+    if (location.hash === this.hash) {
+      setActiveByHash(this.hash);
+      return;
+    }
+
+    location.hash = this.hash; 
+  });
+
+  $(".account-item-title").on("click", function (e) {
     e.preventDefault();
     $(".account-section, .account-nav li").removeClass("active");
     $(".account-sidebar").slideDown();
     $(".account-title").slideDown();
   });
+
 });
 
 /*Account tab end*/

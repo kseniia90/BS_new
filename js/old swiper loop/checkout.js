@@ -20,7 +20,7 @@ $(".payment input[type=radio]").on("change", function (e) {
 
 document.querySelectorAll(".checkout-gifts-slider").forEach((slider) => {
   const slides = slider.querySelectorAll(".swiper-slide");
-  const hasMultipleSlides = slides.length > 3;
+  const hasMultipleSlides = slides.length > 1;
 
   new Swiper(slider, {
     loop: hasMultipleSlides,
@@ -29,3 +29,9 @@ document.querySelectorAll(".checkout-gifts-slider").forEach((slider) => {
   
   });
 });
+
+// const swiperCheckoutGifts = new Swiper('.checkout-gifts-slider', {
+//   loop: true,
+//   spaceBetween: 16,
+//   slidesPerView: 'auto',
+// });

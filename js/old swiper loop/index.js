@@ -19,7 +19,7 @@ document.querySelectorAll(".banner-carousel").forEach((slider) => {
 
 document.querySelectorAll(".photo-slider").forEach((slider) => {
   const slides = slider.querySelectorAll(".swiper-slide");
-  const hasMultipleSlides = slides.length > 4;
+  const hasMultipleSlides = slides.length > 1;
 
   new Swiper(slider, {
     loop: hasMultipleSlides,
@@ -35,6 +35,32 @@ document.querySelectorAll(".photo-slider").forEach((slider) => {
   });
 });
 
+// const swiperBanner = new Swiper(".banner-carousel", {
+//   loop: true,
+//   autoplay: {
+//     delay: 5000,
+//   },
+//   navigation: {
+//     nextEl: ".banner-carousel .swiper-button-next",
+//     prevEl: ".banner-carousel .swiper-button-prev",
+//   },
+//   pagination: {
+//     el: ".banner-carousel .swiper-pagination",
+//   },
+// });
+
+// const swiperPhotos = new Swiper(".photo-slider", {
+//   loop: true,
+//   spaceBetween: 8,
+//   slidesPerView: "auto",
+//   navigation: {
+//     nextEl: ".photo-slider .swiper-button-next",
+//     prevEl: ".photo-slider .swiper-button-prev",
+//   },
+//   pagination: {
+//     el: ".photo-slider .swiper-pagination",
+//   },
+// });
 
 document.querySelectorAll(".scroll-box").forEach(function (scrollBox) {
   const container = scrollBox;

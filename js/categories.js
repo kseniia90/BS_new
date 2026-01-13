@@ -54,47 +54,60 @@ $(document).ready(function () {
   }
 });
 
+document.querySelectorAll(".aktsii-slider").forEach((slider) => {
+  const slides = slider.querySelectorAll(".swiper-slide").length;
+  const enableLoop = slides > 4;
 
-const swiperAktsii = new Swiper(".aktsii-slider", {
-  loop: true,
-  slidesPerView: 4,
-  cssMode: true,
-  navigation: {
-    nextEl: ".aktsii-slider .swiper-button-next",
-    prevEl: ".aktsii-slider .swiper-button-prev",
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: "auto",
-      spaceBetween: 16,
+  new Swiper(slider, {
+    loop: enableLoop,
+    slidesPerView: "auto",
+    cssMode: true,
+
+    navigation: {
+      nextEl: slider.querySelector(".swiper-button-next"),
+      prevEl: slider.querySelector(".swiper-button-prev"),
     },
-    1300: {
-      slidesPerView: 4,
-      spaceBetween: 32,
+
+    breakpoints: {
+      0: {
+        spaceBetween: 16,
+      },
+      1300: {
+        spaceBetween: 32,
+      },
     },
-  },
+  });
 });
 
-const swiperBrand = new Swiper(".brand-slider", {
-  loop: true,
-  spaceBetween: 16,
-  cssMode: true,
-  navigation: {
-    nextEl: ".brand-slider .swiper-button-next",
-    prevEl: ".brand-slider .swiper-button-prev",
-  },
 
-   pagination: {
-    el: '.brand-slider .swiper-pagination',
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: "auto",
+document.querySelectorAll(".brand-slider").forEach((slider) => {
+  const slideCount = slider.querySelectorAll(".swiper-slide").length;
+  const enableLoop = slideCount > 4;
+
+  new Swiper(slider, {
+    loop: enableLoop,
+    spaceBetween: 16,
+    cssMode: true,
+
+    navigation: {
+      nextEl: slider.querySelector(".swiper-button-next"),
+      prevEl: slider.querySelector(".swiper-button-prev"),
     },
-    1300: {
-      slidesPerView: 4,
+
+    pagination: {
+      el: slider.querySelector(".swiper-pagination"),
+      clickable: true,
     },
-  },
+
+    breakpoints: {
+      0: {
+        slidesPerView: "auto",
+      },
+      1300: {
+        slidesPerView: 4,
+      },
+    },
+  });
 });
 
 // countDown on banner
@@ -148,119 +161,151 @@ if (document.querySelector(".sale-coutndown") !== null) {
 }
 
 
+if (document.querySelector(".slider-range") !== null) {
+  const rangeMinValue = document.querySelector("#range-min-value"); 
+  const rangeMaxValue = document.querySelector("#range-max-value"); 
+  const inputMinValue = document.querySelector("#input-min-value"); 
+  const inputMaxValue = document.querySelector("#input-max-value");
+  const rangeElement  = document.querySelector(".slider-range");
+  const form          = document.querySelector(".filter__slider-form");
 
-const rangeMinValue = document.querySelector("#range-min-value");
-const rangeMaxValue = document.querySelector("#range-max-value");
-const inputMinValue = document.querySelector("#input-min-value");
-const inputMaxValue = document.querySelector("#input-max-value");
-const rangeElement = document.querySelector(".slider-range");
+  const MIN_VALUE = form ? parseInt(form.dataset.minDefault, 10) : 0;
+  const MAX_VALUE = form ? parseInt(form.dataset.maxDefault, 10) : 9000;
 
-const MIN_VALUE = 0;
-const MAX_VALUE = 9000;
+  const minBound = Number.isFinite(MIN_VALUE) ? MIN_VALUE : 0;
+  const maxBound = Number.isFinite(MAX_VALUE) ? MAX_VALUE : 9000;
 
-function valueToPercentage(value) {
-  return (value / MAX_VALUE) * 100;
-}
-
-function percentageToValue(percentage) {
-  return Math.round((percentage / 100) * MAX_VALUE);
-}
-
-function setThumbPosition(thumbType, percentage) {
-  const cssVar =
-    thumbType === "min" ? "--min-thumb-percent" : "--max-thumb-percent";
-  rangeElement.style.setProperty(cssVar, percentage);
-}
-
-function getThumbPosition(thumbType) {
-  const cssVar =
-    thumbType === "min" ? "--min-thumb-percent" : "--max-thumb-percent";
-  return rangeElement.style.getPropertyValue(cssVar);
-}
-
-function validateAndSetValue(input, value, minValue, maxValue) {
-  if (value < minValue) {
-    input.value = minValue;
-  } else if (value > maxValue) {
-    input.value = maxValue;
-  }
-  return parseInt(input.value);
-}
-
-function sanitizeInputValue(input) {
-  if (!/^\d+$/.test(input.value)) {
-    input.value = input.value.replace(/[^0-9]/g, "");
-  }
-}
-
-inputMinValue.addEventListener("input", function () {
-  sanitizeInputValue(this);
-
-  const maxValue = parseInt(inputMaxValue.value) || MAX_VALUE;
-  const value = validateAndSetValue(
-    this,
-    parseInt(this.value) || MIN_VALUE,
-    MIN_VALUE,
-    MAX_VALUE
-  );
-
-  if (value >= maxValue) {
-    this.value = maxValue - 1;
+  function clamp(n, min, max) {
+    return Math.min(max, Math.max(min, n));
   }
 
-  const percentage = valueToPercentage(parseInt(this.value));
+  function valueToPercentage(value) {
+    const v = clamp(value, minBound, maxBound);
+    const range = (maxBound - minBound) || 1;
+    return Math.round(((v - minBound) / range) * 100);
+  }
 
-  if (!isNaN(value)) {
-    rangeMinValue.value = percentage;
+  function percentageToValue(percentage) {
+    const p = clamp(parseInt(percentage, 10) || 0, 0, 100);
+    const range = (maxBound - minBound) || 1;
+    return Math.round(minBound + (p / 100) * range);
+  }
+
+  function setThumbPosition(thumbType, percentage) {
+    const cssVar = thumbType === "min" ? "--min-thumb-percent" : "--max-thumb-percent";
+    rangeElement.style.setProperty(cssVar, percentage);
+  }
+
+  function getThumbPosition(thumbType) {
+    const cssVar = thumbType === "min" ? "--min-thumb-percent" : "--max-thumb-percent";
+    const raw = rangeElement.style.getPropertyValue(cssVar);
+    const val = parseInt(raw, 10);
+    return Number.isFinite(val) ? val : (thumbType === "min" ? 0 : 100);
+  }
+
+  function sanitizeInputValue(input) {
+    if (!/^\d*$/.test(input.value)) {
+      input.value = input.value.replace(/[^0-9]/g, "");
+    }
+  }
+
+  function normalizeInputs() {
+    let minV = parseInt(inputMinValue.value, 10);
+    let maxV = parseInt(inputMaxValue.value, 10);
+
+    if (!Number.isFinite(minV)) minV = minBound;
+    if (!Number.isFinite(maxV)) maxV = maxBound;
+
+    minV = clamp(minV, minBound, maxBound);
+    maxV = clamp(maxV, minBound, maxBound);
+
+    if (minV >= maxV) {
+      minV = Math.max(minBound, maxV - 1);
+    }
+
+    inputMinValue.value = minV;
+    inputMaxValue.value = maxV;
+
+    const minP = valueToPercentage(minV);
+    const maxP = valueToPercentage(maxV);
+
+    rangeMinValue.value = minP;
+    rangeMaxValue.value = maxP;
+
+    setThumbPosition("min", minP);
+    setThumbPosition("max", maxP);
+  }
+
+  inputMinValue.addEventListener("input", function () {
+    sanitizeInputValue(this);
+
+    let minV = parseInt(this.value, 10);
+    let maxV = parseInt(inputMaxValue.value, 10);
+
+    if (!Number.isFinite(minV)) minV = minBound;
+    if (!Number.isFinite(maxV)) maxV = maxBound;
+
+    minV = clamp(minV, minBound, maxBound);
+
+    if (minV >= maxV) minV = Math.max(minBound, maxV - 1);
+
+    this.value = minV;
+
+    const minP = valueToPercentage(minV);
+
+    rangeMinValue.value = minP;
+    setThumbPosition("min", minP);
+  });
+
+  inputMaxValue.addEventListener("input", function () {
+    sanitizeInputValue(this);
+
+    let maxV = parseInt(this.value, 10);
+    let minV = parseInt(inputMinValue.value, 10);
+
+    if (!Number.isFinite(maxV)) maxV = maxBound;
+    if (!Number.isFinite(minV)) minV = minBound;
+
+    maxV = clamp(maxV, minBound, maxBound);
+
+    if (maxV <= minV) maxV = Math.min(maxBound, minV + 1);
+
+    this.value = maxV;
+
+    const maxP = valueToPercentage(maxV);
+
+    rangeMaxValue.value = maxP;
+    setThumbPosition("max", maxP);
+  });
+
+  rangeMinValue.addEventListener("input", function () {
+    const maxThumbPercent = getThumbPosition("max");
+
+    if (parseInt(this.value, 10) >= maxThumbPercent) {
+      this.value = maxThumbPercent;
+    }
+
+    const percentage = parseInt(this.value, 10);
+    const value = percentageToValue(percentage);
+
+    inputMinValue.value = value;
     setThumbPosition("min", percentage);
-  }
-});
+  });
 
-inputMaxValue.addEventListener("input", function () {
-  sanitizeInputValue(this);
+  rangeMaxValue.addEventListener("input", function () {
+    const minThumbPercent = getThumbPosition("min");
 
-  const minValue = parseInt(inputMinValue.value) || MIN_VALUE;
-  const value = validateAndSetValue(
-    this,
-    parseInt(this.value),
-    minValue + 1,
-    MAX_VALUE
-  );
-  const percentage = valueToPercentage(parseInt(this.value));
+    if (parseInt(this.value, 10) <= minThumbPercent) {
+      this.value = minThumbPercent;
+    }
 
-  if (!isNaN(value)) {
-    rangeMaxValue.value = percentage;
+    const percentage = parseInt(this.value, 10);
+    const value = percentageToValue(percentage);
+
+    inputMaxValue.value = value;
     setThumbPosition("max", percentage);
-  }
-});
+  });
 
-rangeMinValue.addEventListener("input", function () {
-  const maxThumbPercent = getThumbPosition("max");
+  normalizeInputs();
+}
 
-  if (parseInt(this.value) >= parseInt(maxThumbPercent)) {
-    this.value = maxThumbPercent;
-  }
-
-  const percentage = parseInt(this.value);
-  const value = percentageToValue(percentage);
-
-  inputMinValue.value = value;
-  setThumbPosition("min", percentage);
-});
-
-rangeMaxValue.addEventListener("input", function () {
-  const minThumbPercent = getThumbPosition("min");
-
-  if (parseInt(this.value) <= parseInt(minThumbPercent)) {
-    this.value = minThumbPercent;
-  }
-
-  const percentage = parseInt(this.value);
-  const value = percentageToValue(percentage);
-
-  inputMaxValue.value = value;
-  setThumbPosition("max", percentage);
-});
-
-rangeMinValue.dispatchEvent(new Event("input"));
-rangeMaxValue.dispatchEvent(new Event("input"));

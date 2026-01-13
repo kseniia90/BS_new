@@ -200,10 +200,6 @@
         text-align: end;
     }
 
-    .info-list {
-        grid-template-columns: 60% 40%;
-    }
-
     .info-list li {
         padding: 20px 8px;
     }

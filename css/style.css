@@ -2880,6 +2880,10 @@ ol.breadcrumb li.active {
 	border-radius: 4px;
 }
 
+.product-parameter:nth-child(n + 4) {
+	display: none;
+}
+
 .product__card .bottom,
 .gift-item .bottom {
 	width: 100%;

@@ -1,4 +1,0 @@
-<div class="product-card__lable present">
-    <span>Отримай</span>
-    <span class="icon icon-Property-149"></span>
-</div>

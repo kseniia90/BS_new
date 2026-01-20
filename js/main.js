@@ -339,6 +339,21 @@ document.querySelectorAll(".cart-slider").forEach((slider) => {
   });
 });
 
+document.querySelectorAll(".get_gift-slider").forEach((slider) => {
+  const slides = slider.querySelectorAll(".swiper-slide");
+  const hasMultipleSlides = slides.length > 1;
+
+  new Swiper(slider, {
+    loop: hasMultipleSlides,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".get_gift-slider .swiper-button-next",
+      prevEl: ".get_gift-slider .swiper-button-prev",
+    },
+  
+  });
+});
+
 document.querySelectorAll(".product__variants-slider").forEach((slider) => {
   const slides = slider.querySelectorAll(".swiper-slide");
   const hasMultipleSlides = slides.length > 1;
@@ -743,3 +758,53 @@ jQuery(function ($) {
   });
 
 });
+
+// countDown on banner
+
+if (document.querySelector(".get_gift-coutndown") !== null) {
+
+  const second = 1000,
+        minute = second * 60,
+        hour   = minute * 60,
+        day    = hour * 24;
+
+  const timeleft = JSON.parse(
+    document.querySelector(".get_gift-coutndown").getAttribute("data-timeleft")
+  );
+
+  let distance =
+      (timeleft.days * day) +
+      (timeleft.hours * hour) +
+      (timeleft.minutes * minute) +
+      (timeleft.seconds * second);
+
+  const x = setInterval(() => {
+
+    if (distance <= 0) {
+      document.getElementById("days").innerText    = "00";
+      document.getElementById("hours").innerText   = "00";
+      document.getElementById("minutes").innerText = "00";
+      document.getElementById("seconds").innerText = "00";
+      clearInterval(x);
+      return;
+    }
+
+    let days    = Math.floor(distance / day);
+    let hours   = Math.floor((distance % day) / hour);
+    let minutes = Math.floor((distance % hour) / minute);
+    let seconds = Math.floor((distance % minute) / second);
+
+    // days    = days.toString().padStart(2, "0");
+    // hours   = hours.toString().padStart(2, "0");
+    // minutes = minutes.toString().padStart(2, "0");
+    // seconds = seconds.toString().padStart(2, "0");
+
+    document.getElementById("days").innerText    = days;
+    document.getElementById("hours").innerText   = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+
+    distance -= second;
+
+  }, second);
+}

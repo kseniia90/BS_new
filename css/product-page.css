@@ -1147,6 +1147,7 @@
     .product-page__info .product__name {
         font-size: 16px;
         margin-bottom: 16px;
+        max-height: 57px;
     }
 
     .product-page__info .product__description {
@@ -1329,8 +1330,8 @@
 .get_gift__products {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 15px 1fr 15px 1fr;
-    gap: 8px;
+    grid-template-columns: 29% 1fr 30% 1fr 29%;
+    gap:0;
     align-items: center;
     margin-bottom: 32px;
 }
@@ -1523,10 +1524,12 @@
 
 .get_gift__products .get_gift__symbol {
     display: block;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
     align-self: center;
     justify-self: center;
+    background-size: 15px 15px;
 }
 
 .symbol-plus {
@@ -1580,6 +1583,7 @@
     .get_gift__products .product__name {
         font-size: 10px;
         max-height: 21px;
+        word-wrap: break-word;
     }
 
     .get_gift__products .product__price {
@@ -1603,8 +1607,9 @@
     }
 
     .get_gift__products .get_gift__symbol {
-        width: 10px;
-        height: 10px;
+        width: 15px;
+        height: 15px;
+        background-size: 10px 10px;
     }
 
 }

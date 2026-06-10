@@ -6,6 +6,8 @@ document.querySelectorAll(".banner-carousel").forEach((slider) => {
     loop: hasMultipleSlides,
     autoplay: {
       delay: 5000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     navigation: {
       nextEl: ".banner-carousel .swiper-button-next",
@@ -15,6 +17,7 @@ document.querySelectorAll(".banner-carousel").forEach((slider) => {
       el: ".banner-carousel .swiper-pagination",
     },
   });
+
 });
 
 document.querySelectorAll(".photo-slider").forEach((slider) => {

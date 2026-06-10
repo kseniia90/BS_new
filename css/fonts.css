@@ -1,0 +1,76 @@
+/* fonts start */
+@font-face {
+	font-family: "Comfortaa";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("../fonts/Comfortaa/Comfortaa-Regular.woff2");
+}
+
+@font-face {
+	font-family: "Comfortaa";
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url("../fonts/Comfortaa/Comfortaa-Medium.woff2");
+}
+
+@font-face {
+	font-family: "Comfortaa";
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url("../fonts/Comfortaa/Comfortaa-SemiBold.woff2");
+}
+
+@font-face {
+	font-family: "Comfortaa";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("../fonts/Comfortaa/Comfortaa-Bold.woff2");
+}
+
+@font-face {
+	font-family: "Montserrat";
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+	src: url("../fonts/Montserrat/Montserrat-Light.woff2");
+}
+
+@font-face {
+	font-family: "Montserrat";
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+	src: url("../fonts/Montserrat/Montserrat-Medium.woff2");
+}
+
+@font-face {
+	font-family: "Montserrat";
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+	src: url("../fonts/Montserrat/Montserrat-SemiBold.woff2");
+}
+
+@font-face {
+	font-family: "Montserrat";
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url("../fonts/Montserrat/Montserrat-Bold.woff2");
+}
+
+@font-face {
+	font-family: 'BS_new';
+	src: url('../fonts/BS_new-v1.0/BS_new.eot?bafxqr');
+	src: url('../fonts/BS_new-v1.0/BS_new.eot?bafxqr#iefix') format('embedded-opentype'),
+		url('../fonts/BS_new-v1.0/BS_new.ttf?bafxqr') format('truetype'),
+		url('../fonts/BS_new-v1.0/BS_new.woff?bafxqr') format('woff'),
+		url('../fonts/BS_new-v1.0/BS_new.svg?bafxqr#BS_new') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}

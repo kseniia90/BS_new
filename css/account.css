@@ -119,6 +119,7 @@
     }
 
     .account-title {
+        margin-bottom: 32px;
         font-size: 20px;
     }
 
@@ -256,15 +257,30 @@
     }
 
     .account .tg-banner.resident {
-        background: url('../images/tg_banner_bg_mob.png') no-repeat !important;
+        /*background: url('../images/tg_banner_bg_mob.png') no-repeat !important;
         background-size: contain !important;
-        background-position: bottom center !important;
+        background-position: bottom center !important;*/
+        min-height: 150px;
+        padding: 18px 140px 18px 15px !important;
+        background: #F3EEFD url('../images/tg_banner_bg_res_mob_new.png') no-repeat !important;
+        background-position: right bottom !important;
+        text-align: start;
     }
 
     .account .tg-banner.vip {
-        background: url('../images/tg_banner_bg_vip_mob.png') no-repeat !important;
+        /*background: url('../images/tg_banner_bg_vip_mob.png') no-repeat !important;
         background-size: contain !important;
-        background-position: bottom center !important;
+        background-position: bottom center !important;*/
+        min-height: 150px;
+        padding: 18px 115px 18px 15px !important;
+        background: #F3EEFD url('../images/tg_banner_bg_vip_mob_new.png') no-repeat !important;
+        background-position: 96% bottom !important;
+        text-align: start;
+    }
+
+    .account .tg-banner.resident .tg-banner__content,
+    .account .tg-banner.vip .tg-banner__content {
+        text-align: start;
     }
 
     .account .tg-banner .bs-btn {
@@ -2305,6 +2321,35 @@
         gap: 1px;
     }
 
+}
+
+.account-section .share-link {
+    position: relative;
+    width: max-content;
+    margin: 0 0 16px auto;
+}
+
+.copied-popup {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    background: var(--accent);
+    color: #fff;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width:768px) {
+
+    .account-section .share-link {
+        margin: 32px 0 32px auto;
+    }
 }
 
 .favorites-content {

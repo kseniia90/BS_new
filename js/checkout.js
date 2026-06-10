@@ -1,5 +1,5 @@
 //checkout-info
-$(".checkout-info__change-btn").on("click", function (e) {
+/*$(".checkout-info__change-btn").on("click", function (e) {
   e.preventDefault();
   var $this = $(this);
   $this.toggleClass("chande-open");
@@ -10,7 +10,7 @@ $(".checkout-info__change-btn").on("click", function (e) {
   }
   $this.toggleClass("accordion-active");
   $this.closest(".checkout-info").find(".checkout-info__change").slideToggle();
-});
+});*/
 
 $(".payment input[type=radio]").on("change", function (e) {
   e.preventDefault();

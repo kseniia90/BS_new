@@ -83,6 +83,16 @@ $(".product-page__accordion .accordion__title").on("click", function (e) {
   $this.next().slideToggle();
 });
 
+$(".add_rev").on("click", function (e) {
+  e.preventDefault();
+  $(".review-block__left .add-review-stars").css("display", "flex");
+  $(".review-block__left .add-review-form").css("display", "flex");
+  setTimeout(function() {
+    $(".review-block__left").addClass("show_rev_form");
+  }, 50);
+  
+});
+
 
 
 // File input
@@ -104,3 +114,54 @@ document.addEventListener("DOMContentLoaded", function() {
     fileInput.addEventListener('change', validateFiles);
   }
 });
+
+
+function timer_product_sale(){
+  
+  if (document.querySelector(".coutndown") !== null) {
+    document.querySelectorAll(".coutndown").forEach((countDownElement)=>{
+    
+    const second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+
+    const timeleftAttr = countDownElement.getAttribute("data-timeleft");
+    if (!timeleftAttr) {
+      return;
+    }
+
+    let timeleft = JSON.parse(timeleftAttr),
+      distance = timeleft.days * day + timeleft.hours * hour +  timeleft.minutes * minute +  timeleft.seconds * second;
+    const timerInterval = setInterval(function () {
+      if (distance < 0) {
+        const timerBlock = countDownElement.closest(".product__discount_timer");
+        if (timerBlock) {
+          timerBlock.style.display = "none";
+        }
+        clearInterval(timerInterval);
+        return;
+      }
+      let days, hours, minutes, seconds;
+      days = Math.floor(distance / day);
+      days = days < 10 ? "0" + days : days;
+      (countDownElement.querySelector(".days").innerText = days),
+        (hours = Math.floor((distance % day) / hour));
+      hours = hours < 10 ? "0" + hours : hours;
+      (countDownElement.querySelector(".hours").innerText = hours),
+        (minutes = Math.floor((distance % hour) / minute)),
+        (minutes = minutes < 10 ? "0" + minutes : minutes);
+      (countDownElement.querySelector(".minutes").innerText = minutes),
+        (seconds = Math.floor((distance % minute) / second)),
+        (seconds = seconds < 10 ? "0" + seconds : seconds);
+      countDownElement.querySelector(".seconds").innerText = seconds;
+      var sec = Math.floor((distance % minute) / second);
+      distance = distance - second;
+    }, second);
+
+    })
+  }
+
+}
+
+//timer_product_sale();

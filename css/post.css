@@ -274,14 +274,14 @@
 .post-page__content-right ul li::before {
 	content: '';
 	position: absolute;
-	top: 50%;
+	top: 2px;
 	left: 0;
 	width: 20px;
 	height: 20px;
-	transform: translateY(-50%);
+	transform: translateY(0);
 	background: url(../images/logo-icon.svg);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	border-radius: 50%;
 }
 

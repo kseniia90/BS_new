@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css">
+   <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/index.css">
     <title>BS_new</title>
@@ -117,8 +118,8 @@
                 <div class="header__nav-container">
                     <nav class="header__nav">
                         <div class="header__nav__title">
-                            <div class="header__logo" href="index.html"><img class="logo" src="./images/logo.png"
-                                    alt="logo" width="178" height="20"></div>
+                            <a class="header__logo" href="index.html"><img class="logo" src="./images/logo.png"
+                                    alt="logo" width="178" height="20"></a>
                             <div class="nav__close">
                                 <span class="icon icon-Property-142"></span>
                             </div>
@@ -157,9 +158,9 @@
                                         <h3>Ротова порожнина</h3>
                                     </div>
                                     <ul>
-                                        <li>
+                                        <li class="all_products_link">
                                             <a href="">
-                                                <span>Усі засоби</span>
+                                                <span>Всі товари</span>
                                                 <span class="submenu__arrow icon-Property-1--1"></span>
                                             </a>
                                         </li>
@@ -185,12 +186,10 @@
                                         </div>
                                         <h3>Для дітей</h3>
                                     </div>
-
                                     <ul>
-                                        <li>
+                                        <li class="all_products_link">
                                             <a href="">
-                                                <span>Усі засоби</span>
-                                                <span class="submenu__arrow icon-Property-1--1"></span>
+                                                <span>Для дітей</span>
                                             </a>
                                         </li>
                                         <li>
@@ -200,9 +199,12 @@
                                             </a>
                                         </li>
                                         <li class="has-submenu">
-                                            <a href="">
+                                            <a href="#">
                                                 <span>Для обличчя</span>
-                                                <span class="submenu__arrow icon-Property-1--1"></span>
+                                                <span>
+                                                    <span>Всі товари</span>
+                                                    <span class="submenu__arrow icon-Property-1--1"></span>
+                                                </span>
                                             </a>
                                             <ul class="header__second-submenu__list">
                                                 <li class="header__nav__title">
@@ -211,7 +213,7 @@
                                                     </div>
                                                     <h3>Для обличчя обличчя обличчя обличчя</h3>
                                                 </li>
-                                                <li><a href=""><span><b>Усі засоби</b></span></a></li>
+                                                <li class="all_products_link"><a href=""><span><b>Всі товари</b></span></a></li>
                                                 <li><a href="">спф 30</a></li>
                                                 <li><a href="">спф 40</a></li>
                                                 <li><a href="">спф 50</a></li>
@@ -253,9 +255,9 @@
                                         <h3>Аромадифузори</h3>
                                     </div>
                                     <ul>
-                                        <li>
+                                        <li class="all_products_link">
                                             <a href="">
-                                                <span>Усі засоби</span>
+                                                <span>Всі товари</span>
                                                 <span class="submenu__arrow icon-Property-1--1"></span>
                                             </a>
                                         </li>
@@ -268,7 +270,10 @@
                                         <li class="has-submenu">
                                             <a href="">
                                                 <span>СПФ захист для дітей</span>
-                                                <span class="submenu__arrow icon-Property-1--1"></span>
+                                                <span>
+                                                    <span>Всі товари</span>
+                                                    <span class="submenu__arrow icon-Property-1--1"></span>
+                                                </span>
                                             </a>
                                             <ul class="header__second-submenu__list">
                                                 <li class="header__nav__title">
@@ -277,7 +282,7 @@
                                                     </div>
                                                     <h3>СПФ захист для дітей</h3>
                                                 </li>
-                                                <li><a href=""><span><b>Усі засоби</b></span></a></li>
+                                                <li><a href=""><span><b>Всі товари</b></span></a></li>
                                                 <li><a href="">спф 30</a></li>
                                                 <li><a href="">спф 40</a></li>
                                                 <li><a href="">спф 50</a></li>
@@ -353,7 +358,7 @@
                                 </li>
                                 <li>
                                     <a href="https://www.facebook.com/Korea.skin.ua">
-                                        <span class="icon icon-fb"></span>
+                                        <span class="icon icon-support"></span>
                                         <span>@Korea.skin.ua</span>
                                     </a>
                                 </li>
@@ -376,13 +381,65 @@
         <main class="main">
             <!-- add class "active" -->
             <div class="preloader">
-                <img src="./images/BS_preloader.svg" alt="">
+                <svg width="67" height="110" viewBox="0 0 67 110" xmlns="http://www.w3.org/2000/svg" class="loader">
+                    <g class="petal p1">
+                        <path
+                            d="M42.765 1.14457C41.2249 1.28037 39.9666 1.99237 38.4717 3.56941C34.305 7.97276 31.7813 16.4722 32.5018 23.7089C32.8338 27.0162 33.4343 28.8324 35.2635 32.1159C36.4534 34.2672 39.645 40.4553 40.1745 41.6476C40.3001 41.9411 40.6988 42.8831 41.0647 43.7332C41.4161 44.5816 41.8857 45.664 42.1041 46.1592C43.0249 48.234 45.194 55.0015 46.7964 60.7629C47.2446 62.3848 47.7383 64.1147 47.8845 64.6012C48.1603 65.4697 48.4316 65.6491 48.5067 65.0282C48.5277 64.855 48.8177 63.7913 49.1597 62.6606C52.1821 52.4636 54.2226 42.631 55.4309 32.6538C55.8677 28.9268 55.9537 27.8531 55.9238 25.6811C55.8922 20.74 55.3489 17.3632 53.9497 13.3113C51.8099 7.14796 48.4662 2.69943 45.0139 1.44625C43.9336 1.0517 43.8614 1.04295 42.765 1.14457Z"
+                            fill="#406E75" fill-opacity="0.6" />
+                    </g>            
+                    <g class="petal p5">
+                        <path
+                            d="M7.16981 25.6173C3.92351 25.8631 2.30294 27.3193 2.04508 30.1971C1.6844 34.1878 4.18183 40.0481 8.20199 44.6495C10.4172 47.2059 13.4057 49.4961 16.0193 50.6625C17.9983 51.5593 19.5708 52.068 24.9596 53.5798C31.2183 55.3253 37.9764 57.4936 41.7556 58.9584L42.0865 59.0943L41.861 58.6661C40.4664 56.1071 39.6123 54.48 38.7523 52.7568C35.417 46.0911 31.666 40.0074 28.225 35.6848C26.0512 32.954 24.1864 31.3144 21.3185 29.5671C18.6185 27.9426 16.3961 27.0126 13.5927 26.3369C11.9289 25.9438 8.32509 25.5321 7.16981 25.6173Z"
+                            fill="#406E75" fill-opacity="0.7" />
+                    </g>            
+                    <g class="petal p4">
+                        <path
+                            d="M16.4761 59.5667C13.9998 60.0181 12.4383 60.4938 10.7305 61.3477C8.20539 62.6042 6.29019 63.9704 4.75316 65.5807C2.02065 68.4474 1.4961 70.7651 3.20392 72.4607C5.75345 74.9737 11.9382 76.0594 18.0619 75.0591C20.8432 74.6077 23.3928 73.6196 26.0399 71.985C27.211 71.2653 30.7852 68.6182 33.8959 66.1662C36.5064 64.1168 37.2383 63.5679 37.5555 63.3971C37.8482 63.2507 37.9092 63.0677 37.6775 63.0068C37.5921 62.9824 36.9699 62.7994 36.299 62.592C35.6281 62.3846 34.7498 62.1162 34.3472 62.0065C33.9447 61.8967 33.2737 61.7015 32.859 61.5795C30.7974 60.9574 27.6867 60.262 24.6492 59.7497C22.6852 59.4203 17.8912 59.3105 16.4761 59.5667Z"
+                            fill="#406E75" fill-opacity="0.8" />
+                    </g>            
+                    <g class="petal p2">
+                        <path
+                            d="M48.378 67.4913C48.384 67.6306 48.3822 68.087 48.3731 68.5007C48.2501 71.6922 48.3404 75.9132 48.5975 78.7072C49.1536 84.6476 51.631 89.4477 55.6025 92.2939C57.8204 93.8708 59.8303 94.2943 60.9921 93.4095C63.425 91.5602 64.2118 85.7043 62.695 80.9567C62.0581 79.0032 61.0307 77.3349 59.4326 75.6884C58.2869 74.5137 57.9536 74.2542 53.5824 71.0414C51.4954 69.5126 49.5217 68.0568 49.204 67.7859C48.5168 67.2222 48.3339 67.1523 48.378 67.4913Z"
+                            fill="#406E75" />
+                    </g>            
+                    <g class="petal p3">
+                        <path
+                            d="M42.5195 65.8856C42.3243 66.0198 41.1654 66.7029 39.9577 67.4105C36.8227 69.2525 33.2607 71.68 31.3577 73.2658C30.9185 73.6318 30.2964 74.1685 29.9548 74.4369C28.9179 75.3152 26.9295 77.3402 26.0756 78.4259C24.1604 80.829 22.8308 83.6591 22.0013 87.087C21.7329 88.1971 21.6841 88.6606 21.6719 90.5636C21.6597 92.5764 21.6841 92.8326 21.9525 93.6133C22.3062 94.6746 23.2211 95.6505 24.0628 95.8822C27.2101 96.7361 33.9926 92.8326 37.9816 87.8555C40.0919 85.2206 41.1776 82.4881 41.8607 78.0477C42.5927 73.2536 43.2758 65.8612 42.9952 65.7148C42.9342 65.6783 42.7268 65.7636 42.5195 65.8856Z"
+                            fill="#406E75" fill-opacity="0.9" />
+                    </g>
+                </svg>          
             </div>
 
             <!-- banner slider -->
             <div class="slider-banner margin-bottom container">
                 <div class="banner-carousel swiper">
                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="voting_block">
+                                <img class="banner__img desktop-only" src="./images/banner_up.webp" alt="banner" width="1440" height="637">
+                                <img class="banner__img mobile-only" src="./images/banner_up_mob.webp" alt="banner" width="390" height="390">
+                        
+                                <div class="voting_block-content">
+                                    <h3 class="voting_title">Чи хотіли б ви, щоб ми додали доставку Укрпоштою?</h3>
+                                    <form action="" class="bs-form voting_form">
+                                        <div class="input-block voting">
+                                            <input type="radio" name="voting" id="voting-1" checked>
+                                            <label for="voting-1">Так</label>
+                                        </div>                        
+                                        <div class="input-block voting">
+                                            <input type="radio" name="voting" id="voting-2">
+                                            <label for="voting-2">Ні</label>
+                                        </div>
+                                        <button class="bs-btn">
+                                            <span>
+                                                <span>Проголосувати</span>
+                                                <span class="icon icon-click_n"></span>
+                                            </span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                         <div class="swiper-slide">
                             <a href="">
                                 <img class="banner__img desktop-only" src="./images/index_banner_1.jpg" alt="banner"
@@ -393,25 +450,27 @@
                         </div>
                         <div class="swiper-slide">
                             <a href="">
-                                <img class="banner__img desktop-only" src="./images/banner.webp" alt="banner"
+                                <img class="banner__img desktop-only" src="./images/index_banner_1.jpg" alt="banner"
                                     width="1440" height="637">
-                                <img class="banner__img mobile-only" src="./images/banner.webp" alt="banner"
+                                <img class="banner__img mobile-only" src="./images/index_banner_1_mob.jpg" alt="banner"
                                     width="390" height="390">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="">
-                                <img class="banner__img desktop-only" src="./images/banner1.webp" alt="banner"
+                                <img class="banner__img desktop-only" src="./images/index_banner_1.jpg" alt="banner"
                                     width="1440" height="637">
-                                <img class="banner__img mobile-only" src="./images/banner1.webp" alt="banner"
+                                <img class="banner__img mobile-only" src="./images/index_banner_1_mob.jpg" alt="banner"
                                     width="390" height="390">
                             </a>
                         </div>
                     </div>
-                    <div class="swiper-buttons">
+                    <!-- <div class="swiper-buttons">
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
-                    </div>
+                    </div> -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                     
                     <div class="swiper-pagination"></div>
                 </div>
@@ -506,12 +565,12 @@
             </div>
 
             <!-- instagram block -->
-            <div class="insta-block margin-bottom container">
-                <div class="insta-block__content">
+            <div class="insta-block margin-bottom">
+                <div class="insta-block__content container">
                     <div class="col">
                         <h1 class="title_30">Дивись нас у Instagram</h1>
                         <p>Щодня в сторіс: живі огляди, тести, помилки й поради — без фільтрів і прикрас.</p>
-                        <a class="bs-btn" href="#">
+                        <a class="bs-btn desktop-only" href="#">
                             <span>
                                 <span>Перейти у Instagram</span>
                                 <span class="icon icon-Property-1Instagram"></span>
@@ -564,6 +623,12 @@
                             </div>
                         </div>
                     </div>
+                    <a class="bs-btn mobile-only" href="#">
+                        <span>
+                            <span>Перейти у Instagram</span>
+                            <span class="icon icon-Property-1Instagram"></span>
+                        </span>
+                    </a>
                 </div>
 
             </div>
@@ -3071,7 +3136,7 @@
             <!-- коистувач не зараєстрований - add  class 'guest' -->
             <!-- VIP коистувач - add class 'vip' -->
             <!-- кошик попрожній - add class 'empty' -->
-            <div class="bs-popup mini-cart-popup guest">
+            <div class="bs-popup mini-cart-popup vip">
                 <div class="bs-popup-dialog mini-cart-popup-dialog">
                     <div class="bs-popup-content mini-cart-popup-content">                    
 
@@ -3398,7 +3463,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="mini-banner border-gradient">
+                                                    <!-- <div class="mini-banner border-gradient">
                                                         <div class="mini-banner__content">
                                                             <span class="sing-in__list__icon icon-new_present"></span>
                                                             <p>Залишилось <span class="bold">1200₴</span> грн до подарунка “Medik8 Press & Glow 30 мл”</p>
@@ -3406,6 +3471,46 @@
                                                                 <img src="./images/product.png" alt="product" width="80" height="80">
                                                             </a>
                                                         </div>
+                                                    </div> -->
+
+                                                    <div class="cart_mini-banner-slider swiper">
+                                                        <div class="swiper-wrapper">
+                                                            <div class="swiper-slide">                                                    
+                                                                <div class="mini-banner border-gradient">
+                                                                    <div class="mini-banner__content">
+                                                                        <span class="sing-in__list__icon icon-new_present"></span>
+                                                                        <p>Залишилось <span class="bold">1200₴</span> грн до подарунка “Medik8 Press & Glow 30 мл”</p>
+                                                                        <a href="" class="mini-banner__img">
+                                                                            <img src="./images/product.png" alt="product" width="80" height="80">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>                                                    
+                                                            </div>
+                                                            <div class="swiper-slide">                                                    
+                                                                <div class="mini-banner border-gradient">
+                                                                    <div class="mini-banner__content">
+                                                                        <span class="sing-in__list__icon icon-new_present"></span>
+                                                                        <p>Залишилось <span class="bold">1200₴</span> грн до подарунка “Medik8 Press & Glow 30 мл”</p>
+                                                                        <a href="" class="mini-banner__img">
+                                                                            <img src="./images/product.png" alt="product" width="80" height="80">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>                                                    
+                                                            </div>
+                                                            <div class="swiper-slide">                                                    
+                                                                <div class="mini-banner border-gradient">
+                                                                    <div class="mini-banner__content">
+                                                                        <span class="sing-in__list__icon icon-new_present"></span>
+                                                                        <p>Залишилось <span class="bold">1200₴</span> грн до подарунка “Medik8 Press & Glow 30 мл”</p>
+                                                                        <a href="" class="mini-banner__img">
+                                                                            <img src="./images/product.png" alt="product" width="80" height="80">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>                                                    
+                                                            </div>
+                                                          
+                                                        </div>
+                                                        <div class="swiper-pagination"></div>
                                                     </div>
 
                                                     <!-- add class added -->
@@ -3934,7 +4039,7 @@
                         </li>
                         <li>
                             <a href="https://www.facebook.com/Korea.skin.ua">
-                                <span class="icon icon-fb"></span>
+                                <span class="icon icon-support"></span>
                                 <span>@Korea.skin.ua</span>
                             </a>
                         </li>

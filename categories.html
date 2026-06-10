@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css">
+   <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/categories.css">
 
@@ -117,8 +118,8 @@
                 <div class="header__nav-container">
                     <nav class="header__nav">
                         <div class="header__nav__title">
-                            <div class="header__logo" href="index.html"><img class="logo" src="./images/logo.png"
-                                    alt="logo" width="178" height="20"></div>
+                            <a class="header__logo" href="index.html"><img class="logo" src="./images/logo.png"
+                                    alt="logo" width="178" height="20"></a>
                             <div class="nav__close">
                                 <span class="icon icon-Property-142"></span>
                             </div>
@@ -173,7 +174,7 @@
                                     <ul>
                                         <li>
                                             <a href="">
-                                                <span>Усі засоби</span>
+                                                <span>Всі товари</span>
                                                 <span class="submenu__arrow icon-Property-1--1"></span>
                                             </a>
                                         </li>
@@ -203,7 +204,7 @@
                                     <ul>
                                         <li>
                                             <a href="">
-                                                <span>Усі засоби</span>
+                                                <span>Всі товари</span>
                                                 <span class="submenu__arrow icon-Property-1--1"></span>
                                             </a>
                                         </li>
@@ -225,7 +226,7 @@
                                                     </div>
                                                     <h3>Для обличчя обличчя обличчя обличчя</h3>
                                                 </li>
-                                                <li><a href=""><span><b>Усі засоби</b></span></a></li>
+                                                <li><a href=""><span><b>Всі товари</b></span></a></li>
                                                 <li><a href="">спф 30</a></li>
                                                 <li><a href="">спф 40</a></li>
                                                 <li><a href="">спф 50</a></li>
@@ -269,7 +270,7 @@
                                     <ul>
                                         <li>
                                             <a href="">
-                                                <span>Усі засоби</span>
+                                                <span>Всі товари</span>
                                                 <span class="submenu__arrow icon-Property-1--1"></span>
                                             </a>
                                         </li>
@@ -291,7 +292,7 @@
                                                     </div>
                                                     <h3>СПФ захист для дітей</h3>
                                                 </li>
-                                                <li><a href=""><span><b>Усі засоби</b></span></a></li>
+                                                <li><a href=""><span><b>Всі товари</b></span></a></li>
                                                 <li><a href="">спф 30</a></li>
                                                 <li><a href="">спф 40</a></li>
                                                 <li><a href="">спф 50</a></li>
@@ -367,7 +368,7 @@
                                 </li>
                                 <li>
                                     <a href="https://www.facebook.com/Korea.skin.ua">
-                                        <span class="icon icon-fb"></span>
+                                        <span class="icon icon-support"></span>
                                         <span>@Korea.skin.ua</span>
                                     </a>
                                 </li>
@@ -415,9 +416,29 @@
                 </div>
 
                 <div class="filters__title__wrapper mobile-only">
-                    <div class="filters__view-btns">
+                    <!-- <div class="filters__view-btns">
                         <button class="filters-view-btn filters-view-btn-multi active">&nbsp;</button>
                         <button class="filters-view-btn filters-view-btn-list">&nbsp;</button>
+                    </div> -->
+                    <div class="categories-sorting">
+                        <form class="categories-sorting__form" method="get">
+                    
+                            <select name="orderby" class="orderby">
+                                <option value="menu_order">
+                                    Сортування за замовчуванням </option>
+                                <option value="popularity">
+                                    Сортувати за популярністю </option>
+                                <option value="rating">
+                                    Сортувати за оцінкою </option>
+                                <option value="date">
+                                    Сортувати за останніми </option>
+                                <option value="price" selected="selected">
+                                    Сортувати за ціною: від нижчої до вищої </option>
+                                <option value="price-desc">
+                                    Сортувати за ціною: від вищої до нижчої </option>
+                            </select>
+                    
+                        </form>
                     </div>
                     <div class="filters__title filters__title-open">
                         <span class="icon icon-icon_filter"></span>
@@ -929,6 +950,34 @@
                                 <a class="product__card__banner" href="">
                                     <img src="./images/card-banner.png" alt="product-img" width="270" height="430">
                                 </a>
+                            </div>
+
+                            <div class="product__card product__card--banner">
+                                <div class="voting_block">
+                                    <img class="banner__img desktop-only" src="./images/banner_card_up.webp" alt="banner" width="270" height="430">
+                                    <img class="banner__img mobile-only" src="./images/banner_card_up_mob.webp" alt="banner" width="200"
+                                        height="390">
+                            
+                                    <div class="voting_block-content">
+                                        <h3 class="voting_title">Чи хотіли б ви, щоб ми додали доставку Укрпоштою?</h3>
+                                        <form action="" class="bs-form voting_form">
+                                            <div class="input-block voting">
+                                                <input type="radio" name="voting" id="voting-1" checked>
+                                                <label for="voting-1">Так</label>
+                                            </div>
+                                            <div class="input-block voting">
+                                                <input type="radio" name="voting" id="voting-2">
+                                                <label for="voting-2">Ні</label>
+                                            </div>
+                                            <button class="bs-btn">
+                                                <span>
+                                                    <span>Проголосувати</span>
+                                                    <span class="icon icon-click_n"></span>
+                                                </span>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="product__card">
@@ -2009,7 +2058,7 @@
                         </li>
                         <li>
                             <a href="https://www.facebook.com/Korea.skin.ua">
-                                <span class="icon icon-fb"></span>
+                                <span class="icon icon-support"></span>
                                 <span>@Korea.skin.ua</span>
                             </a>
                         </li>

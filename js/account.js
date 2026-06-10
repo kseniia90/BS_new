@@ -272,4 +272,37 @@ $('#load_more_order').on('click', function(e){
 
 $('#logout').on('click', function(e){
   e.preventDefault();
-})
+});
+
+document.querySelectorAll(".share-link").forEach(function (e) {
+  e.addEventListener("click", function (t) {
+    if (window.isSecureContext) {
+      let i = e.querySelector("a"),
+        n = "";
+      let o = n || document.title;
+      if (i && i.href) {
+        if (navigator.share)
+          navigator .share({ title: o, url: i.href })
+            .then(() => { console.log("Thanks for sharing!");})
+            .catch(console.error);
+        else {
+          navigator.clipboard.writeText(i.href);
+          let t = document.createElement("div");
+          (t.classList.add("copied-popup"),
+            (t.innerHTML = "Посилання скопійовано"),
+            e.append(t),
+            setTimeout(() => {
+              t.style.opacity = 1;
+            }, 10),
+            setTimeout(() => {
+              t.style.opacity = 0;
+            }, 2e3),
+            setTimeout(() => {
+              t.remove();
+            }, 3e3));
+        }
+        t.preventDefault();
+      }
+    }
+  });
+});

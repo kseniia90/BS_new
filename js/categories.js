@@ -61,19 +61,26 @@ document.querySelectorAll(".aktsii-slider").forEach((slider) => {
   new Swiper(slider, {
     loop: enableLoop,
     slidesPerView: "auto",
-    cssMode: true,
+    // cssMode: true,
+    spaceBetween: 24,
+    loop: true,
 
     navigation: {
       nextEl: slider.querySelector(".swiper-button-next"),
       prevEl: slider.querySelector(".swiper-button-prev"),
     },
 
+    pagination: {
+      el: slider.querySelector(".swiper-pagination"),
+      clickable: true,
+    },
+
     breakpoints: {
       0: {
-        spaceBetween: 16,
+         slidesPerView: "auto"
       },
       1300: {
-        spaceBetween: 32,
+        slidesPerView:4
       },
     },
   });

@@ -259,7 +259,7 @@
 	.blog .blog__card-content h4 {
 		font-size: 16px;
 		line-height: 140%;
-		height: auto;
+		height: 65px;
 	}
 
 	.blog .blog__card-content .blog__descr {

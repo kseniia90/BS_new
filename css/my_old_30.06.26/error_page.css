@@ -1,0 +1,120 @@
+.error_page-content {
+    width: 100%;
+    max-width: 740px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    padding: 80px 0;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.error_page-content img,
+.error_page-content .error_icon {
+    aspect-ratio: 1/1;
+}
+
+/* error page */
+
+.error_page_main-content {
+    gap: 36px;
+    max-width: 604px;
+}
+
+.error_page_text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.error_page-content h2 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+
+    .error_page-content {
+        padding: 64px 0;
+    }
+
+    .error_page-content img,
+    .error_page-content .error_icon {
+        width: 80px;
+    }
+
+}
+
+/* error payment not complete */
+
+.error_payment .error_page_main-content {
+    gap: 64px;
+    max-width: 760px;
+}
+
+.error_payment .error_page_text-block {
+    align-items: center;
+}
+
+.error-payment__bottom {
+    display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 16px;
+}
+
+.error-payment__bottom h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+}
+
+.error_payment .bs-btn {
+    font-size: 14px;
+}
+
+.error_payment .bs-btn>span {
+    gap: 6px;
+}
+
+.error_payment .bs-btn .icon {
+    font-size: 20px;
+}
+
+@media (max-width:768px) {
+    .error_payment .error_page_main-content {
+        gap: 40px;
+        font-size: 14px;
+    }
+
+    .error_payment .error_page_text-block {
+        gap: 4px;
+    }
+
+    .error_payment .error_page_text-block svg {
+        margin-bottom: 12px;
+    }
+
+     .error_payment .bs-color-list {
+        gap: 10px;
+    }
+
+    .error_payment .bs-color-list li {
+        padding: 12px 16px;
+        padding-left: 32px;
+	    text-indent: -16px;
+    }
+
+    .error_payment .bs-btn {
+        margin-top: 8px;
+    }
+}

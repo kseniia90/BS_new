@@ -1,0 +1,45 @@
+.cart-item.cart__table__row--out-of-stock,
+.product-row-list > li.cart__table__row--out-of-stock {
+	position: relative;
+	background: rgba(192, 57, 43, 0.08);
+	border: 2px solid #c0392b;
+	border-radius: 12px;
+	padding: 16px 12px 12px;
+	margin: 12px 0;
+	box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.15);
+	animation: nb-cart-oos-pulse 1.4s ease-out 1;
+}
+
+.cart-item.cart__table__row--out-of-stock::before,
+.product-row-list > li.cart__table__row--out-of-stock::before {
+	content: attr(data-oos-label);
+	display: inline-block;
+	position: absolute;
+	top: -10px;
+	left: 12px;
+	background: #c0392b;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	padding: 3px 10px;
+	border-radius: 999px;
+	text-transform: uppercase;
+	pointer-events: none;
+}
+
+.cart-item.cart__table__row--out-of-stock:not([data-oos-label])::before,
+.product-row-list > li.cart__table__row--out-of-stock:not([data-oos-label])::before {
+	content: "Немає в наявності";
+}
+
+:lang(ru) .cart-item.cart__table__row--out-of-stock:not([data-oos-label])::before,
+:lang(ru) .product-row-list > li.cart__table__row--out-of-stock:not([data-oos-label])::before {
+	content: "Нет в наличии";
+}
+
+@keyframes nb-cart-oos-pulse {
+	0%   { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.6); }
+	60%  { box-shadow: 0 0 0 12px rgba(192, 57, 43, 0); }
+	100% { box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.08); }
+}

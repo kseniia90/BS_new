@@ -107,22 +107,6 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 }
 
 @font-face {
-	font-family: "Playfair Display";
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-	src: url("../fonts/PlayfairDisplay/PlayfairDisplay-VariableFont_wght.ttf");
-}
-
-@font-face {
-	font-family: "Playfair Display";
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap;
-	src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Italic-VariableFont_wght.ttf");
-}
-
-@font-face {
 	font-family: 'BS_new';
 	src: url('./fonts/BS_new-v1.0/BS_new.eot?bafxqr');
 	src: url('./fonts/BS_new-v1.0/BS_new.eot?bafxqr#iefix') format('embedded-opentype'),
@@ -1376,10 +1360,6 @@ ol.breadcrumb li.active {
     opacity: 0;
     transform: scale(0.85);
   }
-}
-
-.pfd_font {
-	font-family: 'Playfair Display', serif;
 }
 
 
@@ -2913,8 +2893,6 @@ ol.breadcrumb li.active {
 }
 
 .product__card--banner .bs-form.voting_form input[type="radio"] {
-	flex: 1 0 14px;
-	max-width: 14px;
 	width: 14px;
 	height: 14px;
 }
@@ -2925,9 +2903,8 @@ ol.breadcrumb li.active {
 	height: 6px;
 }
 
-.product__card--banner .bs-form.voting_form label {
+.product__card--banner  .bs-form.voting_form label {
 	font-size: clamp(10px, 1.2vw, 14px);
-	text-align: left;
 }
 
 .product__card--banner .bs-form.voting_form .bs-btn {
@@ -5066,10 +5043,6 @@ ol.breadcrumb li.active {
 	border: 0;	
 }
 
-.cart-slider .product__card .product__card__img {
-	height: 80px;
-}
-
 .cart-slider .product__card .product__card__img>img {
 	height: 80px;
 	object-fit: contain;
@@ -5085,7 +5058,6 @@ ol.breadcrumb li.active {
 
 .cart-slider .product__name {
 	height: auto;
-	max-height: fit-content;
 	font-size: 14px;
 	line-height: 17px;
 	margin-bottom: 4px;

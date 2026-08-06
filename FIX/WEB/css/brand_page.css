@@ -1,0 +1,263 @@
+.brand-top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 160%;
+    letter-spacing: 0.34px;
+    color: #6E7175;
+}
+
+.brand-top_left {
+    padding: 20px 20px 20px 0;
+}
+
+.brand-top_title {
+    font-size: 36px;
+	line-height: 140%;
+	font-weight: 300;
+	margin-bottom: 45px;
+    color: #000000;
+    .pfd_font {
+        font-style: italic;
+        font-size: 48px;
+    }
+}
+
+.brand-top_left .bs-btn {
+    margin-top: 45px;
+}
+
+.brand-top_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.product-item:nth-child(even)  {
+    flex-direction: row-reverse;
+}
+
+.product-item__img {
+    flex: 0 0 50%;
+    max-width: 50%;
+    align-self: flex-start;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        aspect-ratio: 695/600;
+    }
+}
+
+.product-item__info {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 65px 75px;
+}
+
+.product-item__name {
+    font-weight: 400;
+    font-style: Italic;
+    font-size: 38px;
+    line-height: 120%;
+    letter-spacing: 0.34px;
+    margin-bottom: 8px;
+}
+
+.product-item__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.34px;
+    color: #6E7175;
+    margin-bottom: 8px;
+}
+
+.product-item__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.product-item__info .product__price,
+.product-item__info .product__price .old-price{
+    gap: 8px;
+    font-weight: 400;
+    font-style: Italic;
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: 0.34px;
+}
+
+.product-item__info .product__variants {
+    padding: 0;
+}
+
+.product-item__info .product__variants li a,
+.product-item__info .product__variants__item {
+    padding: 9px 16px;
+}
+
+.product-item__info .advantages-row {
+    margin: 32px 0;
+    gap: 8px;
+}
+
+.product-item__info .advantages-row h4 {
+    font-family: 'Comfortaa';
+    letter-spacing: 0.34px;
+    text-transform: none;
+}
+
+.product-item__info .product__parameters {
+    gap: 8px;
+}
+
+.product-item__info .product-parameter {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 160%;
+    letter-spacing: 0.34px;
+    text-transform: uppercase;
+    padding: 16px;
+    border-radius: 100px;
+    background: #F4F5F7;
+}
+
+.product-item__info .bs-btn {
+    width: 100%;
+}
+
+@media (max-width:1100px) {
+
+    .product-item__img {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+
+    .product-item__info {
+        flex: 0 0 70%;
+        max-width: 70%;
+        padding: 35px 45px;
+    }
+}
+
+@media (max-width:992px) {
+    .brand-top {
+        grid-template-columns: 1fr;
+        font-size: 16px;
+        padding: 0;
+    }
+
+    .brand-top_left {
+        padding: 0 16px 32px;
+    }
+}
+
+@media (max-width:768px) {
+
+    .brand-page .margin-bottom {
+        margin-bottom: 48px;
+    }
+
+    .brand-top_title {
+        font-size: 22px;
+        margin-bottom: 32px;
+        .pfd_font {
+            font-size: 28px;
+        }
+    }
+
+    .brand-top_left .bs-btn {
+        margin-top: 32px;
+    }
+
+    .product-list {
+        padding: 0;
+    }
+
+    .product-item,
+    .product-item:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .product-item__img,
+    .product-item__info {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .product-item__info {
+        padding: 32px 16px;
+    }
+
+    .product-item__name {
+        font-size: 28px;
+    }
+
+    .product-item__row {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .product-item__info .advantages-row {
+        margin: 32px 0;
+        gap: 8px;
+    }
+
+    .product-item__info .advantages-row h4 {
+        font-family: 'Comfortaa';
+        letter-spacing: 0.34px;
+        text-transform: none;
+    }
+
+    .product-item__info .product__parameters {
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .product-item__info .product__parameters::-webkit-scrollbar {
+        display: none;
+    }
+
+    .product-item__info .product-parameter {
+        scroll-snap-align: start;
+        white-space: nowrap;
+    }
+
+    .product-item__info .bs-btn {
+        width: 100%;
+    }
+}

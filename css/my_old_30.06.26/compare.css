@@ -448,10 +448,6 @@
         display: none;
     }
 
-    .compare-content.single-category .compare-table-wrapper {
-        display: block;
-    }
-
     .compare-table {
         font-size: 14px;
     }

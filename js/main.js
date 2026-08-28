@@ -593,63 +593,72 @@ if (document.querySelector(".authorization-popup") !== null) {
 //  authorization popup end
 
 // show more-less
-document.querySelectorAll(".text-block").forEach((block) => {
-  const hiddenText = block.querySelector(".hidden-text");
-  const button = block.querySelector(".show-more-btn");
+if (document.querySelector(".hidden-text") !== null) {
+  document.querySelectorAll(".text-block").forEach((block) => {
+    const hiddenText = block.querySelector(".hidden-text");
+    const button = block.querySelector(".show-more-btn");
 
-  button.addEventListener("click", () => {
-    if (hiddenText.style.maxHeight) {
-      hiddenText.style.maxHeight = null;
-      button.innerHTML = "Розгорнути";
-      button.setAttribute("aria-expanded", "false");
-    } else {
-      hiddenText.style.maxHeight = hiddenText.scrollHeight + "px";
-      button.innerHTML = "Згорнути";
-      button.setAttribute("aria-expanded", "true");
-    }
+    button.addEventListener("click", () => {
+      if (hiddenText.style.maxHeight) {
+        hiddenText.style.maxHeight = null;
+        button.innerHTML = "Розгорнути";
+        button.setAttribute("aria-expanded", "false");
+      } else {
+        hiddenText.style.maxHeight = hiddenText.scrollHeight + "px";
+        button.innerHTML = "Згорнути";
+        button.setAttribute("aria-expanded", "true");
+      }
+    });
   });
-});
+}
 
 // product variants dropdown
-const selectedAll = document.querySelectorAll(".variant-dropdown-wrapper");
+function nbInitVariantDropdowns(root) {
+  root = root || document;
+  const wrappers = root.querySelectorAll(".variant-dropdown-wrapper");
 
-selectedAll.forEach((selected) => {
-  const optionsList = selected.querySelectorAll(".variant-dropdown-wrapper li");
+  wrappers.forEach((selected) => {
+    if (selected.dataset.nbInited === "1") return;
+    selected.dataset.nbInited = "1";
 
-  selected.addEventListener("click", () => {
-    let arrow = selected.children[1];
+    const optionsList = selected.querySelectorAll(".variant-dropdown-wrapper li");
 
-    if (selected.classList.contains("active")) {
-      handleDropdown(selected, arrow, false);
-    } else {
-      let currentActive = document.querySelector(
-        ".variant-dropdown-wrapper.active"
-      );
+    selected.addEventListener("click", () => {
+      let arrow = selected.children[1];
 
-      if (currentActive) {
-        let anotherArrow = currentActive.children[1];
-        handleDropdown(currentActive, anotherArrow, false);
+      if (selected.classList.contains("active")) {
+        handleDropdown(selected, arrow, false);
+      } else {
+        let currentActive = document.querySelector(
+          ".variant-dropdown-wrapper.active"
+        );
+
+        if (currentActive) {
+          let anotherArrow = currentActive.children[1];
+          handleDropdown(currentActive, anotherArrow, false);
+        }
+
+        handleDropdown(selected, arrow, true);
       }
+    });
 
-      handleDropdown(selected, arrow, true);
+    if (optionsList.length > 0) {
+      optionsList[0].classList.add("selected");
+      selected.querySelector(".selected-display").innerHTML =
+        optionsList[0].innerHTML;
+    }
+
+    for (let o of optionsList) {
+      o.addEventListener("click", () => {
+        optionsList.forEach((el) => el.classList.remove("selected"));
+        o.classList.add("selected");
+        selected.querySelector(".selected-display").innerHTML = o.innerHTML;
+      });
     }
   });
-
-  // update the display of the dropdown
-  if (optionsList.length > 0) {
-    optionsList[0].classList.add("selected");
-    selected.querySelector(".selected-display").innerHTML =
-      optionsList[0].innerHTML;
-  }
-
-  for (let o of optionsList) {
-    o.addEventListener("click", () => {
-      optionsList.forEach((el) => el.classList.remove("selected"));
-      o.classList.add("selected");
-      selected.querySelector(".selected-display").innerHTML = o.innerHTML;
-    });
-  }
-});
+}
+window.nbInitVariantDropdowns = nbInitVariantDropdowns;
+nbInitVariantDropdowns(document);
 
 // check if anything else ofther than the dropdown is clicked
 document.addEventListener("mousemove", function (e) {

@@ -3242,6 +3242,19 @@ ol.breadcrumb li.active {
 	text-transform: none;
 }
 
+.product-label.brand {
+	background-color: #C6E4AC;
+	text-transform: none;
+}
+
+.icon-brand {
+	display: block;
+	width: 9px;
+	height: 9px;
+	background: url('data:image/svg+xml,<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.803666 0.62046L0.342985 0.814809L-0.000764466 -1.75387e-06L0.874633 0.125522L0.803666 0.62046ZM9.84715 1.91721L9.91812 1.42228L10.8117 1.55041L10.2291 2.23994L9.84715 1.91721ZM0.803666 0.62046L1.26435 0.426111L2.34725 2.99298L1.88657 3.18733L1.42588 3.38168L0.342985 0.814809L0.803666 0.62046ZM8.95257 2.97584L8.57067 2.65311L9.46524 1.59449L9.84715 1.91721L10.2291 2.23994L9.33448 3.29856L8.95257 2.97584ZM9.84715 1.91721L9.77618 2.41215L0.732699 1.1154L0.803666 0.62046L0.874633 0.125522L9.91812 1.42228L9.84715 1.91721Z" fill="black"/><path d="M4.2563 8.7351L4.63202 9.065L4.11757 9.6509L3.79973 8.93892L4.2563 8.7351ZM2.59941 5.02355L3.05598 4.81973L4.71287 8.53128L4.2563 8.7351L3.79973 8.93892L2.14284 5.22737L2.59941 5.02355ZM4.2563 8.7351L3.88058 8.40519L7.2324 4.5879L7.60812 4.9178L7.98384 5.2477L4.63202 9.065L4.2563 8.7351Z" fill="black"/></svg>') no-repeat center;
+	background-size: contain;
+}
+
 .product__card .product__card__img>img {
 	height: 140px;
 	aspect-ratio: 1/1;
@@ -3968,6 +3981,16 @@ ol.breadcrumb li.active {
 	text-align: center;
 	background: #FFF7D3;
 	border-radius: 8px;
+}
+
+.title-label {
+	width: max-content;
+	padding: 10px 24px !important;
+	font-weight: 700 !important;
+	font-size: 18px !important;
+	line-height: 14px;
+	letter-spacing: 0.3px;
+	text-transform: uppercase;
 }
 
 .posts-slider-block .bs-btn {

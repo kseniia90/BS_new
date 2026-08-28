@@ -164,4 +164,14 @@ function timer_product_sale(){
 
 }
 
+$(document).on('click', '.characteristics__title [data-tab]', function () {
+    var $btn = $(this);
+    var tab = $btn.attr('data-tab');
+    var $c = $btn.closest('.characteristics__container');
+    $c.find('.characteristics__title [data-tab]').removeClass('active');
+    $btn.addClass('active');
+    $c.find('.characteristics__tab-pane').removeClass('active');
+    $c.find('.characteristics__tab-pane[data-tab-pane="' + tab + '"]').addClass('active');
+});
+
 //timer_product_sale();

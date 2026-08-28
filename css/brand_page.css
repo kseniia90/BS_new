@@ -83,12 +83,21 @@
 }
 
 .product-item__name {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     font-weight: 400;
     font-style: Italic;
     font-size: 38px;
-    line-height: 120%;
+    line-height: 27px;
     letter-spacing: 0.34px;
     margin-bottom: 8px;
+}
+
+.product-item__name .text-gray {
+    font-size: 24px;
+    line-height: 17px;
+    color: #6E7175;
 }
 
 .product-item__description {
@@ -221,6 +230,10 @@
 
     .product-item__name {
         font-size: 28px;
+    }
+
+    .product-item__name .text-gray {
+        font-size: 20px;
     }
 
     .product-item__row {

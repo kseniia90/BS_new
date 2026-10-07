@@ -439,6 +439,14 @@ $(".add-coupon .accordion__title").on("click", function (e) {
   $this.next().slideToggle();
 });
 
+// another-recipient accordion
+$(".another-recipient .accordion__title").on("click", function (e) {
+  e.preventDefault();
+  var $this = $(this);
+  $this.toggleClass("accordion-active");
+  $this.next().slideToggle();
+});
+
 // accordion end
 
 $("textarea").keyup(function () {
@@ -834,11 +842,6 @@ if (document.querySelector(".get_gift-coutndown") !== null) {
     let minutes = Math.floor((distance % hour) / minute);
     let seconds = Math.floor((distance % minute) / second);
 
-    // days    = days.toString().padStart(2, "0");
-    // hours   = hours.toString().padStart(2, "0");
-    // minutes = minutes.toString().padStart(2, "0");
-    // seconds = seconds.toString().padStart(2, "0");
-
     document.getElementById("days").innerText    = days;
     document.getElementById("hours").innerText   = hours;
     document.getElementById("minutes").innerText = minutes;
@@ -848,4 +851,39 @@ if (document.querySelector(".get_gift-coutndown") !== null) {
 
   }, second);
 };
+
+//find out price start
+const popupFindPrice = document.querySelector(".find-out-price-popup");
+
+if (popupFindPrice) {
+
+  document.querySelectorAll(".chat-btn").forEach(function (button) {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      popupFindPrice.classList.add("active");
+      document.body.classList.add("lock");
+    });
+  });
+
+  document.querySelectorAll(".find-out-price-popup-close").forEach(function (button) {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      popupFindPrice.classList.remove("active");
+      document.body.classList.remove("lock");
+    });
+  });
+
+  popupFindPrice.addEventListener("click", function (event) {
+    const content = popupFindPrice.querySelector(".find-out-price-popup-content");
+
+    if (content && !content.contains(event.target)) {
+      popupFindPrice.classList.remove("active");
+      document.body.classList.remove("lock");
+    }
+  });
+
+}
+// find out price end
 

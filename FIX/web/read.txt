@@ -1,0 +1,1 @@
+1. Delete block <div class="mini-cart__foot-row add-coupon">

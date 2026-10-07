@@ -397,8 +397,60 @@
                         комплексом</a></li>
             </ol>
 
-            <div class="checkout container margin-bottom guest">
+            <div class="checkout container margin-bottom resident">
                 <h1 class="title page-title"><span>Оформити замовлення</span></h1>
+                <!-- add class "active" to show the popup -->
+                    <div class="checkout-error-popup gift-error-popup">
+                        <div class="product__card">
+                            <div class="top">
+                                <a class="product__card__img" href="product-page.html">
+                                    <img src="./images/product.png" alt="product-img" width="56" height="56">
+                                </a>
+                            </div>                        
+                            <div class="product__info">
+                                <div>
+                                    <a href="product-page.html" class="product__name">
+                                        <span>Відновлюючий бальзам для губ</span>
+                                    </a>
+                                    <p class="product__description">Подарунок зник після застосування б’ютіків</p>
+                                </div>     
+                            </div>
+                        </div>
+
+                        <div class="cart-progress-bar">
+                            <div class="progress-bar-content">
+                                <div class="row row-bottom">
+                                    <span class="icon icon-Property-138"></span>
+                                    <span>Додайте ще 1061₴ до замовлення, щоб повернути подарунок</span>
+                                </div>
+                                <div class="row row-top">
+                                    <div class="range-line">
+                                        <div class="range-line-active"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="checkout-error-popup free-del-error-popup active">
+                        <div class="error-popup__top">
+                            <h3>Безкоштовна доставка недоступна після знижок</h3>
+                            <p class="product__description">Загальна вартість кошика стала нижчою за поріг безкоштовної доставки</p>
+                        </div>
+
+                        <div class="cart-progress-bar">
+                            <div class="progress-bar-content">
+                                <div class="row row-bottom">
+                                    <span class="icon icon-Property-146"></span>
+                                    <span>До безкоштовної доставки залишилось 1500₴</span>
+                                </div>
+                                <div class="row row-top">
+                                    <div class="range-line">
+                                        <div class="range-line-active"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
 
                 <div class="checkout__content">
                     <div class="checkout__left">
@@ -423,34 +475,24 @@
                                 <ul class="cart__sing-in__list">
                                         <li>
                                             <span class="sing-in__list__icon icon-Property-147"></span>
-                                            <span>до 10% кешбеку</span>
-                                        </li>
-                                        <li>
-                                            <span class="sing-in__list__icon icon-Property-146"></span>
-                                            <span>безкоштовна доставка</span>
+                                            <span>до 5% кешбеку</span>
                                         </li>
                                         <li>
                                             <span class="sing-in__list__icon icon icon-Property-138"></span>
-                                            <span>подарунок в кожне замовлення</span>
+                                            <span>подарунки до замовлення</span>
                                         </li>
                                         <li>
+                                            <span class="sing-in__list__icon icon-Property-146"></span>
+                                            <span>безкоштовна доставка від 3000 грн</span>
+                                        </li>
+                                        
+                                        <li>
                                             <p class="sing-in__list__icon">
-                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_4632_60562)">
-                                                        <path
-                                                            d="M12.6667 5.51733V4.66667C12.6667 2.09333 10.5727 0 8.00004 0C5.42737 0 3.33337 2.09333 3.33337 4.66667V5.51733C2.17204 5.93133 1.33337 7.03133 1.33337 8.33333V13C1.33337 14.654 2.67937 16 4.33337 16H11.6667C13.3207 16 14.6667 14.654 14.6667 13V8.33333C14.6667 7.03133 13.828 5.932 12.6667 5.51733ZM4.00004 4.66667C4.00004 2.46067 5.79404 0.666667 8.00004 0.666667C10.206 0.666667 12 2.46067 12 4.66667V5.36733C11.8894 5.35467 11.7807 5.33333 11.6667 5.33333H4.33337C4.21937 5.33333 4.11071 5.35467 4.00004 5.36733V4.66667ZM14 13C14 14.2867 12.9534 15.3333 11.6667 15.3333H4.33337C3.04671 15.3333 2.00004 14.2867 2.00004 13V8.33333C2.00004 7.04667 3.04671 6 4.33337 6H11.6667C12.9534 6 14 7.04667 14 8.33333V13ZM8.33337 9.66667V11.6667C8.33337 11.8507 8.18404 12 8.00004 12C7.81604 12 7.66671 11.8507 7.66671 11.6667V9.66667C7.66671 9.48267 7.81604 9.33333 8.00004 9.33333C8.18404 9.33333 8.33337 9.48267 8.33337 9.66667Z"
-                                                            fill="black" />
-                                                    </g>
-                                                    <defs>
-                                                        <clipPath id="clip0_4632_60562">
-                                                            <rect width="16" height="16" fill="white" />
-                                                        </clipPath>
-                                                    </defs>
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.3333 4.72222V10.8333C13.3333 12.2117 12.2117 13.3333 10.8333 13.3333H2.5C1.12167 13.3333 0 12.2117 0 10.8333V4.16667C0 2.78833 1.12167 1.66667 2.5 1.66667H6.38889C6.54222 1.66667 6.66667 1.79111 6.66667 1.94444C6.66667 2.09778 6.54222 2.22222 6.38889 2.22222H2.5C1.605 2.22222 0.856667 2.83389 0.631667 3.65889L5.29167 8.31944C6.02667 9.05389 7.30722 9.05389 8.04167 8.31944L10.0961 6.19611C10.2022 6.08611 10.3794 6.08333 10.4889 6.18944C10.5989 6.29611 10.6022 6.47222 10.4956 6.58222L8.43778 8.70889C7.96278 9.18444 7.335 9.44444 6.66667 9.44444C5.99833 9.44444 5.37111 9.18444 4.89889 8.71222L0.555556 4.36833V10.8333C0.555556 11.9056 1.42778 12.7778 2.5 12.7778H10.8333C11.9056 12.7778 12.7778 11.9056 12.7778 10.8333V4.72222C12.7778 4.56889 12.9022 4.44444 13.0556 4.44444C13.2089 4.44444 13.3333 4.56889 13.3333 4.72222ZM7.77778 1.65278C7.77778 0.741111 8.46278 0 9.30556 0C9.80889 0 10.2739 0.247778 10.5556 0.612778C10.8372 0.248333 11.3022 0 11.8056 0C12.6483 0 13.3333 0.741111 13.3333 1.65278C13.3333 2.74722 12.125 4.11333 11.3633 4.71778C11.1256 4.90667 10.8406 5.00056 10.5556 5.00056C10.2706 5.00056 9.98555 4.90667 9.74778 4.71778C8.98611 4.11333 7.77778 2.74722 7.77778 1.65278ZM8.33333 1.65278C8.33333 2.49444 9.38333 3.71944 10.0928 4.28222C10.365 4.49833 10.7461 4.49833 11.0183 4.28222C11.7278 3.71889 12.7778 2.49389 12.7778 1.65278C12.7778 1.04778 12.3417 0.555556 11.8056 0.555556C11.2583 0.555556 10.8333 1.00389 10.8333 1.38889C10.8333 1.54222 10.7089 1.66667 10.5556 1.66667C10.4022 1.66667 10.2778 1.54222 10.2778 1.38889C10.2778 1.00389 9.85278 0.555556 9.30556 0.555556C8.76944 0.555556 8.33333 1.04778 8.33333 1.65278Z" fill="#1B1B1D"/>
                                                 </svg>
                                             </p>
-
-                                            <span>доступ до закритої спільноти Yana's club</span>
+                                            <span>доступ до Приватного Клубу</span>
                                         </li>
                                     </ul>
                                 <a class="bs-btn bs-btn-yellow" href="">
@@ -464,13 +506,13 @@
 
                         <div class="checkout-info margin-bottom_40">
                             <h2 class="checkout-info-title">Твої дані</h2>
-                            <div class="checkout-info__item margin-bottom_40">
+                            <!-- <div class="checkout-info__item margin-bottom_40">
                                 <div class="checkout-info__item__content">
                                     <h3>Вербовецька Марина Олександрівна</h3>
                                     <p class="ligth-text">+380 66 589 67 21</p>
                                 </div>
                                 <button class="checkout-info__change-btn">Редагувати</button>
-                            </div>
+                            </div> -->
                             <div class="checkout-info__change">
                                 <form class="bs-form">
                                     <div class="bs-form__row">
@@ -497,29 +539,84 @@
 
                                     </div>
                                 </form>
+                            </div>                            
+                            <div class="checkout-info__change another-recipient">
+
+                                <div class="accordion__item">
+                                    <div class="accordion__title">
+                                        <div class="accordion__title__content">
+                                            <form action="" class="bs-form">
+                                                <div class="checkgroup">
+                                                    <input class="checkgroup-control" type="checkbox" id="another-recipient-check">
+                                                    <label class="checkgroup-title" for="another-recipient-check">Отримувач інша особа</label>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="accordion__content">
+                                        <h2 class="checkout-info-title">Контактні дані отримувача</h2>
+                                        <form class="bs-form">
+                                            <div class="bs-form__row">
+                                                <div class="input-block">
+                                                    <label for="another-recipient_name">Ім’я<span>*</span></label>
+                                                    <input type="text" name="user_name" id="another-recipient_name">
+                                                </div>
+                                
+                                                <div class="input-block">
+                                                    <label for="another-recipient_lastname">Прізвище<span>*</span></label>
+                                                    <input type="text" name="user_lastname" id="another-recipient_lastname">
+                                                </div>
+                                            </div>
+                                            <div class="bs-form__row">
+                                                <div class="input-block">
+                                                    <label for="another-recipient_phone">Телефон<span>*</span></label>
+                                                    <input type="phone" name="user_phone" id="another-recipient_phone" maxlength="13">
+                                                </div>
+                                
+                                                <div class="input-block">
+                                                    <label for="another-recipient_email">E-mail<span>*</span></label>
+                                                    <input type="email" name="user_email" id="another-recipient_email">
+                                                </div>
+                                
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="checkout-info margin-bottom_40">
                             <h2 class="checkout-info-title">Доставка</h2>
-                            <div class="checkout-info__item">
-                                <div class="checkout-info__item__content">
-                                    <h3>Тернопіль, Відділення №27</h3>
+                            <form action="" class="bs-form delivery-form">
+
+                                <div class="input-block delivery">
+                                    <input type="radio" name="delivery" id="delivery-nova" checked>
+                                    <label for="delivery-nova"><span>Нова пошта</span><img src="images/nova_p.svg" alt="nova-logo" height="24" width="24"></label>
                                 </div>
-                                <button class="checkout-info__change-btn">Редагувати</button>
-                            </div>
+
+                                <div class="input-block delivery">
+                                    <input type="radio" name="delivery" id="delivery-ukrp">
+                                    <label for="delivery-ukrp"><span>Укрпошта</span><img src="images/ukr_p.svg" alt="ukr-logo" height="24" width="25"></label>
+                                </div>
+
+                                <div class="input-block delivery">
+                                    <input type="radio" name="delivery" id="delivery-meest">
+                                    <label for="delivery-meest"><span>Meest</span><img src="images/meest_p.svg" alt="meest-logo" height="24" width="16"></label>
+                                </div>
+
+                                <div class="input-block delivery">
+                                    <input type="radio" name="delivery" id="delivery-uklon">
+                                    <label for="delivery-uklon"><span>Uklon Delivery</span><img src="images/uklon_p.svg" alt="uklon-logo" height="24" width="24"></label>
+                                    <p class="delivery-info"><span>Uklon Delivery доступна лише в Києві. При оплаті до 12:00 доставимо в той самий день, після 12:00 — наступного дня. Після оформлення замовлення з вами обов’язково зв’яжеться менеджер</span></p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="checkout-info margin-bottom_40">
+                            <h2 class="checkout-info-title">Адреса доставки</h2>
                             <div class="checkout-info__change">
                                 <form class="bs-form">
                                     <div class="bs-form__row">
-                                        <div class="input-block">
-                                            <label for="select-type">Тип <span>*</span></label>
-                                            <select id="select-type" required="">
-                                                <option value="" selected disabled>Оберіть тип</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                            </select>
-                                        </div>
-
                                         <div class="input-block">
                                             <label for="select-city">Місто <span>*</span></label>
                                             <select id="select-city" required="">
@@ -528,17 +625,15 @@
                                                 <option value="2">2</option>
                                             </select>
                                         </div>
-                                    </div>
-
-                                    <div class="input-block">
-                                        <label for="select-warehouse">Відділення <span>*</span></label>
-                                        <select id="select-warehouse" required="">
-                                            <option value="" selected disabled>Оберіть відділення</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                        </select>
-                                    </div>
-
+                                        <div class="input-block">
+                                            <label for="select-warehouse">Поштомат/відділення <span>*</span></label>
+                                            <select id="select-warehouse" required="">
+                                                <option value="" selected disabled>Відділення</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </div>
+                                    </div>       
                                     <div class="input-block">
                                         <label for="user_comment">Коментар до замовлення</label>
                                         <textarea name="user_comment" id="user_comment" cols="2" rows="3"
@@ -546,12 +641,6 @@
                                     </div>
                                 </form>
                             </div>
-                            <form action="" class="bs-form">
-                                <div class="checkgroup">
-                                    <input class="checkgroup-control" type="checkbox" id="recipient-check">
-                                    <label class="checkgroup-title" for="recipient-check">Я одержувач</label>
-                                </div>
-                            </form>
                         </div>
 
                         <div class="checkout-info margin-bottom_40">
@@ -577,19 +666,13 @@
                                     <label for="payment-3">Онлайн оплата на сайті / Оплата частинами</label>
                                     <p class="payment-info"><span>Lorem ipsum, dolor sit amet consectetur adipisicing
                                             elit.</span></p>
-                                </div>
-
-                                <p class="ligth-text">Ваші особисті дані будуть використовуватися для обробки ваших
-                                    замовлень, спрощення вашої роботи з сайтом та інших цілей, описаних в нашій політика
-                                    конфіденційності.</p>
-
+                                </div>                              
+                            </form>
+                            <form action="" class="bs-form">
                                 <div class="checkgroup">
-                                    <input class="checkgroup-control" type="checkbox" id="terms-check">
-                                    <label class="checkgroup-title" for="terms-check">Я прочитав(а) і погоджуюсь<a
-                                            href="">(докладніше
-                                            правила та умови)</a></label>
+                                    <input class="checkgroup-control" type="checkbox" id="call-check">
+                                    <label class="checkgroup-title" for="call-check">Подзвонити мені</label>
                                 </div>
-
                             </form>
 
                         </div>
@@ -800,47 +883,7 @@
                             </div>
                         </div>
 
-                        <div class="checkout-block">
-                            <!-- add class added -->
-                            <div class="add-coupon">
-                                <div class="accordion__item">
-                                    <div class="accordion__title">
-                                        <div class="accordion__title__content">
-                                            <p class="accordion__title-icon"></p>
-                                            <p class="accordion__title-text">Додати промокод</p>
-                                        </div>
-                                    </div>
-                                    <div class="accordion__content">
-                                        <form action="" class="bs-form add-cupon-form">
-                                            <div class="input-block add-coupon-block">
-                                                <input type="text" class="add_cupon" placeholder="Введи промокод">
-                                                <button class="bs-btn add-cupon-btn"><span
-                                                        class="icon icon-Property-124"></span></button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <form action="" class="bs-form add-cupon-form">
-                                    <div class="input-block added-coupon-block">
-                                        <input type="text" class="added_cupon">
-                                        <button class="bs-btn bs-btn-gray delete-cupon-btn"><span
-                                                class="icon icon-Property-1-7"></span></button>
-                                    </div>
-                                </form>
-
-                                <!-- <div class="add-coupon__status">
-                                    <span class="icon icon-Property-124"></span>
-                                    <span>Промокод успішно додано</span>
-                                </div> -->
-                            </div>
-
-                            <form action="" class="bs-form">
-                                <div class="checkgroup">
-                                    <input class="checkgroup-control" type="checkbox" id="call-check">
-                                    <label class="checkgroup-title" for="call-check">Подзвонити мені</label>
-                                </div>
-                            </form>
-                        </div>
+                        
                         <div class="checkout-block">
                             <div class="mini-cart__foot">
                                 <div class="mini-cart__foot-row">
@@ -851,27 +894,60 @@
                                     <p>Знижка:</p>
                                     <p>549₴</p>
                                 </div>
-                                <div class="mini-cart__foot-row">
+                                <div class="mini-cart__foot-row delivery">
                                     <p>Доставка:</p>
                                     <p>Безкоштовно</p>
                                 </div>
-                                <div class="mini-cart__foot-row cupons">
-                                    <p>Бʼютіки:</p>
-                                    <p>21₴</p>
-                                </div>
-                                <form action="" class="bs-form spend-coupon-form">
-                                    <div class="checkgroup">
-                                        <input class="checkgroup-control" type="checkbox" id="spend-coupon-check">
-                                        <label class="checkgroup-title" for="spend-coupon-check">Списати бʼютіки</label>
-                                    </div>
-                                    <div class="bs-form__row">
-                                        <div class="input-block">
-                                            <input type="number" name="spend-coupon"
-                                                placeholder="Введи кількість бʼютіків">
+                            
+                                <div class="cupons-block">   
+                                    <!-- add class added -->
+                                    <div class="add-coupon promocode">
+                                        <div class="accordion__item">
+                                            <div class="accordion__title">
+                                                <div class="accordion__title__content">
+                                                    <p class="accordion__title-icon"></p>
+                                                    <p class="accordion__title-text">Додати промокод</p>
+                                                </div>
+                                            </div>
+                                            <div class="accordion__content">
+                                                <form action="" class="bs-form add-cupon-form">
+                                                    <div class="input-block add-coupon-block">
+                                                        <input type="text" class="add_cupon" placeholder="Введи промокод">
+                                                        <button type="button" class="bs-btn add-cupon-btn"><span class="icon icon-Property-124"></span></button>
+                                                    </div>
+                                                    <div class="input-block added-coupon-block" style="display: none;">
+                                                        <input type="text" class="added_cupon">
+                                                        <button type="button" class="bs-btn delete-cupon-btn"><span class="icon icon-Property-1-7"></span></button>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
-                                        <button class="bs-btn bs-btn-gray"><span>Списати</span></button>
-                                    </div>
-                                </form>
+                                    </div>  
+                                    <div class="add-coupon cupon">
+                                        <div class="accordion__item">
+                                            <div class="accordion__title accordion-active">
+                                                <div class="accordion__title__content">
+                                                    <p class="accordion__title-icon"></p>
+                                                    <p class="accordion__title-text">Списати бʼютіки</p>
+                                                </div>
+                                            </div>
+                                            <div class="accordion__content" style="display: block;">
+                                                <form action="" class="bs-form add-cupon-form">
+                                                    <div class="input-block add-coupon-block">
+                                                        <input type="text" class="add_cupon" placeholder="" value="6">
+                                                        <button type="button" class="bs-btn add-cupon-btn"><span
+                                                                class="icon icon-Property-124"></span></button>
+                                                    </div>
+                                                    <div class="input-block added-coupon-block" style="display: none;">
+                                                        <input type="text" class="added_cupon">
+                                                        <button type="button" class="bs-btn delete-cupon-btn"><span
+                                                                class="icon icon-Property-1-7"></span></button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>                                     
+                                </div>
                                 <div class="mini-cart__foot-row total">
                                     <p>До сплати:</p>
                                     <p>2000₴</p>
@@ -890,8 +966,10 @@
                                             <span>Оформити замовлення</span>
                                         </span>
                                     </button>
+                                    <div class="checkout-terms">
+                                        <p class="ligth-text">Оформлюючи замовлення, я погоджуюся з <a href="https://www.beauty-systema.com/dohovir-publichnoi-oferty/">Публічним договором-офертою про надання послуг</a></p>
+                                    </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>

@@ -469,6 +469,10 @@
     line-height: 17px;
 }
 
+.buttons .chat-btn {
+
+}
+
 .buttons .bs-btn>span,
 .gifts-slider-block .bs-btn>span,
 .product__subscribe .bs-btn>span {
